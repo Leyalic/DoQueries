@@ -3,24 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoQueriesPy", "DoQueriesPy\DoQueriesPy.vcxproj", "{980DBA7A-3B5F-4562-A77E-F480CD3B803F}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DoQueriesPy", "DoQueriesPy\DoQueriesPy.pyproj", "{9B5CACBC-B1D0-4A14-A2FB-ED018E113C72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Debug|x64.ActiveCfg = Debug|x64
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Debug|x64.Build.0 = Debug|x64
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Debug|x86.ActiveCfg = Debug|Win32
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Debug|x86.Build.0 = Debug|Win32
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Release|x64.ActiveCfg = Release|x64
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Release|x64.Build.0 = Release|x64
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Release|x86.ActiveCfg = Release|Win32
-		{980DBA7A-3B5F-4562-A77E-F480CD3B803F}.Release|x86.Build.0 = Release|Win32
+		{9B5CACBC-B1D0-4A14-A2FB-ED018E113C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5CACBC-B1D0-4A14-A2FB-ED018E113C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
