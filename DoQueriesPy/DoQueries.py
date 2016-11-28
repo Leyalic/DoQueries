@@ -230,151 +230,151 @@ def do_dailies():
             do_query(query, date + " Athlete Aid Overaward " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_IL_CMT_CDE_OVR_AGR_LMT_" + year):
+        if query.startswith("UUFA_IL_CMT_CDE_OVR_AGR_LMT_") and (year in query[:-10]) :
             do_query(query, date + " Comment Code Over Aggregate 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_COMMENT_CODE_298_" + year):
+        if query.startswith("UUFA_IL_COMMENT_CODE_298_") and (year in query[:-10]) :
             do_query(query, date + " IASG - Pell Eligible 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FDEG_FFBD_FBLK_FFBC_" + year):
+        if query.startswith("UUFA_IL_FDEG_FFBD_FBLK_FFBC_") and (year in query[:-10]) :
             do_query(query, date + " Complete FDEG FFBD FBLK FFBC " + year + ".xls", directory,
                      prof_rkm_attachment_list)
 
-        if query.startswith("FA_IL_COMPLETE_FDEG_" + year):
+        if query.startswith("FA_IL_COMPLETE_FDEG_") and (year in query[:-10]) :
             do_query(query, date + " FDEG Update 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_CORR_NOT_MARK_SENT_" + year):
+        if query.startswith("UUFA_IL_CORR_NOT_MARK_SENT_") and (year in query[:-10]) :
             do_query(query, date + " Corrections not Marked to Sent 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_CORR_SENT_RJCT_CD1_" + year):
+        if query.startswith("UUFA_IL_CORR_SENT_RJCT_CD1_") and (year in query[:-10]) :
             do_query(query, date + " Correction Sent Reject Code 1 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_ENRL_GR_DATE_ERRORS_" + year):
+        if query.startswith("FA_IL_ENRL_GR_DATE_ERRORS_") and (year in query[:-10]) :
             do_query(query, date + " Place FDIP" + year + " Checklist 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_FBKP" + year) | query.startswith("UUFA_IL_FBKP" + year):
+        if query.startswith("UUFA_IL_FBKP") and (year in query[:-10]) :
             do_query(query, date + " FBKP" + year + " Checklist Initiated.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FOUT" + year + "_INC_" + year):
+        if query.startswith("UUFA_IL_FOUT") and (year in query[:-10]) :
             do_query(query, date + " Outside Resources 20" + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("FA_IL_FP1B" + year + "_CHECKLIST_" + year):
+        if query.startswith("FA_IL_FP1B") and (year in query[:-10]) :
             do_query(query, date + " FP1B" + year + " Checklist " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_FP2B" + year + "_CHECKLIST_" + year):
+        if query.startswith("FA_IL_FP2B") and (year in query[:-10]) :
             do_query(query, date + " FP2B" + year + " Checklist " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_FP1N" + year + "_CHECKLIST_" + year):
+        if query.startswith("FA_IL_FP1N") and (year in query[:-10]) :
             do_query(query, date + " FP1N" + year + " Checklist " + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("FA_IL_FP2N" + year + "_CHECKLIST_" + year):
+        if query.startswith("FA_IL_FP2N") and (year in query[:-10]) :
             do_query(query, date + " FP2N" + year + " Checklist " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FPJ" + year + "_CHECKLIST_" + year):
+        if query.startswith("UUFA_IL_FPJ") and (year in query[:-10]) :
             do_query(query, date + " FPJ" + year + " Checklist 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_ISIR_02_IND_UP_DWN_" + year):
+        if query.startswith("UUFA_IL_ISIR_02_IND_UP_DWN_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Service IND UP Down 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FEHU" + year + "_INITIATED"):
+        if query.startswith("UUFA_IL_FEHU") and (year in query[:-10]) :
             do_query(query, date + " Initiated FEHU" + year + " Checklist.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_IL_IRS_DRT_02_20" + year):
+        if query.startswith("UUFA_IL_IRS_DRT_02_20") and (year in query[:-10]) :
             do_query(query, date + " IRS Data Retrieval Equal to 02 " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_ISIR_CMT_CODE_359_360_" + year):
+        if query.startswith("FA_IL_ISIR_CMT_CODE_359_360_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Comment Code 359 or 360 " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_IL_ISIR_GRD_I_UG_FATRM_" + year):
+        if query.startswith("UUFA_IL_ISIR_GRD_I_UG_FATRM_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Graduate Independent UG FATERM 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_ISIR_PRMARY_EFC_DIF_" + year):
+        if query.startswith("UUFA_IL_ISIR_PRMARY_EFC_DIF_") and (year in query[:-10]) :
             do_query(query, date + " Primary EFC Difference 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_ISIR_LOADED_NOT_PKG_" + year):
+        if query.startswith("UUFA_IL_ISIR_LOADED_NOT_PKG_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Loaded Not Packaged 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_LN_EXP_GRAD_DATE_20" + year):
+        if query.startswith("UUFA_IL_LN_EXP_GRAD_DATE") and (year in query[:-10]) :
             do_query(query, date + " Loan Awd No FLRP Grad Date 20" + year + ".xls", directory,
                      loans_kr_attachment_list)
 
-        if query.startswith("UUFA_IL_NURSING_LOANS_TILA_" + year):
+        if query.startswith("UUFA_IL_NURSING_LOANS_TILA_") and (year in query[:-10]) :
             do_query(query, date + " Nursing Loans 20" + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("FA_IL_OTHER_ATB_20" + year):
+        if query.startswith("FA_IL_OTHER_ATB_20") and (year in query[:-10]) :
             do_query(query, date + " ISIR Other ATB 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_IL_OTHER_ATTND_" + year):
+        if query.startswith("FA_IL_OTHER_ATTND_") and (year in query[:-10]) :
             do_query(query, date + " Attend Other Institution 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_PELL_LEU_C_" + year):
+        if query.startswith("UUFA_IL_PELL_LEU_C_") and (year in query[:-10]) :
             do_query(query, date + " Pell LEU Limit Flag C " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_PELL_LEU_E_" + year):
+        if query.startswith("UUFA_IL_PELL_LEU_E_") and (year in query[:-10]) :
             do_query(query, date + " Pell LEU Limit Flag E " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_PELL_MAX_ELIG_" + year):
+        if query.startswith("UUFA_IL_PELL_MAX_ELIG_") and (year in query[:-10]) :
             do_query(query, date + " Pell Max Eligibility " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_IL_SF_RFND_AWD_NO_POST_" + year):
+        if query.startswith("UUFA_IL_SF_RFND_AWD_NO_POST_") and (year in query[:-10]) :
             do_query(query, date + " Refund Post Third Party 20" + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("UUFA_IL_SUB_ISIR_NO_PACKAGE_" + year):
+        if query.startswith("UUFA_IL_SUB_ISIR_NO_PACKAGE_") and (year in query[:-10]) :
             do_query(query, date + " Subsequent ISIR Not Package Not Verified 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_VET_ACTV_DUTY_STAT_" + year):
+        if query.startswith("UUFA_IL_VET_ACTV_DUTY_STAT_") and (year in query[:-10]) :
             do_query(query, date + " Veteran Active Duty Status 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_VER_I_SUB_SUSP_ISIR_" + year):
+        if query.startswith("UUFA_IL_VER_I_SUB_SUSP_ISIR_") and (year in query[:-10]) :
             do_query(query, date + " FAVR Initiated Susp ISIR Psbl DRT " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_V5_VER_AFTR_OTH_VER_" + year):
+        if query.startswith("UUFA_IL_V5_VER_AFTR_OTH_VER_") and (year in query[:-10]) :
             do_query(query, date + " Selected for V5 after other Ver " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_UPDATED_SEC_" + year):
+        if query.startswith("UUFA_IL_UPDATED_SEC_") and (year in query[:-10]) :
             do_query(query, date + " New ISIR Updated ATB " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FATN_INITIATED_" + year):
+        if query.startswith("UUFA_IL_FATN_INITIATED_") and (year in query[:-10]) :
             do_query(query, date + " Review FATN Checklist 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FED_AID_OVERAWARD_" + year):
+        if query.startswith("UUFA_IL_FED_AID_OVERAWARD_") and (year in query[:-10]) :
             do_query(query, date + " Federal Aid Overaward " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FHST_I_HST_COMPLETE_" + year):
+        if query.startswith("UUFA_IL_FHST_I_HST_COMPLETE_") and (year in query[:-10]) :
             do_query(query, date + " HS Transcript 'C' FHST" + year + " I.xls", directory,
                      rkm_attachment_list)
 
@@ -386,19 +386,19 @@ def do_dailies():
             do_query(query, date + " " + query, directory,
                      akcal_attachment_list)
 
-        if query.startswith("UUFA_IL_PKG_SCH_EXP_GRAD_FA_" + year):
+        if query.startswith("UUFA_IL_PKG_SCH_EXP_GRAD_FA_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Aid Grad Date Fall 20" + year + ".xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("UUFA_IL_PKG_FED_EXP_GRAD_FA_" + year):
+        if query.startswith("UUFA_IL_PKG_FED_EXP_GRAD_FA_") and (year in query[:-10]) :
             do_query(query, date + " Accepted Federal Aid Grad Date Fall 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FPEL" + year + "_NO_DB_MATCH"):
+        if query.startswith("UUFA_IL_FPEL") and (year in query[:-10]) :
             do_query(query, date + " FPEL" + year + " No Database Match.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_PACKAGING_C_NO_FED_AID_" + year):
+        if query.startswith("UUFA_PACKAGING_C_NO_FED_AID_") and (year in query[:-10]) :
             do_query(query, date + " Packaging C 71%-72% No Fed Aid " + year + ".xls", directory,
                      sys_attachment_list)
 
@@ -410,11 +410,11 @@ def do_dailies():
             do_query(query, date + " Item Types in " + str(int(year)-1) + "not in " + year + ".xls", directory,
                      mat_attachment_list)
 
-        if query.startswith("UUFA_IL_FREV_CHECKLIST_INT_" + year):
+        if query.startswith("UUFA_IL_FREV_CHECKLIST_INT_") and (year in query[:-10]) :
             do_query(query, date + " FREV Checklist Initiated " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_IL_FREV_DOES_NOT_EXIST_" + year):
+        if query.startswith("UUFA_IL_FREV_DOES_NOT_EXIST_") and (year in query[:-10]) :
             do_query(query, date + " FREV Does Not Exist 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -492,71 +492,71 @@ def do_monday_weeklies():
     # Change File_Name to be query ac it is received and _new_file_name to what the new query should be.Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_WR_AGG_CK_MLT_YR_AWDED_" + year):
+        if query.startswith("UUFA_WR_AGG_CK_MLT_YR_AWDED_" ) and (year in query[:-10]) :
             do_query(query, date + " Student Pkgd for " + str(int(year) - 1) + " after " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_ATH_" + year):
+        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_ATH_" ) and (year in query[:-10]) :
             do_query(query, date + " Athlete Disb Not Enrolled " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_FED_" + year):
+        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_FED_" ) and (year in query[:-10]) :
             do_query(query, date + " Federal Disb Not Enrolled " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_SCH_" + year):
+        if query.startswith("UUFA_WR_AID_DISB_NO_ENR_SCH_" ) and (year in query[:-10]) :
             do_query(query, date + " T 53 Sch Disb Not Enrolled " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_WR_AMERICORP_AWD_POST_" + year):
+        if query.startswith("UUFA_WR_AMERICORP_AWD_POST_" ) and (year in query[:-10]) :
             do_query(query, date + " Americorp Awards " + year + ".xls", directory,
                      amber_k_attachment_list)
 
-        if query.startswith("UUFA_WR_ATHLETE_NOT_DISB_" + year):
+        if query.startswith("UUFA_WR_ATHLETE_NOT_DISB_" ) and (year in query[:-10]) :
             do_query(query, date + " Athlete Not Disbursed " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_ATH_HRS_AFTR_CENSUS_" + year):
+        if query.startswith("UUFA_WR_ATH_HRS_AFTR_CENSUS_" ) and (year in query[:-10]) :
             do_query(query, date + " Ath Hours After Census " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_ATH_SF_TERM_BALANCE_" + year):
+        if query.startswith("UUFA_WR_ATH_SF_TERM_BALANCE_" ) and (year in query[:-10]) :
             do_query(query, date + " Athlete Tuition Fee Balance " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_AUDIT_CLSS_AID_DISB_" + year):
+        if query.startswith("UUFA_WR_AUDIT_CLSS_AID_DISB_" ) and (year in query[:-10]) :
             do_query(query, date + " Audit Class Aid Disbursed " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_ATH_" + year):
+        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_ATH_" ) and (year in query[:-10]) :
             do_query(query, date + " Ath Awards past Grad Term " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_FC_" + year):
+        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_FC_" ) and (year in query[:-10]) :
             do_query(query, date + " Federal Awards past Grad Term " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_SV_" + year):
+        if query.startswith("UUFA_WR_AWD_UG_NOW_GRAD_SV_" ) and (year in query[:-10]) :
             do_query(query, date + " Scholar Awards past Grad Term " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_WR_CHKLST_STATUS_ERROR_" + year):
+        if query.startswith("UUFA_WR_CHKLST_STATUS_ERROR_" ) and (year in query[:-10]) :
             do_query(query, date + " Checklist Status Error " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_DISB_ATH_FAILURE_" + year):
+        if query.startswith("UUFA_WR_DISB_ATH_FAILURE_" ) and (year in query[:-10]) :
             do_query(query, date + " Authorization Failure 20" + year + ".xls", disb_failure_directory,
                      null_attachment_list)
 
-        if query.startswith("UUFA_WR_DL_DISBURSED_LTHT_" + year):
+        if query.startswith("UUFA_WR_DL_DISBURSED_LTHT_" ) and (year in query[:-10]) :
             do_query(query, date + " DL Disbursed LTHT " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_DL_EC_SUSPENDED_" + year):
+        if query.startswith("UUFA_WR_DL_EC_SUSPENDED_" ) and (year in query[:-10]) :
             do_query(query, date + " DL Entrance Counseling Suspense " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_DL_ORIG_TRNS_PEND_" + year):
+        if query.startswith("UUFA_WR_DL_ORIG_TRNS_PEND_" ) and (year in query[:-10]) :
             do_query(query, date + " DL Orig Trans Pending " + year + ".xls", directory,
                      loans_r_attachment_list)
 
@@ -564,35 +564,35 @@ def do_monday_weeklies():
             do_query(query, date + " EFT Consent Verification 20" + year + ".xls", directory,
                      rkjm_attachment_list)
 
-        if query.startswith("UUFA_WR_FAFSA_CKLST_INCMP_" + year):
+        if query.startswith("UUFA_WR_FAFSA_CKLST_INCMP_" ) and (year in query[:-10]) :
             do_query(query, date + " PLUS FAFSA Incomplete " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if  query.startswith("UUFA_WR_FALL_TOTAL_WDRN_DRP_" + year):
+        if  query.startswith("UUFA_WR_FALL_TOTAL_WDRN_DRP_" ) and (year in query[:-10]) :
             do_query(query, date + " Fall Disb Total Withdrawn Drop " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if  query.startswith("UUFA_WR_SPR_TOTAL_WDRN_DRP_" + year):
+        if  query.startswith("UUFA_WR_SPR_TOTAL_WDRN_DRP_" ) and (year in query[:-10]) :
             do_query(query, date + " Spring Disb Total Withdrawn Drop " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if  query.startswith("UUFA_WR_SUM_TOTAL_WDRN_DRP_" + year):
+        if  query.startswith("UUFA_WR_SUM_TOTAL_WDRN_DRP_" ) and (year in query[:-10]) :
             do_query(query, date + " Summer Disb Total Withdrawn Drop " + year + " .xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_WR_FARC_CHECKLIST_" + year) | query.startswith("UUFA_WR_FARC_CHECKLIST_" + year):
+        if query.startswith("UUFA_WR_FARC_CHECKLIST_" ) and (year in query[:-10]) :
             do_query(query, date + " FARC 30 Day Review " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_WR_FARC_CMNT_CODES_" + year) | query.startswith("UUFA_WR_FARC_CMNT_CODES_" + year):
+        if query.startswith("UUFA_WR_FARC_CMNT_CODES_" ) and (year in query[:-10]) :
             do_query(query, date + " Initiated FARC w ISIR Cmnt Codes " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_WR_FED_AID_OVERAWARD_" + year):
+        if query.startswith("FA_WR_FED_AID_OVERAWARD_" ) and (year in query[:-10]) :
             do_query(query, date + " Federal Aid Overaward " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_FGED_ISIR_DEGREE_" + year):
+        if query.startswith("UUFA_WR_FGED_ISIR_DEGREE_" ) and (year in query[:-10]) :
             do_query(query, date + " FGED ISIR Degree 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -600,132 +600,132 @@ def do_monday_weeklies():
             do_query(query, date + " FPEL" + year + " Initiated Pell.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_GENDER_" + year):
+        if query.startswith("UUFA_WR_GENDER_") and (year in query[:-10]) :
             do_query(query, date + " Gender Discrepancies 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_HEDU_PARAMEDIC_" + year):
+        if query.startswith("UUFA_WR_HEDU_PARAMEDIC_") and (year in query[:-10]) :
             do_query(query, date + " HEDU Paramedic Class 20" + year + "F.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("FA_WR_HOME_SCHOOLED_" + year):
+        if query.startswith("FA_WR_HOME_SCHOOLED_") and (year in query[:-10]) :
             do_query(query, date + " Home Schooled Check " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_HRS_DECREASE_ATH_" + year):
+        if query.startswith("UUFA_WR_HRS_DECREASE_ATH_") and (year in query[:-10]) :
             do_query(query, date + " Hours Decrease Athlete " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_HRS_DECREASE_FC_" + year):
+        if query.startswith("UUFA_WR_HRS_DECREASE_FC_") and (year in query[:-10]) :
             do_query(query, date + " Hours Decrease FC " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_HRS_DECREASE_SV_" + year):
+        if query.startswith("UUFA_WR_HRS_DECREASE_SV_") and (year in query[:-10]) :
             do_query(query, date + " Hours Decrease SV " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_WR_FHST_I_HST_COMPLETE_" + year):
+        if query.startswith("UUFA_WR_FHST_I_HST_COMPLETE_") and (year in query[:-10]) :
             do_query(query, date + " HS Transcript 'C' FHST" + year + " 'I'.xls", directory,
                      rkm_attachment_list)
         
-        if query.startswith("UUFA_WR_FMFB_W_PELL_AWD_20" + year):
+        if query.startswith("UUFA_WR_FMFB") and (year in query[:-10]) :
             do_query(query, date + " Football Athlete with Pell Award " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_AS_EFC_" + year):
+        if query.startswith("UUFA_WR_ISIR_AS_EFC_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Assumption EFC 20" + year + ".xls", directory,
                      mat_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_COR_ASSESSMENT_" + year):
+        if query.startswith("UUFA_WR_ISIR_COR_ASSESSMENT_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Correction Assessment " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_CORR_REJECT_" + year):
+        if query.startswith("UUFA_WR_ISIR_CORR_REJECT_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Correction Rejected " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_DGR_ANSW_CHNG_" + year):
+        if query.startswith("UUFA_WR_ISIR_DGR_ANSW_CHNG_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Degree Answer Change " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_DEP_STAT_PRB_" + year):
+        if query.startswith("UUFA_WR_ISIR_DEP_STAT_PRB_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Dependency 20" + year + ".xls", directory,
                      mat_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_REJECTED_CORR_" + year):
+        if query.startswith("UUFA_WR_ISIR_REJECTED_CORR_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Rejected Corrections 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
         if query.startswith("UUFA_WR_ISIR_REJECT_CODES_" + year) \
-                | query.startswith("UUFA_WR_ISIR_REJECT_CODES_20" + year):
+                | query.startswith("UUFA_WR_ISIR_REJECT_CODES_20") and (year in query[:-10]) :
             do_query(query, date + " Rejected ISIR's 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_SS_MCH_NOT_CON_" + year):
+        if query.startswith("UUFA_WR_ISIR_SS_MCH_NOT_CON_") and (year in query[:-10]) :
             do_query(query, date + " SS Match Not Confirmed 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_ISIR_SUSPENSE_20" + year):
+        if query.startswith("UUFA_WR_ISIR_SUSPENSE_20") and (year in query[:-10]) :
             do_query(query, date + " ISIR Suspense " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_LEGAL_ALIEN_WORK_" + year):
+        if query.startswith("UUFA_WR_LEGAL_ALIEN_WORK_") and (year in query[:-10]) :
             do_query(query, date + " Legal Alien Work 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_LN_ACCPT_STAF_31_32_" + year):
+        if query.startswith("UUFA_WR_LN_ACCPT_STAF_31_32_") and (year in query[:-10]) :
             do_query(query, date + " Stafford Accept Offer " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LOAN_CENSUS_DATE_" + year):
+        if query.startswith("UUFA_WR_LOAN_CENSUS_DATE_") and (year in query[:-10]) :
             do_query(query, date + " Loans Census Date 20" + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LN_FA907_1_REVISED_" + year):
+        if query.startswith("UUFA_WR_LN_FA907_1_REVISED_") and (year in query[:-10]) :
             do_query(query, date + " Loan Disbursed Report " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LN_FA907_2_REVISED_" + year):
+        if query.startswith("UUFA_WR_LN_FA907_2_REVISED_") and (year in query[:-10]) :
             do_query(query, date + " Loan Not Disbursed Report " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("FA_WR_LOAN_ORIG_DEPT_REVIEW_" + year):
+        if query.startswith("FA_WR_LOAN_ORIG_DEPT_REVIEW_") and (year in query[:-10]) :
             do_query(query, date + " Loan ORIG DEPT RVW " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LN_SENT_NO_RESPONSE_" + year):
+        if query.startswith("UUFA_WR_LN_SENT_NO_RESPONSE_") and (year in query[:-10]) :
             do_query(query, date + " Loan Sent No Response " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LOAN_TRANSMIT_HOLD_" + year):
+        if query.startswith("UUFA_WR_LOAN_TRANSMIT_HOLD_") and (year in query[:-10]) :
             do_query(query, date + " Loan Transmit Hold " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_LW_MD_DN_AW_NO_DISB_" + year):
+        if query.startswith("UUFA_WR_LW_MD_DN_AW_NO_DISB_") and (year in query[:-10]) :
             do_query(query, date + " LW MD DN Awards Not Disbursed " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_WR_MNTGMR_AMCORP_OVRAW_" + year):
+        if query.startswith("UUFA_WR_MNTGMR_AMCORP_OVRAW_") and (year in query[:-10]) :
             do_query(query, date + " Montgomery Americorp Overaward " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_MULTIPLE_EMPLIDS_" + year):
+        if query.startswith("UUFA_WR_MULTIPLE_EMPLIDS_") and (year in query[:-10]) :
             do_query(query, date + " Multiple EMPLIDS 20" + year + ".xls", directory,
                      mat_attachment_list)
 
-        if query.startswith("UUFA_WR_NO_COMMENT_CODE_" + year):
+        if query.startswith("UUFA_WR_NO_COMMENT_CODE_") and (year in query[:-10]) :
             do_query(query, date + " Sub ISIR Checklist No ISIR Comment Code 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_NSLDS_LOAN_DATA_" + year):
+        if query.startswith("UUFA_WR_NSLDS_LOAN_DATA_") and (year in query[:-10]) :
             do_query(query, date + " NSLDS Loan Data .xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_WR_OVRD_ACAD_LVL_" + year):
+        if query.startswith("UUFA_WR_OVRD_ACAD_LVL_") and (year in query[:-10]) :
             do_query(query, date + " FA Term Override Acad Level " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PA_EXPECTED_GRAD_DATE_" + year):
+        if query.startswith("UUFA_WR_PA_EXPECT") and (year in query[:-10]) :
             do_query(query, date + " PA MPS FDEG Checklist " + year + ".xls", directory,
                      prof_attachment_list)
 
@@ -733,159 +733,159 @@ def do_monday_weeklies():
             do_query(query, date + " PA Expected Grad Date Blank 20" + year + "U.xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_AWRD_LOCK_" + year):
+        if query.startswith("UUFA_WR_PELL_AWRD_LOCK_") and (year in query[:-10]) :
             do_query(query, date + " Pell Award Lock No FPEL" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_OVERPAYMENT_" + year):
+        if query.startswith("UUFA_WR_PELL_OVERPAYMENT_") and (year in query[:-10]) :
             do_query(query, date + " Pell Ovpy Check NSLDS 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_SUMMER_NO_PELL_" + year):
+        if query.startswith("UUFA_WR_PELL_SUMMER_NO_PELL_") and (year in query[:-10]) :
             do_query(query, date + " Pell Summer No Pell 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_TERM_FT_" + year):
+        if query.startswith("UUFA_WR_PELL_TERM_FT_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards FT 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_TERM_HT_" + year):
+        if query.startswith("UUFA_WR_PELL_TERM_HT_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards HT 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_TERM_LH_" + year):
+        if query.startswith("UUFA_WR_PELL_TERM_LH_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards LH 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_TERM_NL_" + year):
+        if query.startswith("UUFA_WR_PELL_TERM_NL_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards NL 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PELL_TERM_TQ_" + year):
+        if query.startswith("UUFA_WR_PELL_TERM_TQ_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards TQ 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PERK_SPLIT_MISMATCH_" + year):
+        if query.startswith("UUFA_WR_PERK_SPLIT_MISMATCH_") and (year in query[:-10]) :
             do_query(query, date + " Perkins Plan Split Mismatch " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_PRK_LN_ACAD_LVL_CHG_" + year):
+        if query.startswith("UUFA_WR_PRK_LN_ACAD_LVL_CHG_") and (year in query[:-10]) :
             do_query(query, date + " Perkins Awd With Acad Lvl Change " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_QUALITY_ASSURANCE_" + year):
+        if query.startswith("UUFA_WR_QUALITY_ASSURANCE_") and (year in query[:-10]) :
             do_query(query, date + " QA Students Complete Verification 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_WR_RT4_DROPPED_CLASSES_" + year):
+        if query.startswith("FA_WR_RT4_DROPPED_CLASSES_") and (year in query[:-10]) :
             do_query(query, date + " RT4 Dropped Classes 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_SCH_NOT_DISB_" + year):
+        if query.startswith("UUFA_WR_SCH_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Cash Non-Cash Sch Not Disb " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_WR_SSR_MATCH_NOT_CNFRM_" + year):
+        if query.startswith("UUFA_WR_SSR_MATCH_NOT_CNFRM_") and (year in query[:-10]) :
             do_query(query, date + " SSR Not Confirmed 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SSR_NOT_CNFRMD_VTRN_" + year):
+        if query.startswith("UUFA_WR_SSR_NOT_CNFRMD_VTRN_") and (year in query[:-10]) :
             do_query(query, date + " VA Match SSR DB Override " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SS_DB_OVERRIDE_" + year):
+        if query.startswith("UUFA_WR_SS_DB_OVERRIDE_") and (year in query[:-10]) :
             do_query(query, date + " SS DB Override " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SUB_ISIR_PACKAGED_" + year):
+        if query.startswith("UUFA_WR_SUB_ISIR_PACKAGED_") and (year in query[:-10]) :
             do_query(query, date + " Subsequent ISIR Packaged 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SUB_ISIR_REAWD_AID_" + year):
+        if query.startswith("UUFA_WR_SUB_ISIR_REAWD_AID_") and (year in query[:-10]) :
             do_query(query, date + " Canceled FCOR Complete " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SUB_ISIR_SYSG_20" + year):
+        if query.startswith("UUFA_WR_SUB_ISIR_SYSG_20") and (year in query[:-10]) :
             do_query(query, date + " Subsequent ISIR System Generated 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SUB_ISIR_VERIFIED_" + year):
+        if query.startswith("UUFA_WR_SUB_ISIR_VERIFIED_") and (year in query[:-10]) :
             do_query(query, date + " Subsequent ISIR Verified 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SUMMER_NO_DL_" + year):
+        if query.startswith("UUFA_WR_SUMMER_NO_DL_") and (year in query[:-10]) :
             do_query(query, date + " Summer Enroll No DL " + year + ".xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_WR_SSP_DOB_PRB_APPLCNT_" + year):
+        if query.startswith("UUFA_WR_SSP_DOB_PRB_APPLCNT_") and (year in query[:-10]) :
             do_query(query, date + " Suspense Applicant DOB Problem " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SSP_NAME_PRB_APLCNT_" + year):
+        if query.startswith("UUFA_WR_SSP_NAME_PRB_APLCNT_") and (year in query[:-10]) :
             do_query(query, date + " Suspense Applicant Name Problem " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_SSP_SSN_PRB_APLCNT_" + year):
+        if query.startswith("UUFA_WR_SSP_SSN_PRB_APLCNT_") and (year in query[:-10]) :
             do_query(query, date + " Suspense Applicant SSN Problem " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_TERM_NSLDS_LOAN_YR_" + year):
+        if query.startswith("UUFA_WR_TERM_NSLDS_LOAN_YR_") and (year in query[:-10]) :
             do_query(query, date + " NSLDS Loan Year Blank " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_TITLE_VII_MED_LOANS_" + year):
+        if query.startswith("UUFA_WR_TITLE_VII_MED_LOANS_") and (year in query[:-10]) :
             do_query(query, date + " Title VII Medical Loans TILA 20" + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_WR_TRANSFER_ENT_CNS_" + year):
+        if query.startswith("UUFA_WR_TRANSFER_ENT_CNS_") and (year in query[:-10]) :
             do_query(query, date + " Transfer Students Entrance Counseling 20" + year + ".xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_WR_TRANSFER_STU_FA_SP_" + year):
+        if query.startswith("UUFA_WR_TRANSFER_STU_FA_SP_") and (year in query[:-10]) :
             do_query(query, date + " Transfer Students Fall-Spring 20" + year + ".xls", directory,
                      leo_attachment_list)
 
-        if query.startswith("UUFA_WR_UG_GR_DIR_LN_GR_TRM_" + year):
+        if query.startswith("UUFA_WR_UG_GR_DIR_LN_GR_TRM_") and (year in query[:-10]) :
             do_query(query, date + " UG-GR Direct Ln Grad Term " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_UG_GR_PLUS_GR_TERM_" + year):
+        if query.startswith("UUFA_WR_UG_GR_PLUS_GR_TERM_") and (year in query[:-10]) :
             do_query(query, date + " UG-GR PLUS Grad Term " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_UAC_SNGDO_20" + year):
+        if query.startswith("UUFA_WR_UAC_SNGDO_20") and (year in query[:-10]) :
             do_query(query, date + " UAC SNGDO Campus 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("FA_WR_UNDOCUMENTED_STUDENTS_" + year):
+        if query.startswith("FA_WR_UNDOCUMENTED_STUDENTS_") and (year in query[:-10]) :
             do_query(query, date + " Undocumented Student Awards " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_VERI_CHKLST_MISSING_" + year):
+        if query.startswith("UUFA_WR_VERI_CHKLST_MISSING_") and (year in query[:-10]) :
             do_query(query, date + " Verification Checklist Missing 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_VERI_INCOME_ADJ_20" + year):
+        if query.startswith("UUFA_WR_VERI_INCOME_ADJ_20") and (year in query[:-10]) :
             do_query(query, date + " Income Adjustments 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_VER_NOT_CONSL_20" + year):
+        if query.startswith("UUFA_WR_VER_NOT_CONSL_20") and (year in query[:-10]) :
             do_query(query, date + " Verification Not Consolidated 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_VETERAN_ACTIVE_DUTY_" + year):
+        if query.startswith("UUFA_WR_VETERAN_ACTIVE_DUTY_") and (year in query[:-10]) :
             do_query(query, date + " Veteran Active Duty 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_VETERAN_NO_QUALIFY_" + year):
+        if query.startswith("UUFA_WR_VETERAN_NO_QUALIFY_") and (year in query[:-10]) :
             do_query(query, date + " Veteran No Qualify 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_WEEKS_OF_INSTR_FIX_" + year):
+        if query.startswith("UUFA_WR_WEEKS_OF_INSTR_FIX_") and (year in query[:-10]) :
             do_query(query, date + " Weeks of Instruction 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_WR_DL_AY_SP_CANCELED_" + year):
+        if query.startswith("UUFA_WR_DL_AY_SP_CANCELED_") and (year in query[:-10]) :
             do_query(query, date + " DL AY SP Cancelled " + year + ".xls", directory,
                      loans_ak_attachment_list)
 
@@ -893,19 +893,19 @@ def do_monday_weeklies():
             do_query(query, date + " Loan Transmit Hold 13.xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_REJECT_CODE_ON_ISIR_" + year):
+        if query.startswith("UUFA_WR_REJECT_CODE_ON_ISIR_") and (year in query[:-10]) :
             do_query(query, date + " Rejected ISIR's " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_RT4_FA_DROP_CLASSES_" + year):
+        if query.startswith("UUFA_WR_RT4_FA_DROP_CLASSES_") and (year in query[:-10]) :
             do_query(query, date + " RT4 Fall Drop Classes 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_RT4_SP_DROP_CLASSES_" + year):
+        if query.startswith("UUFA_WR_RT4_SP_DROP_CLASSES_") and (year in query[:-10]) :
             do_query(query, date + " RT4 Spring Drop Classes 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_WR_RT4_SU_DROP_CLASSES_" + year):
+        if query.startswith("UUFA_WR_RT4_SU_DROP_CLASSES_") and (year in query[:-10]) :
             do_query(query, date + " RT4 Summer Drop Classes 20" + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -914,11 +914,11 @@ def do_monday_weeklies():
             do_query(query, date + " Loan EFT Detail Error.xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_WR_NSL_PROMISSORY_NOTE_" + year):
+        if query.startswith("UUFA_WR_NSL_PROMISSORY_NOTE_") and (year in query[:-10]) :
             do_query(query, date + " NSL Promissory Note " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_WR_SNGDO_CAMPUS_20" + year):
+        if query.startswith("UUFA_WR_SNGDO_CAMPUS") and (year in query[:-10]) :
             do_query(query, date + " Asian-SNGDO Campus " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -967,19 +967,19 @@ def do_monday_weeklies():
                      loans_r_attachment_list)
 
         # Packaging queries that are being manually run.
-        if query.startswith("FA_PRT_ATH_ACCEPT_FED_AID_" + year):
+        if query.startswith("FA_PRT_ATH_ACCEPT_FED_AID_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Accepted Federal Aid " + year + ".xls", packaging_directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_PRT_ATH_AWD_CBA_GRANT_" + year):
+        if query.startswith("FA_PRT_ATH_AWD_CBA_GRANT_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Awarded CBA Grant " + year + ".xls", packaging_directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_PRT_ATHLETE_GRAD_DATE_" + year):
+        if query.startswith("FA_PRT_ATHLETE_GRAD_DATE_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Accepted Grad Date " + year + ".xls", packaging_directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_PRT_ATH_OFFERED_FED_AID_" + year):
+        if query.startswith("FA_PRT_ATH_OFFERED_FED_AID_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Offered Federal Aid " + year + ".xls", packaging_directory,
                      athletics_attachment_list)
 
@@ -1045,91 +1045,91 @@ def do_budget_queries():
     # Change File_Name to be query AC it is received and _new_file_name to what the new query should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_BR_ACAD_LVLS_OUT_SYNC_" + year):
+        if query.startswith("UUFA_BR_ACAD_LVLS_OUT_SYNC_") and (year in query[:-10]) :
             do_query(query, date + " GR Academic Levels Out of Sync " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_ATH_TUIT_INCR_NR_" + year):
+        if query.startswith("UUFA_BR_ATH_TUIT_INCR_NR_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Tuition Increase " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_BR_ATH_TUITION_INCRS_" + year):
+        if query.startswith("UUFA_BR_ATH_TUITION_INCRS_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Tuition Increase Non Resident 20" + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_BR_BDGT_DOUBLE_BUDGETS_" + year):
+        if query.startswith("UUFA_BR_BDGT_DOUBLE_BUDGETS_") and (year in query[:-10]) :
             do_query(query, date + " Double Budget " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_COA_LESS_HT_" + year):
+        if query.startswith("UUFA_BR_COA_LESS_HT_") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Less Than Half Time Enrollment " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_COA_TUIT_ZERO_" + year):
+        if query.startswith("UUFA_BR_COA_TUIT_ZERO_") and (year in query[:-10]) :
             do_query(query, date + " COA Tuition Amount Zero " + year + ".xls", directory,
                      akv_attachment_list)
 
-        if query.startswith("UUFA_BR_DN_LW_MD_AID_ATRB_" + year):
+        if query.startswith("UUFA_BR_DN_LW_MD_AID_ATRB_") and (year in query[:-10]) :
             do_query(query, date + " DN-LW-MD Student Aid Career " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_BR_FT_CLASS_OVERRIDES_" + year):
+        if query.startswith("UUFA_BR_FT_CLASS_OVERRIDES_") and (year in query[:-10]) :
             do_query(query, date + " Class Overrides " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_BR_ISIR_SCHOLARSHIP_" + year):
+        if query.startswith("UUFA_BR_ISIR_SCHOLARSHIP_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship ISIR Received 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_BR_NO_BUDGET_ATTEND_" + year):
+        if query.startswith("UUFA_BR_NO_BUDGET_ATTEND_") and (year in query[:-10]) :
             do_query(query, date + " NO Budget Attend 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_NSLDS_NO_MCH_DB_FLG_" + year):
+        if query.startswith("UUFA_BR_NSLDS_NO_MCH_DB_FLG_") and (year in query[:-10]) :
             do_query(query, date + " NSLDS No Match DB Flag " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_BR_OMBAMBA_" + year):
+        if query.startswith("UUFA_BR_OMBAMBA_") and (year in query[:-10]) :
             do_query(query, date + " Academic Plan OMBAMBA " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_BR_PELL_COA_BLANK_" + year):
+        if query.startswith("UUFA_BR_PELL_COA_BLANK_") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Blank " + year + ".xls", directory,
                      aka_attachment_list)
 
-        if query.startswith("UUFA_BR_PELL_COA_DOUBLE_" + year):
+        if query.startswith("UUFA_BR_PELL_COA_DOUBLE_") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Double " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("FA_BR_PELL_COA_LESS_HT_20" + year):
+        if query.startswith("FA_BR_PELL_COA_LESS_HT_20") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Less HT Enrollment " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_PROC_STAT_RVW_STAT_" + year):
+        if query.startswith("UUFA_BR_PROC_STAT_RVW_STAT_") and (year in query[:-10]) :
             do_query(query, date + " Reset Processing Status to 1 " + year + ".xls", directory,
                      ms_attachment_list)
 
-        if query.startswith("UUFA_BR_RES_NON_RES_BDGT_" + year):
+        if query.startswith("UUFA_BR_RES_NON_RES_BDGT_") and (year in query[:-10]) :
             do_query(query, date + " Resident - Non-Resident Budget " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_BR_SCH_TUITION_FEES_NR_" + year):
+        if query.startswith("UUFA_BR_SCH_TUITION_FEES_NR_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Fees NR " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_BR_SCH_TUITION_ONLY_NR_" + year):
+        if query.startswith("UUFA_BR_SCH_TUITION_ONLY_NR_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Only NR " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_BR_SCHOLAR_TUIT_FEES_" + year):
+        if query.startswith("UUFA_BR_SCHOLAR_TUIT_FEES_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Fees Res " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("UUFA_BR_SCHOLAR_TUIT_ONLY_" + year):
+        if query.startswith("UUFA_BR_SCHOLAR_TUIT_ONLY_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Only Res " + year + ".xls", directory,
                      amber_attachment_list)
 
-        if query.startswith("FA_BR_UFORM_CHANGE_BUD_DUR_" + year):
+        if query.startswith("FA_BR_UFORM_CHANGE_BUD_DUR_") and (year in query[:-10]) :
             do_query(query, date + " Correct Budget Duration " + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -1162,7 +1162,7 @@ def do_budget_queries():
 def do_budget_test_queries():
     global aid_year
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_BUDGET_20"):
+        if query_name.startswith("UUFA_BUDGET_"):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -1396,7 +1396,7 @@ def do_packaging_queries():
             do_query(query, date + " UG Acad Levels Out of Sync.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_ACAD_PROG_REVIEW_" + year):
+        if query.startswith("UUFA_PRT_ACAD_PROG_REVIEW_") and (year in query[:-10]) :
             do_query(query, date + " Academic Progress Review.xls", directory,
                      ak_attachment_list)
 
@@ -1416,7 +1416,7 @@ def do_packaging_queries():
             do_query(query, date + " Athlete Offered Federal Aid.xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_PRT_ATH_OFFR_ACCPT_AID_" + year):
+        if query.startswith("UUFA_PRT_ATH_OFFR_ACCPT_AID_") and (year in query[:-10]) :
             do_query(query, date + " ATH Fed State Inst O-A.xls", directory,
                      athletics_attachment_list)
 
@@ -1440,7 +1440,7 @@ def do_packaging_queries():
             do_query(query, date + " Award Mass Packaging No Awards.xls", directory,
                      ms_attachment_list)
 
-        if query.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_" + year):
+        if query.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_") and (year in query[:-10]) :
             do_query(query, date + " PELL ELIGIBLE NO PELL 20" + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1452,7 +1452,7 @@ def do_packaging_queries():
             do_query(query, date + " LA-wk eligible - Award No Loans.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_PRT_DEFR_ENROLLMENT_" + year):
+        if query.startswith("UUFA_PRT_DEFR_ENROLLMENT_") and (year in query[:-10]) :
             do_query(query, date + " DEFER Enrollment " + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -1460,23 +1460,23 @@ def do_packaging_queries():
             do_query(query, date + " Parent SSN Review.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_PRT_DIAG_AWD_PELL_TERM_" + year):
+        if query.startswith("UUFA_PRT_DIAG_AWD_PELL_TERM_") and (year in query[:-10]) :
             do_query(query, date + " Term Pell Awards 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("FA_PRT_DISB_PLAN_SPLT_CODE_" + year):
+        if query.startswith("FA_PRT_DISB_PLAN_SPLT_CODE_") and (year in query[:-10]) :
             do_query(query, date + " Disb Plan FY Split Code XX.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_DL_DPAY_SCSP_" + year):
+        if query.startswith("UUFA_PRT_DL_DPAY_SCSP_") and (year in query[:-10]) :
             do_query(query, date + " Disb Plan AY-Split Code SP.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_DSB_PLN_SPLT_CD_FD_" + year):
+        if query.startswith("UUFA_PRT_DSB_PLN_SPLT_CD_FD_") and (year in query[:-10]) :
             do_query(query, date + " Federal Disb Plan FY Split Code XX " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_DSB_PLN_SPLT_CD_SC_" + year):
+        if query.startswith("UUFA_PRT_DSB_PLN_SPLT_CD_SC_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Disb Plan FY Split Code XX " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1484,15 +1484,15 @@ def do_packaging_queries():
             do_query(query, date + " Expected Grad Term 1" + str(int(year) - 1) + "8.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_PRT_DL_GRAD_TERM_FALL_" + year):
+        if query.startswith("UUFA_PRT_DL_GRAD_TERM_FALL_") and (year in query[:-10]) :
             do_query(query, date + " DL Expected Grad Term Fall " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_GRAD_TRM_FALL_" + year):
+        if query.startswith("UUFA_PRT_GRAD_TRM_FALL_") and (year in query[:-10]) :
             do_query(query, date + " Loan Proration Grad Term Fall " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_GRAD_TRM_SPRING_" + year):
+        if query.startswith("UUFA_PRT_GRAD_TRM_SPRING_") and (year in query[:-10]) :
             do_query(query, date + " Loan Proration Grad Term Spring " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1500,19 +1500,19 @@ def do_packaging_queries():
             do_query(query, date + " UG 5th YR 2ND Bachelor.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_HEAL_20"):
+        if query.startswith("UUFA_PRT_HEAL_"):
             do_query(query, date + " Heal 20 " + year + ".xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_LEU_C_FSEOG_" + year):
+        if query.startswith("UUFA_PRT_LEU_C_FSEOG_") and (year in query[:-10]) :
             do_query(query, date + " LEU C Flag Awarded FSEOG " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_LEU_C_PELL_AWARD_" + year):
+        if query.startswith("UUFA_PRT_LEU_C_PELL_AWARD_") and (year in query[:-10]) :
             do_query(query, date + " LEU C Flag Awarded Pell " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_LEU_E_FSEOG_" + year):
+        if query.startswith("UUFA_PRT_LEU_E_FSEOG_") and (year in query[:-10]) :
             do_query(query, date + " LEU E Flag Awarded FSEOG " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1524,11 +1524,11 @@ def do_packaging_queries():
             do_query(query, date + " Packaging No Fall 1" + str(int(year) - 1) + "8 (2).xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_PRT_NSL_LOAN_RPT_VERI_" + year):
+        if query.startswith("UUFA_PRT_NSL_LOAN_RPT_VERI_") and (year in query[:-10]) :
             do_query(query, date + " NSL Loan Need Verification.xls", directory,
                      loans_krv_attachment_list)
 
-        if query.startswith("UUFA_PRT_NURSING_LOAN_RPT_" + year):
+        if query.startswith("UUFA_PRT_NURSING_LOAN_RPT_") and (year in query[:-10]) :
             do_query(query, date + " NSL Needs NSL P-N Checklist " + year + ".xls", directory,
                      prof_attachment_list)
 
@@ -1536,11 +1536,11 @@ def do_packaging_queries():
             do_query(query, date + " Manual Packaging Counselors.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_PELL_COMMENT_037_" + year):
+        if query.startswith("UUFA_PRT_PELL_COMMENT_037_") and (year in query[:-10]) :
             do_query(query, date + " Pell Comment Code 037 20" + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_PELL_ELG_NO_PELL_" + year):
+        if query.startswith("UUFA_PRT_PELL_ELG_NO_PELL_") and (year in query[:-10]) :
             do_query(query, date + " PELL ELIGIBLE NO PELL " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1564,7 +1564,7 @@ def do_packaging_queries():
             do_query(query, date + " Award NO Budget for Term.xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_PKG_SCH_AWD_NO_BGT_" + year):
+        if query.startswith("UUFA_PRT_PKG_SCH_AWD_NO_BGT_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Award NO Budget for Term.xls", directory,
                      ac_attachment_list)
 
@@ -1584,7 +1584,7 @@ def do_packaging_queries():
             do_query(query, date + " Loan Offrd Disb Plan SP Split Code SP.xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_PRT_SET_HEAL_FLAG_" + year):
+        if query.startswith("UUFA_PRT_SET_HEAL_FLAG_") and (year in query[:-10]) :
             do_query(query, date + " MD - Pharmacy Heal Eligible Flag.xls", directory,
                      loans_kr_attachment_list)
 
@@ -1596,11 +1596,11 @@ def do_packaging_queries():
             do_query(query, date + " Students Not Packaged (old).xls", directory,
                      ms_attachment_list)
 
-        if query.startswith("UUFA_PRT_STDNT_NOT_PACKAGED_" + year):
+        if query.startswith("UUFA_PRT_STDNT_NOT_PACKAGED_") and (year in query[:-10]) :
             do_query(query, date + " Students Not Packaged " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_TEACH_CREDENTIAL_" + year):
+        if query.startswith("UUFA_PRT_TEACH_CREDENTIAL_") and (year in query[:-10]) :
             do_query(query, date + " Teach Credential 20" + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1665,175 +1665,175 @@ def do_monthlies():
     # Change File_Name to be file ac it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_MR_COMMENT_CODE_298_" + year):
+        if query.startswith("UUFA_MR_COMMENT_CODE_298_") and (year in query[:-10]) :
             do_query(query, date + " IASG - Pell Eligible 20 " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_THIRD_PARTY_CROSSWALK_" + year) | query.startswith("UUFA_MR_3RD_PARTY_CROSSWALK_" + year):
+        if query.startswith("UUFA_MR_3RD_PARTY_CROSSWALK_") and (year in query[:-10]) :
             do_query(query, date + " Third Party Crosswalk " + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("FA_MR_THRD_PRTY_MNTR_IA_ALL_" + year) | query.startswith("UUFA_MR_3RD_PRT_MNTR_IA_ALL_" + year):
+        if query.startswith("UUFA_MR_3RD_PRT_MNTR_IA_ALL_") and (year in query[:-10]) :
             do_query(query, date + " Third Party Monitor " + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("FA_MR_ACAD_LVLS_OUT_OF_SYNC_" + year) | query.startswith("UUFA_MR_ACAD_LVLS_NOT_SYNC_" + year):
+        if query.startswith("UUFA_MR_ACAD_LVLS_NOT_SYNC_") and (year in query[:-10]) :
             do_query(query, date + " Academic Levels out of SYNC " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_MR_ADM_DEFERRAL_" + year):
+        if query.startswith("UUFA_MR_ADM_DEFERRAL_") and (year in query[:-10]) :
             do_query(query, date + " FA Admission Deferral " + year + ".xls", directory,
                      aj_attachment_list)
 
-        if query.startswith("UUFA_MR_ALT_LN_TRNSMIT_HOLD_" + year):
+        if query.startswith("UUFA_MR_ALT_LN_TRNSMIT_HOLD_") and (year in query[:-10]) :
             do_query(query, date + " Alt Loan Transmit Hold " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("FA_MR_ATHLETE_RESIDENCY_" + year) | query.startswith("UUFA_MR_ATHLETE_RESIDENCY_" + year):
+        if query.startswith("UUFA_MR_ATHLETE_RESIDENCY_") and (year in query[:-10]) :
             do_query(query, date + " Residency for Athlete Student " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_MR_ATHLETE_T53_AWARDS_" + year) | query.startswith("UUFA_MR_ATHLETE_T53_AWARDS_" + year):
+        if query.startswith("UUFA_MR_ATHLETE_T53_AWARDS_") and (year in query[:-10]) :
             do_query(query, date + " Athlete T53 Awards Accepted " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_MR_COD_DL_20" + year) | query.startswith("UUFA_MR_COD_DL_20" + year):
+        if query.startswith("UUFA_MR_COD_DL") and (year in query[:-10]) :
             do_query(query, date + " COD DL FATB" + year + " FCRD" + year + " FHMS" + year + ".xls", directory,
                      aka_attachment_list)
 
-        if query.startswith("FA_MR_COD_PELL_TEACH_IASG_20" + year) | query.startswith("UUFA_MR_COD_PELL_TEACH_IASG_" + year):
+        if query.startswith("UUFA_MR_COD_PELL_TEACH_IASG_") and (year in query[:-10]) :
             do_query(query, date + " COD Grant FCRD" + year + "-FHMS" + year + " Report.xls", directory,
                      aka_attachment_list)
 
-        if query.startswith("UUFA_MR_DIR_LN_TRNSMIT_HOLD_" + year):
+        if query.startswith("UUFA_MR_DIR_LN_TRNSMIT_HOLD_") and (year in query[:-10]) :
             do_query(query, date + " COD Direct Loan Transmit Hold " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("FA_MR_DISB_ATH_AWD_NOPOST_" + year) | query.startswith("UUFA_MR_DISB_ATH_AWD_NOPOST_" + year):
+        if query.startswith("UUFA_MR_DISB_ATH_AWD_NOPOST_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Waiver Disbursed Not Posted " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_MR_DL_ORIG_AWARD_" + year):
+        if query.startswith("UUFA_MR_DL_ORIG_AWARD_") and (year in query[:-10]) :
             do_query(query, date + " DL ORIG Award " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_MR_DISB_CASH_AWD_NOPOST_" + year) | query.startswith("UUFA_MR_DSB_CASH_AWD_NOPOST_" + year):
+        if query.startswith("UUFA_MR_DSB_CASH_AWD_NOPOST_") and (year in query[:-10]) :
             do_query(query, date + " Cash Disbursed Not Posted " + year + ".xls", directory,
                      aca_attachment_list)
 
-        if query.startswith("FA_MR_DISB_WAVR_AWD_NOPOST_" + year) | query.startswith("UUFA_MR_DSB_WAVR_AWD_NOPOST_" + year):
+        if query.startswith("UUFA_MR_DSB_WAVR_AWD_NOPOST_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholarship Disbursed Not Posted " + year + ".xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("UUFA_MR_DN_INC_CHECKLISTS_" + year):
+        if query.startswith("UUFA_MR_DN_INC_CHECKLISTS_") and (year in query[:-10]) :
             do_query(query, date + " Dental Students with I Checklists " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_MR_FWS_WITH_NSI_HOLD_" + year):
+        if query.startswith("UUFA_MR_FWS_WITH_NSI_HOLD_") and (year in query[:-10]) :
             do_query(query, date + " FWS with NSI Holds.xls", directory,
                      a_attachment_list)
 
-        if query.startswith("UUFA_MR_GRAD_TERM_PRB_" + year):
+        if query.startswith("UUFA_MR_GRAD_TERM_PRB_") and (year in query[:-10]) :
             do_query(query, date + " Grad Term Wrong " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_ITEM_CHARTFIELD_SETUP_" + year) | query.startswith("UUFA_MR_ITEM_CHARTFLD_SETUP_" + year):
+        if query.startswith("UUFA_MR_ITEM_CHARTFLD_SETUP_") and (year in query[:-10]) :
             do_query(query, date + " Item Chartfield Setup.xls", acct_directory,
                      ac_attachment_list)
 
-        if query.startswith("FA_MR_ITEM_TYPE_DISB_RULE_" + year) | query.startswith("UUFA_MR_ITEM_TYPE_DISB_RULE_" + year):
+        if query.startswith("UUFA_MR_ITEM_TYPE_DISB_RULE_") and (year in query[:-10]) :
             do_query(query, date + " Item Type Career - Match Disb Rule Career " + year + ".xls", directory,
                      acvjm_attachment_list)
 
-        if query.startswith("FA_MR_LAW_INC_CHECKLISTS_" + year) | query.startswith("UUFA_MR_LAW_INC_CHECKLISTS_" + year):
+        if query.startswith("UUFA_MR_LAW_INC_CHECKLISTS_") and (year in query[:-10]) :
             do_query(query, date + " Law Students with I Checklists " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("FA_MR_LOAN_AWD_PARTIAL_DISB_" + year) | query.startswith("UUFA_MR_LOAN_AWD_PARTL_DISB_" + year):
+        if query.startswith("UUFA_MR_LOAN_AWD_PARTL_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Loan Awards Partial Disbursed " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("FA_MR_MED_INC_CHECKLISTS_" + year) | query.startswith("UUFA_MR_MED_INC_CHECKLISTS_" + year):
+        if query.startswith("UUFA_MR_MED_INC_CHECKLISTS_") and (year in query[:-10]) :
             do_query(query, date + " Med Students with I Checklists " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("FA_MR_MED_LAW_LEVEL_REVIEW_" + year) | query.startswith("UUFA_MR_MED_LAW_LVL_REVIEW_" + year) | query.startswith("UUFA_MR_DN_LW_MD_LVL_RVW_" + year):
+        if query.startswith("UUFA_MR_MED_LAW_LVL_REVIEW_" + year) | query.startswith("UUFA_MR_DN_LW_MD_LVL_RVW_") and (year in query[:-10]) :
             do_query(query, date + " MED-LAW Academic Level Review " + year + ".xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("FA_MR_PARTIAL_TW_OTHER_SCH_" + year) | query.startswith("UUFA_MR_PART_TW_OTHER_SCH_" + year):
+        if query.startswith("UUFA_MR_PART_TW_OTHER_SCH_") and (year in query[:-10]) :
             do_query(query, date + " Partial TW Other Scholarship " + year + ".xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("FA_MR_PELL_AWARD_ADJUSTMENT_" + year) | query.startswith("UUFA_MR_PELL_AWD_ADJUSTMENT_" + year):
+        if query.startswith("UUFA_MR_PELL_AWD_ADJUSTMENT_") and (year in query[:-10]) :
             do_query(query, date + " Pell Award Adjust " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_PELL_ONLY_" + year) | query.startswith("UUFA_MR_PELL_ONLY_" + year):
+        if query.startswith("UUFA_MR_PELL_ONLY_") and (year in query[:-10]) :
             do_query(query, date + " Pell Awd  Zero Grants Loans " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_PELL_SSN_MISMATCH_" + year) | query.startswith("UUFA_MR_PELL_SSN_MISMATCH_" + year):
+        if query.startswith("UUFA_MR_PELL_SSN_MISMATCH_") and (year in query[:-10]) :
             do_query(query, date + " SSN Mismatch " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_PERKINS_CLASS_LIMITS_" + year) | query.startswith("UUFA_MR_PERKINS_CLASS_LIMIT_" + year):
+        if query.startswith("UUFA_MR_PERKINS_CLASS_LIMIT_") and (year in query[:-10]) :
             do_query(query, date + " Perkins Class Limits " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_MR_PERK_MISC_LN_CNCLD_" + year):
+        if query.startswith("UUFA_MR_PERK_MISC_LN_CNCLD_") and (year in query[:-10]) :
             do_query(query, date + " Perkins - Misc Loans Cancelled " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_MR_PERK_MISC_LOAN_DISB_" + year):
+        if query.startswith("UUFA_MR_PERK_MISC_LOAN_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Perkins - Misc Loans Disbursed " + year + ".xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_MR_SCHOLAR_LOA_" + year) | query.startswith("UUFA_MR_SCH_LOA_" + year):
+        if query.startswith("UUFA_MR_SCHOLAR_LOA_" + year) | query.startswith("UUFA_MR_SCH_LOA_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship LOA " + year + ".xls", directory,
                      acj_attachment_list)
 
-        if query.startswith("FA_MR_SF_DIS_AWD_PT_ERR_FC_" + year) | query.startswith("UUFA_MR_SF_DIS_AWD_PT_ER_FC_" + year):
+        if query.startswith("UUFA_MR_SF_DIS_AWD_PT_ER_FC_") and (year in query[:-10]) :
             do_query(query, date + " Federal Award Disb Post Error " + year + ".xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("FA_MR_SF_DIS_AWD_PT_ERR_SV_" + year) | query.startswith("UUFA_MR_SF_DIS_AWD_PT_ER_SV_" + year):
+        if query.startswith("UUFA_MR_SF_DIS_AWD_PT_ER_SV_") and (year in query[:-10]) :
             do_query(query, date + " SCHOL-ATH Award Disb Post Error " + year + ".xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("FA_MR_STATE_FM_MH_PW_" + year) | query.startswith("UUFA_MR_STATE_FM_MH_PW_" + year):
+        if query.startswith("UUFA_MR_STATE_FM_MH_PW_") and (year in query[:-10]) :
             do_query(query, date + " Palau - Micronesia - Marshall Islands Students " + year + ".xls", directory,
                      rkam_attachment_list)
 
-        if query.startswith("FA_MR_SUSPEND_RC2_" + year) | query.startswith("UUFA_MR_SUSPEND_RC2_" + year):
+        if query.startswith("UUFA_MR_SUSPEND_RC2_") and (year in query[:-10]) :
             do_query(query, date + " ISIR Suspended Reason Code 2 " + year + ".xls", directory,
                      rkmv_attachment_list)
 
-        if query.startswith("FA_MR_UFORM_GRAD_TERM_PRB_" + year) | query.startswith("FA_MR_UFORM_GRAD_TERM_PRB_" + year):
+        if query.startswith("FA_MR_UFORM_GRAD_TERM_PRB_") and (year in query[:-10]) :
             do_query(query, date + " Grad Term Wrong " + year + ".xls", directory,
                      rac_attachment_list)
 
-        if query.startswith("FA_MR_UNDS_OFFER_SCHOLAR_" + year) | query.startswith("UUFA_MR_UNDS_OFFER_SCHOLAR_" + year):
+        if query.startswith("UUFA_MR_UNDS_OFFER_SCHOLAR_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Awards UNDS Career " + year + ".xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("FA_MR_UNDS_OFRD_AMT_ATHLETE_" + year) | query.startswith("UUFA_MR_UNDS_OFRD_AMT_FDRL_" + year):
+        if query.startswith("UUFA_MR_UNDS_OFRD_AMT_FDRL_") and (year in query[:-10]) :
             do_query(query, date + " Athlete Awards UNDS Career " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("FA_MR_UNDS_OFRD_AMT_FEDERAL_" + year) | query.startswith("UUFA_MR_UNDS_OFRD_AMT_ATH_" + year):
+        if query.startswith("UUFA_MR_UNDS_OFRD_AMT_ATH_") and (year in query[:-10]) :
             do_query(query, date + " Federal Awards UNDS Career " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("FA_MR_VERIFY_DEPND_OVERRIDE_" + year) | query.startswith("UUFA_MR_VERIFY_DEP_OVERRIDE_" + year):
+        if query.startswith("UUFA_MR_VERIFY_DEP_OVERRIDE_") and (year in query[:-10]) :
             do_query(query, date + " Verification Dependency Override " + year + ".xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_SEFA_DL_TOTAL_AWARDS_" + year):
+        if query.startswith("UUFA_SEFA_DL_TOTAL_AWARDS_") and (year in query[:-10]) :
             do_query(query, date + " SEFA DL Amounts 20" + year + ".xls", directory,
                      mary_s_attachment_list)
 
-        if query.startswith("UUFA_SEFA_TOTAL_STUDENTS_" + year):
+        if query.startswith("UUFA_SEFA_TOTAL_STUDENTS_") and (year in query[:-10]) :
             do_query(query, date + " SEFA DL Total Students 20" + year + ".xls", directory,
                      mary_s_attachment_list)
 
@@ -1965,11 +1965,11 @@ def do_end_of_term_queries():
             do_query(query, date + " Medical SAT Review.xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_MR_FWS_WITH_NSI_HOLD_" + year):
+        if query.startswith("UUFA_MR_FWS_WITH_NSI_HOLD_") and (year in query[:-10]) :
             do_query(query, date + " FWS with NSI Holds.xls", directory,
                      a_attachment_list)
 
-        if query.startswith("UUFA_PELL_ACAD_PROG_LES_THN_" + year):
+        if query.startswith("UUFA_PELL_ACAD_PROG_LES_THN_") and (year in query[:-10]) :
             do_query(query, date + " Pell Less Than " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -2099,6 +2099,7 @@ def do_end_of_term_queries():
 
 def do_disb_queries():
     global aid_year
+    year = "17"
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB"):
             year = str(int(re.search(r'\d+', query_name).group()))
@@ -2115,51 +2116,51 @@ def do_disb_queries():
         os.makedirs(directory)
 
     for query in os.listdir("."):
-        if query.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB_" + year):
+        if query.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, disb_date + " Item Types Authorized Not Disbursed " + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("FA_DQ_ATHLETE_RM_BD_" + year):
+        if query.startswith("FA_DQ_ATHLETE_RM_BD_") and (year in query[:-10]) :
             do_query(query, disb_date + " Athlete Room and Board " + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("FA_DQ_ATH_OFF_SCHED_RM_BD_" + year):
+        if query.startswith("FA_DQ_ATH_OFF_SCHED_RM_BD_") and (year in query[:-10]) :
             do_query(query, disb_date + " Athlete Off Schedule R&B " + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_CASH_DISB_TOTALS_20" + year):
+        if query.startswith("UUFA_CASH_DISB_TOTALS_20") and (year in query[:-10]) :
             do_query(query, disb_date + " Cash Disbursement Totals " + year + ".xls", directory,
                      sys_attachment_list)
 
-        if query.startswith("UUFA_DQ_FALL_" + year):
+        if query.startswith("UUFA_DQ_FALL_" + year) :
             do_query(query, disb_date + " DL Fall Awards 20" + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_DQ_FALL_SPRING_" + year):
+        if query.startswith("UUFA_DQ_FALL_SPRING_") and (year in query[:-10]) :
             do_query(query, disb_date + " DL Fall Spring Awards 20" + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_DQ_SPRING_" + year):
+        if query.startswith("UUFA_DQ_SPRING_") and (year in query[:-10]) :
             do_query(query, disb_date + " DL Spring Awards 20" + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_DQ_UG_PLUS_REFUND_IA_" + year):
+        if query.startswith("UUFA_DQ_UG_PLUS_REFUND_IA_") and (year in query[:-10]) :
             do_query(query, disb_date + " DL UG PLUS Refund Borrower " + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_MISC_DISB_TOTALS_20" + year):
+        if query.startswith("UUFA_MISC_DISB_TOTALS_20") and (year in query[:-10]) :
             do_query(query, disb_date + " Misc Disbursement Totals " + year + ".xls", directory,
                      sys_attachment_list)
 
-        if query.startswith("UUFA_DQ_MISC_RESOURCE_DISB_" + year):
+        if query.startswith("UUFA_DQ_MISC_RESOURCE_DISB_") and (year in query[:-10]) :
             do_query(query, disb_date + " Misc Resources Disbursement " + year + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_NONCASH_DISB_TOTALS_20" + year):
+        if query.startswith("UUFA_NONCASH_DISB_TOTALS_20") and (year in query[:-10]) :
             do_query(query, disb_date + " Non-cash Disbursement Totals " + year + ".xls", directory,
                      sys_attachment_list)
 
-        if query.startswith("UUFA_DQ_PELL_ACPT_GR8_DISB_" + year):
+        if query.startswith("UUFA_DQ_PELL_ACPT_GR8_DISB_") and (year in query[:-10]) :
             do_query(query, disb_date + " Pell Accepted Awards Greater Disb " + year + ".xls", directory,
                      disb_attachment_list)
 
@@ -2171,7 +2172,7 @@ def do_disb_queries():
             do_query(query, disb_date + " Teach Grant Recipients 20" + str(int(year) - 1) + ".xls", directory,
                      disb_attachment_list)
 
-        if query.startswith("UUFA_DQ_TEACH_GRANT_" + year):
+        if query.startswith("UUFA_DQ_TEACH_GRANT_") and (year in query[:-10]) :
             do_query(query, disb_date + " Teach Grant Recipients 20" + year + ".xls", directory,
                      disb_attachment_list)
 
@@ -2239,7 +2240,7 @@ def do_2nd_ldr():
             do_query(query, date + " Waiver Awd Disb not Posted.xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("UUFA_PRT_PELL_ELG_NO_PELL_" + year):
+        if query.startswith("UUFA_PRT_PELL_ELG_NO_PELL_") and (year in query[:-10]) :
             do_query(query, date + " Pell Eligible No Pell 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -2336,7 +2337,7 @@ def do_day_after_ldr():
             do_query(query, date + " Waiver Awd Disb Not Posted.xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_" + year):
+        if query.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_") and (year in query[:-10]) :
             do_query(query, date + " Pell Eligible No Pell 20" + year + ".xls", directory,
                      rkm_attachment_list)
 
@@ -2384,11 +2385,11 @@ def dl_pre_outbound():
     # Change File_Name to be file as it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_DLR_ORIG_TRNS_PEND_" + year):
+        if query.startswith("UUFA_DLR_ORIG_TRNS_PEND_") and (year in query[:-10]) :
             do_query(query, date + " DL Orig-Trans Pending " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_ENTRANCE_COUNSEL_" + year):
+        if query.startswith("UUFA_DLR_ENTRANCE_COUNSEL_") and (year in query[:-10]) :
             do_query(query, date + " DL Entrance Counseling I  " + year + ".xls", directory,
                      dl_attachment_list)
 
@@ -2396,11 +2397,11 @@ def dl_pre_outbound():
             do_query(query, date + " Loan EFT Date Lender Error.xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LOAN_NO_NSLDS_" + year):
+        if query.startswith("UUFA_DLR_LOAN_NO_NSLDS_") and (year in query[:-10]) :
             do_query(query, date + " Loan No NSLDS " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LOAN_ORIG_ACAD_LVL_" + year):
+        if query.startswith("UUFA_DLR_LOAN_ORIG_ACAD_LVL_") and (year in query[:-10]) :
             do_query(query, date + " Loans Academic Level " + year + ".xls", directory,
                      dl_attachment_list)
 
@@ -2408,7 +2409,7 @@ def dl_pre_outbound():
             do_query(query, date + " Loan Originate Edit Errors.xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LOAN_ORIG_SPLT_CDS_" + year):
+        if query.startswith("UUFA_DLR_LOAN_ORIG_SPLT_CDS_") and (year in query[:-10]) :
             do_query(query, date + " Loan Split Codes " + year + ".xls", directory,
                      dl_attachment_list)
 
@@ -2416,23 +2417,23 @@ def dl_pre_outbound():
             do_query(query, date + " Loan ORIG VLOAN Reasons.xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LOAN_SPC_NEED_OVWD_" + year):
+        if query.startswith("UUFA_DLR_LOAN_SPC_NEED_OVWD_") and (year in query[:-10]) :
             do_query(query, date + " Loan Overaward Special Need " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LN_ACPT_STAF_31_32_" + year):
+        if query.startswith("UUFA_DLR_LN_ACPT_STAF_31_32_") and (year in query[:-10]) :
             do_query(query, date + " Stafford Accept Offer " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_NOT_DISB_20" + year):
+        if query.startswith("UUFA_DLR_NOT_DISB_20") and (year in query[:-10]) :
             do_query(query, date + " DL Disb Errors " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_NOT_DISBURSED_" + year):
+        if query.startswith("UUFA_DLR_NOT_DISBURSED_") and (year in query[:-10]) :
             do_query(query, date + " DL Disbursement Errors " + year + "(Old).xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_NOT_DISBURSED_20" + year):
+        if query.startswith("UUFA_DLR_NOT_DISBURSED_20") and (year in query[:-10]) :
             do_query(query, date + " DL Disbursement Errors " + year + ".xls", directory,
                      dl_attachment_list)
 
@@ -2515,7 +2516,7 @@ def al_pre_outbound():
             do_query(query, date + " Loan EFT Date Lender Errors.xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORIG_ACAD_LVL_" + year):
+        if query.startswith("UUFA_ALR_LOAN_ORIG_ACAD_LVL_") and (year in query[:-10]) :
             do_query(query, date + " Loans Academic Level 20" + year + ".xls", directory,
                      alt_attachment_list)
 
@@ -2523,15 +2524,15 @@ def al_pre_outbound():
             do_query(query, date + " Loan Originate Edit Errors.xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORIG_FA_LOAD_" + year):
+        if query.startswith("UUFA_ALR_LOAN_ORIG_FA_LOAD_") and (year in query[:-10]) :
             do_query(query, date + " Loan ORIG FA Load 20" + year + ".xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_" + year):
+        if query.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_") and (year in query[:-10]) :
             do_query(query, date + " Loan ORIG Lender Note 20" + year + ".xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORIG_SPLT_CDS_" + year):
+        if query.startswith("UUFA_ALR_LOAN_ORIG_SPLT_CDS_") and (year in query[:-10]) :
             do_query(query, date + " Loan ORIG Split Codes 20" + year + ".xls", directory,
                      alt_attachment_list)
 
@@ -2539,7 +2540,7 @@ def al_pre_outbound():
             do_query(query, date + " Loan ORIG VLOAN Reasons.xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_SPC_NEED_OVWD_" + year):
+        if query.startswith("UUFA_ALR_LOAN_SPC_NEED_OVWD_") and (year in query[:-10]) :
             do_query(query, date + " Loan Overaward Special Need " + year + ".xls", directory,
                      alt_attachment_list)
 
@@ -2840,15 +2841,15 @@ def do_daily_scholarships():
     # Change File_Name to be file as it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_SCHOLAR_DISB_ZERO_" + year):
+        if query.startswith("UUFA_SCHOLAR_DISB_ZERO_") and (year in query[:-10]) :
             do_query(query, date + " Scholarships awarded not disbursed " + year + ".xls", directory,
                      ss_attachment_list)
 
-        if query.startswith("UUFA_SCHOLAR_TWO_CAREERS_" + year):
+        if query.startswith("UUFA_SCHOLAR_TWO_CAREERS_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Award with Two Careers " + year + ".xls", directory,
                      jen_attachment_list)
 
-        if query.startswith("UUFA_SCHOLAR_AUTH_NOT_DISB_" + year):
+        if query.startswith("UUFA_SCHOLAR_AUTH_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Scholar Authorized Not Disbursed " + year + ".xls", directory,
                      jen_attachment_list)
 
@@ -2863,7 +2864,7 @@ def do_daily_scholarships():
 def do_weekly_scholarships():
     global aid_year
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_BOOKS_NOPOST_"):
+        if ("BOOKS_NOPOST" in query_name):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -2884,67 +2885,67 @@ def do_weekly_scholarships():
     # Change File_Name to be file as it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_DEPT_POST_WRNG_ITEM_" + year):
+        if ("DEPT_POST_WRNG_ITEM" in query) and (year in query[:-10]) :
             do_query(query, date + " Depts posting to the wrong item type  " + year + ".xls", directory,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_MISC_TOTAL_" + year):
+        if ("MISC_TOTAL" in query) and (year in query[:-10]) :
             do_query(query, date + " IT Dept Misc Awards Total (10001) " + year + ".xls", directory_save,
                      null_attachment_list)
 
-        if query.startswith("UUFA_MISC_NOPOST_" + year):
+        if ("MISC_NOPOST" in query) and (year in query[:-10]) :
             do_query(query, date + " 7880013 Dept Misc Awards No Post " + year + ".xls", directory_save,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_BOOKS_TOTAL_" + year):
+        if ("BOOKS_TOTAL" in query) and (year in query[:-10]) :
             do_query(query, date + " 788 IT Dept Books Awards Total (10002) " + year + ".xls", directory_save,
                      null_attachment_list)
 
-        if query.startswith("UUFA_BOOKS_NOPOST_" + year):
+        if ("BOOKS_NOPOST" in query) and (year in query[:-10]) :
             do_query(query, date + " 7880015 Dept Books No Post " + year + ".xls", directory_save,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_ROOMBOARD_TOTAL_" + year):
+        if ("ROOMBOARD_TOTAL" in query) and (year in query[:-10]) :
             do_query(query, date + " 788 IT Dept Room & Board Awards Total (10003) " + year + ".xls", directory_save,
                      null_attachment_list)
 
-        if query.startswith("UUFA_ROOMBOARD_NOPOST_" + year):
+        if ("ROOMBOARD_NOPOST" in query) and (year in query[:-10]) :
             do_query(query, date + " 7880029 Dept Room & Board No Post " + year + ".xls", directory_save,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_TRAVEL_TOTAL_" + year):
+        if ("TRAVEL_TOTAL" in query) and (year in query[:-10]) :
             do_query(query, date + " 788 IT Dept Travel Awards Total (10004) " + year + ".xls", directory_save,
                      null_attachment_list)
 
-        if query.startswith("UUFA_TRAVEL_NOPOST_" + year):
+        if ("TRAVEL_NOPOST" in query) and (year in query[:-10]) :
             do_query(query, date + " 7880033 Dept Travel No Post " + year + ".xls", directory_save,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_TRAINEESHIP_TOTAL_" + year):
+        if (("TRAINEESHIP" in query) and ("TOTAL" in query)) and (year in query[:-10]) :
             do_query(query, date + " 788 IT Dept Traineeship Awards Total (10005) " + year + ".xls", directory_save,
                      null_attachment_list)
 
-        if query.startswith("UUFA_TRAINEESHIP_NOPOST_" + year):
+        if ("TRAINEESHIP_NOPOST" in query) and (year in query[:-10]) :
             do_query(query, date + " 7880034 Dept Traineeship No Post " + year + ".xls", directory_save,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_SCH_ALL_NEED_20" + year):
+        if ("SCH_ALL_NEED" in query) and (year in query[:-10]) :
             do_query(query, date + " All Scholarships Need Based " + year + ".xls", directory,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_SCH_ALL_NRFRESH_20" + year):
+        if ("SCH_ALL_NRFRESH" in query) and (year in query[:-10]) :
             do_query(query, date + " All Scholarships Non Res Freshman " + year + ".xls", directory,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_SCH_ALL_NRTRAN_20" + year):
+        if ("SCH_ALL_NRTRAN" in query) and (year in query[:-10]) :
             do_query(query, date + " All Scholarships Non Res Transfer " + year + ".xls", directory,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_SCH_ALL_RESFRESH_20" + year):
+        if ("SCH_ALL_RESFRESH" in query) and (year in query[:-10]) :
             do_query(query, date + " All Scholarships Res Freshman " + year + ".xls", directory,
                      ssj_attachment_list)
 
-        if query.startswith("UUFA_SCH_ALL_RESTRAN_20" + year):
+        if ("SCH_ALL_RESTRAN" in query) and (year in query[:-10]) :
             do_query(query, date + " All Scholarships Res Transfer " + year + ".xls", directory,
                      ssj_attachment_list)
 
@@ -3001,7 +3002,7 @@ for filename in os.listdir("."):
     if filename.startswith("UUFA_SCHOLAR_DISB_ZERO"):
         do_daily_scholarships()
     # Weekly Scholarships Queries
-    if filename.startswith("UUFA_BOOKS_NOPOST_"):
+    if ("BOOKS_NOPOST" in filename):
         do_weekly_scholarships()
     # Budget Testing Queries
     if filename.startswith("UUFA_BUDGET_20"):
