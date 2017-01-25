@@ -91,12 +91,12 @@ leila =     "lames@sa.utah.edu"
 leo =       "lgaray@sa.utah.edu"
 linh =      "lly@sa.utah.edu"
 lisa =      "lisa.zaelit@admin.utah.edu"
-marc =      "mgangwer@sa.utah.edu"
+marc =      "mgangwer@sa.utah.edu; TDespain@sa.utah.edu"
 mary =      "msnow@sa.utah.edu"
 mat =       "mmason@sa.utah.edu"
 raenetta =  "rking@sa.utah.edu"
 ryan =      "rchristensen@sa.utah.edu"
-scott =     "swilgar@sa.utah.edu"
+scott =     ""
 shana =     "syem@sa.utah.edu"
 shanon =    "SYBrown@sa.utah.edu"
 sheryl =    "shansen@sa.utah.edu"
@@ -107,7 +107,7 @@ anne =       john + ";" + emily + ";" + mary
 athletics = chelsea + ";" + kayla
 loans =     krista + ";" + jessica
 prof =     shana
-systems =   mat + ";" + scott + ";" + leo + ";" + jen + ";" + veronica
+systems =   mat + ";" + leo + ";" + jen + ";" + veronica
 
 a_mail =        send_to(anne)
 ac_mail =       send_to(amber, carol)
@@ -131,6 +131,7 @@ athletics_mail =send_to(athletics, karen)
 disb_mail =     send_to(loans, ryan, karen, marc, steffany, chelsea, amber, carol, kayla, lisa, systems)
 dl_mail =       send_to(loans, ryan, karen, systems)
 jen_mail =      send_to(jen)
+krms_mail =     send_to(krista, ryan, mary, shanon)
 leo_mail =      send_to(leo)
 loans_ak_mail = send_to(loans, ryan, karen)
 loans_kr_mail = send_to(loans, ryan, karen)
@@ -184,6 +185,7 @@ athletics_attachment_list = []
 disb_attachment_list = []
 dl_attachment_list = []
 jen_attachment_list = []
+krms_attachment_list = []
 leo_attachment_list = []
 loans_r_attachment_list = []
 loans_ak_attachment_list = []
@@ -232,7 +234,7 @@ def do_dailies():
 
         if query.startswith("UUFA_IL_CMT_CDE_OVR_AGR_LMT_") and (year in query[:-10]) :
             do_query(query, date + " Comment Code Over Aggregate 20" + year + ".xls", directory,
-                     rkm_attachment_list)
+                     loans_kr_attachment_list)
 
         if query.startswith("UUFA_IL_COMMENT_CODE_298_") and (year in query[:-10]) :
             do_query(query, date + " IASG - Pell Eligible 20" + year + ".xls", directory,
@@ -1713,6 +1715,10 @@ def do_monthlies():
             do_query(query, date + " Athlete Waiver Disbursed Not Posted " + year + ".xls", directory,
                      athletics_attachment_list)
 
+        if query.startswith("UUFA_MR_DISB_FAILED") and (year in query[:-10]) :
+            do_query(query, date + " DL Disbursement Failed " + year + ".xls", directory,
+                     krms_attachment_list)
+
         if query.startswith("UUFA_MR_DL_ORIG_AWARD_") and (year in query[:-10]) :
             do_query(query, date + " DL ORIG Award " + year + ".xls", directory,
                      athletics_attachment_list)
@@ -1793,6 +1799,10 @@ def do_monthlies():
             do_query(query, date + " Scholarship LOA " + year + ".xls", directory,
                      acj_attachment_list)
 
+        if ("SCHOLAR_REINSTATE" in query ) and (year in query[:-10]) :
+            do_query(query, date + " Scholarship Reinstate " + year + ".xls", directory,
+                     acj_attachment_list)
+
         if query.startswith("UUFA_MR_SF_DIS_AWD_PT_ER_FC_") and (year in query[:-10]) :
             do_query(query, date + " Federal Award Disb Post Error " + year + ".xls", directory,
                      loans_ak_attachment_list)
@@ -1861,6 +1871,9 @@ def do_monthlies():
     if aj_attachment_list:
         mailer("", aid_year + " Monthly Queries", aj_mail, "", aj_attachment_list)
         del aj_attachment_list[:]
+    if krms_attachment_list:
+        mailer("", aid_year + " Monthly Queries", krms_mail, "", krms_attachment_list)
+        del krms_attachment_list[:]
     if rkam_attachment_list:
         mailer("", aid_year + " Monthly Queries", rkam_mail, "", rkam_attachment_list)
         del rkam_attachment_list[:]
@@ -2186,11 +2199,12 @@ def do_disb_queries():
 
 def do_2nd_ldr():
     global aid_year
+    year = 17
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_PRT_PELL_ELG_NO_PELL_"):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
-    aid_year = "20" + str(int(year) - 1) + "-20" + year
+    aid_year = "20" + str(int(year) - 1) + "-20" + str(year)
     if test:
         directory = os.path.realpath(os.path.join('C:\Testing Bob/Term', aid_year))
     else:
@@ -2261,7 +2275,7 @@ def do_2nd_ldr():
 def do_day_after_ldr():
     global aid_year
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_"):
+        if query_name.startswith("UUFA_PRT_PELL_ELG_NO_PELL_"):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -2345,6 +2359,18 @@ def do_day_after_ldr():
             do_query(query, date + " Non-Matric Stu Athlete Balance Owing.xls", directory,
                      athletics_attachment_list)
 
+        if query.startswith("UUFA_FATERM_SOURCE_N_AWD_ATH"):
+            do_query(query, date + " NonTerm Source N Cancel Award Rvw - Athlete.xls", directory,
+                     athletics_attachment_list)
+
+        if query.startswith("UUFA_FATERM_SOURCE_N_AWD_SV"):
+            do_query(query, date + " Term Source N Cancel Award Rvw - Scholarships.xls", directory,
+                     athletics_attachment_list)
+
+        if query.startswith("UUFA_PRT_PELL_ELG_NO_PELL_"):
+            do_query(query, date + " Pell Eligible No Pell " + year + ".xls", directory,
+                     athletics_attachment_list)
+
     if ac_attachment_list:
         mailer("", "Day After LDR Queries", ac_mail, "", ac_attachment_list)
         del ac_attachment_list[:]
@@ -2395,6 +2421,10 @@ def dl_pre_outbound():
 
         if query.startswith("UUFA_DLR_LOAN_EFT_DT_LNDR_ERR"):
             do_query(query, date + " Loan EFT Date Lender Error.xls", directory,
+                     dl_attachment_list)
+
+        if query.startswith("UUFA_DLR_LOAN_ORIG_FA_LOAD_"):
+            do_query(query, date + " DL ORIG FA Load " + year + ".xls", directory,
                      dl_attachment_list)
 
         if query.startswith("UUFA_DLR_LOAN_NO_NSLDS_") and (year in query[:-10]) :
@@ -2974,14 +3004,14 @@ for filename in os.listdir("."):
     # Disbursement Queries
     if filename.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB"):
         do_disb_queries()
-    # 2nd LDR Queries
+    #2nd LDR Queries
     if filename.startswith("UUFA_PRT_PELL_ELG_NO_PELL"):
-        do_2nd_ldr()
+      do_2nd_ldr()
     # End of Term Queries
     if filename.startswith("UUFA_ACADEMIC_PLAN_RVW_FRAP_"):
         do_end_of_term_queries()
     # Day After LDR Queries
-    if filename.startswith("UUFA_PRT_AWD_PLL_ELG_NO_PLL_"):
+    if filename.startswith("UUFA_LDR_MIN_ENROLLMENT_ATH"):
         do_day_after_ldr()
     # Direct Loans Pre-Outbound Queries
     if filename.startswith("UUFA_DLR_NOT_DISBURSED"):
