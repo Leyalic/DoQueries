@@ -247,3 +247,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/DoQueriesPy.pyproj
+*.pyproj
+*.pyproj
