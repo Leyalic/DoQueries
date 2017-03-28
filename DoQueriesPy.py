@@ -11,7 +11,7 @@ date = time.strftime("%x").replace("/", "-")
 month_folder = date[:2] + "-20" + date[-2:]
 year = date[-2:]
 ###############################
-test = True
+test = False
 ###############################
 
 def rename(name, new_name, attach_list, i=2):
@@ -228,11 +228,11 @@ def do_dailies():
     # Change File_Name to be file as it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_IL_ATHLETE_OVERAWARD_"):
+        if "IL_ATHLETE_OVERAWARD_" in query:
             do_query(query, date + " Athlete Aid Overaward " + year + ".xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_IL_CMT_CDE_OVR_AGR_LMT_") and (year in query[:-10]) :
+        if "IL_CMT_CDE_OVR_AGR_LMT_" in query and year in query[:-10]:
             do_query(query, date + " Comment Code Over Aggregate 20" + year + ".xls", directory,
                      loans_kr_attachment_list)
 
@@ -1117,19 +1117,19 @@ def do_budget_queries():
 
         if query.startswith("UUFA_BR_SCH_TUITION_FEES_NR_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Fees NR " + year + ".xls", directory,
-                     amber_attachment_list)
+                     ac_attachment_list)
 
         if query.startswith("UUFA_BR_SCH_TUITION_ONLY_NR_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Only NR " + year + ".xls", directory,
-                     amber_attachment_list)
+                     ac_attachment_list)
 
         if query.startswith("UUFA_BR_SCHOLAR_TUIT_FEES_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Fees Res " + year + ".xls", directory,
-                     amber_attachment_list)
+                     ac_attachment_list)
 
         if query.startswith("UUFA_BR_SCHOLAR_TUIT_ONLY_") and (year in query[:-10]) :
             do_query(query, date + " Waiver-Scholar Tuition Only Res " + year + ".xls", directory,
-                     amber_attachment_list)
+                     ac_attachment_list)
 
         if query.startswith("FA_BR_UFORM_CHANGE_BUD_DUR_") and (year in query[:-10]) :
             do_query(query, date + " Correct Budget Duration " + year + ".xls", directory,
@@ -1141,9 +1141,9 @@ def do_budget_queries():
     if aka_attachment_list:
         mailer("", aid_year + " Budget Queries", aka_mail, "", aka_attachment_list)
         del aka_attachment_list[:]
-    if amber_attachment_list:
-        mailer("", aid_year + " Budget Queries", amber_mail, "", amber_attachment_list)
-        del amber_attachment_list[:]
+    if ac_attachment_list:
+        mailer("", aid_year + " Budget Queries", ac_mail, "", ac_attachment_list)
+        del ac_attachment_list[:]
     if rkm_attachment_list:
         mailer("", aid_year + " Budget Queries", rkm_mail, "", rkm_attachment_list)
         del rkm_attachment_list[:]
@@ -2390,7 +2390,7 @@ def dl_pre_outbound():
     global aid_year
     year = "16"
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_DLR_NOT_DISBURSED"):
+        if query_name.startswith("UUFA_DLR_NOT_DISB"):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -2522,11 +2522,11 @@ def al_pre_outbound():
     # Change File_Name to be file as it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
     for query in os.listdir("."):
-        if query.startswith("UUFA_ALR_110_CHNG_PNDNG_TRANS"):
+        if query.startswith("UUFA_ALR_110_CHNG_PDG_TRANS_"):
             do_query(query, date + " Loan Pending Change Transactions.xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_CL_APP_RESPONSE_ERRS"):
+        if query.startswith("UUFA_ALR_CL_APP_RSPNS_ERR_"):
             do_query(query, date + " CL Response Load Errors.xls", directory,
                      alt_attachment_list)
 
@@ -2542,35 +2542,35 @@ def al_pre_outbound():
             do_query(query, date + " CLoan Sent No Response " + year + ".xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_EFT_DETAIL_ERROR"):
-            do_query(query, date + " CLoans EFT Detail Error.xls", directory,
+        if query.startswith("UUFA_ALR_LN_EFT_DETAIL_ERR_"):
+            do_query(query, date + " Loans EFT Detail Error.xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_EFT_DT_LNDR_ERR"):
+        if query.startswith("UUFA_ALR_LN_EFT_DT_LNDR_ERR_"):
             do_query(query, date + " Loan EFT Date Lender Errors.xls", directory,
                      alt_attachment_list)
 
         if query.startswith("UUFA_ALR_LOAN_ORIG_ACAD_LVL_") and (year in query[:-10]) :
-            do_query(query, date + " Loans Academic Level 20" + year + ".xls", directory,
+            do_query(query, date + " Loans Academic Level " + year + ".xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORIG_EDIT_ERRORS"):
+        if query.startswith("UUFA_ALR_LN_ORIG_EDIT_ERR_"):
             do_query(query, date + " Loan Originate Edit Errors.xls", directory,
                      alt_attachment_list)
 
         if query.startswith("UUFA_ALR_LOAN_ORIG_FA_LOAD_") and (year in query[:-10]) :
-            do_query(query, date + " Loan ORIG FA Load 20" + year + ".xls", directory,
+            do_query(query, date + " Loan ORIG FA Load " + year + ".xls", directory,
                      alt_attachment_list)
 
         if query.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_") and (year in query[:-10]) :
-            do_query(query, date + " Loan ORIG Lender Note 20" + year + ".xls", directory,
+            do_query(query, date + " Loan ORIG Lender Note " + year + ".xls", directory,
                      alt_attachment_list)
 
         if query.startswith("UUFA_ALR_LOAN_ORIG_SPLT_CDS_") and (year in query[:-10]) :
-            do_query(query, date + " Loan ORIG Split Codes 20" + year + ".xls", directory,
+            do_query(query, date + " Loan ORIG Split Codes " + year + ".xls", directory,
                      alt_attachment_list)
 
-        if query.startswith("UUFA_ALR_LOAN_ORIG_VLOAN_RSN"):
+        if query.startswith("UUFA_ALR_LN_ORIG_VLOAN_RSN_"):
             do_query(query, date + " Loan ORIG VLOAN Reasons.xls", directory,
                      alt_attachment_list)
 
@@ -3018,7 +3018,7 @@ for filename in os.listdir("."):
     if filename.startswith("UUFA_LDR_MIN_ENROLLMENT_ATH"):
         do_day_after_ldr()
     # Direct Loans Pre-Outbound Queries
-    if filename.startswith("UUFA_DLR_NOT_DISBURSED"):
+    if filename.startswith("UUFA_DLR_NOT_DISB"):
         dl_pre_outbound()
     # Alternative Loan Pre-Outbound Queries
     if filename.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_"):
@@ -3052,4 +3052,4 @@ for filename in os.listdir("."):
 
         # if ak_attachment_list:
         #    mailer("", aid_year + " _____________", ak_mail, "", ak_attachment_list)
-        #   del ak_attachment_list[:]
+        #   del ak_attachment_list[:]a
