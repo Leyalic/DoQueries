@@ -2,12 +2,17 @@ __author__ = 'mmason'
 #Version 4.30
 
 import os
+import datetime
 import time
+import calendar
 import shutil
 import re
 
 # date becomes the current date and is then placed in MM-DD-YY format
 date = time.strftime("%x").replace("/", "-")
+now = datetime.datetime.now()
+last_month = now.month-1 if now.month > 1 else 12
+last_months_year = now.year-1 if now.month == 12 else now.year
 month_folder = date[:2] + "-20" + date[-2:]
 year = date[-2:]
 ###############################
@@ -94,6 +99,7 @@ lisa =      "lisa.zaelit@admin.utah.edu"
 marc =      "mgangwer@sa.utah.edu; TDespain@sa.utah.edu"
 mary =      "msnow@sa.utah.edu"
 mat =       "mmason@sa.utah.edu"
+plooster =  "matthew.plooster@utah.edu"
 raenetta =  "rking@sa.utah.edu"
 ryan =      "rchristensen@sa.utah.edu"
 scott =     ""
@@ -101,6 +107,7 @@ shana =     "syem@sa.utah.edu"
 shanon =    "SYBrown@sa.utah.edu"
 sheryl =    "shansen@sa.utah.edu"
 steffany =  "steffany.forrest@income.utah.edu"
+tim     =   "TDespain@sa.utah.edu"
 veronica =  "vchristensen@sa.utah.edu"
 anne =       john + ";" + emily + ";" + mary
 
@@ -108,27 +115,28 @@ athletics = chelsea + ";" + kayla
 loans =     krista + ";" + jessica
 prof =     shana
 systems =   mat + ";" + leo + ";" + jen + ";" + veronica
+schol =     jonathan + ";" + sheryl + ";" + plooster + ";" + raenetta
 
 a_mail =        send_to(anne)
-ac_mail =       send_to(amber, carol)
-acl_mail =      send_to(amber, carol, leila)
-aca_mail =      send_to(amber, carol, ryan)
-acj_mail =      send_to(amber, carol, jonathan)
-acrkm_mail =    send_to(amber, carol, ryan, karen, marc)
-acvj_mail =     send_to(amber, carol, veronica, jen)
-acvjm_mail =    send_to(amber, carol, veronica, jen, mat)
-aj_mail =       send_to(amber, jonathan)
+ac_mail =       send_to(jonathan, sheryl, amber, carol)
+acl_mail =      send_to(jonathan, sheryl, amber, carol, leila)
+aca_mail =      send_to(jonathan, sheryl, amber, carol, ryan)
+acj_mail =      send_to(jonathan, sheryl, amber, carol, jonathan)
+acrkm_mail =    send_to(jonathan, sheryl, amber, carol, ryan, karen, marc)
+acvj_mail =     send_to(jonathan, sheryl, amber, carol, veronica, jen)
+acvjm_mail =    send_to(jonathan, sheryl, amber, carol, veronica, jen, mat)
+aj_mail =       send_to(amber, jonathan, sheryl)
 ak_mail =       send_to(ryan, karen)
 aka_mail =      send_to(ryan, karen, anne)
-akc_mail =      send_to(ryan, karen, carol)
-akcal_mail =    send_to(ryan, karen, carol, amber, leila)
+akc_mail =      send_to(ryan, karen, carol, jonathan, sheryl)
+akcal_mail =    send_to(ryan, karen, carol, amber, jonathan, sheryl, shanon)
 akl_mail =      send_to(ryan, karen, linh)
 akv_mail =      send_to(ryan, karen, veronica)
 alt_mail =      send_to(loans, ryan, systems)
-amber_k_mail =  send_to(amber, karen)
-amber_mail =    send_to(amber)
+amber_k_mail =  send_to(jonathan, sheryl, amber, karen)
+amber_mail =    send_to(jonathan, sheryl, amber)
 athletics_mail =send_to(athletics, karen)
-disb_mail =     send_to(loans, ryan, karen, marc, steffany, chelsea, amber, carol, kayla, lisa, systems)
+disb_mail =     send_to(loans, ryan, karen, marc, steffany, chelsea, jonathan, sheryl,  amber, carol, kayla, lisa, systems)
 dl_mail =       send_to(loans, ryan, karen, systems)
 jen_mail =      send_to(jen)
 krms_mail =     send_to(krista, ryan, mary, shanon)
@@ -148,10 +156,12 @@ rac_mail =      send_to(raenetta, ryan, carol)
 rkam_mail =     send_to(ryan, karen, anne, marc)
 rkjm_mail =     send_to(ryan, karen, john, marc)
 rkm_mail =      send_to(ryan, karen, marc)
+rmt_mail =      send_to(ryan, marc, tim)
 rkmv_mail =     send_to(ryan, karen, marc, veronica)
+schol_mail = send_to(raenetta, )
 scott_mail =    send_to(scott)
 ss_mail =       send_to(amber, carol, jonathan, mary, sheryl, systems)
-ssj_mail =      send_to(amber, carol, jonathan, mary, shanon, chelsea, brenda, hilerie, raenetta)
+ssj_mail =      send_to(amber, carol, jonathan, mary, shanon, chelsea, brenda, hilerie, raenetta, sheryl)
 sys_mail =      send_to(systems)
 v_mail =        send_to(veronica)
 vm_mail =       send_to(veronica, mat)
@@ -177,6 +187,7 @@ rkm_attachment_list = []
 prof_rkm_attachment_list = []
 rkjm_attachment_list = []
 rkmv_attachment_list = []
+rmt_attachment_list = []
 akv_attachment_list = []
 alt_attachment_list = []
 amber_attachment_list = []
@@ -233,7 +244,11 @@ def do_dailies():
                      athletics_attachment_list)
 
         if "IL_CMT_CDE_OVR_AGR_LMT_" in query and year in query[:-10]:
-            do_query(query, date + " Comment Code Over Aggregate 20" + year + ".xls", directory,
+            do_query(query, date + " Comment Code Over Aggregate " + year + ".xls", directory,
+                     loans_kr_attachment_list)
+
+        if "IL_CMT_CDE_O_AGR_LMT_2" in query and year in query[:-10]:
+            do_query(query, date + " Comment Code Over Aggregate No FATERM Req " + year + ".xls", directory,
                      loans_kr_attachment_list)
 
         if query.startswith("UUFA_IL_COMMENT_CODE_298_") and (year in query[:-10]) :
@@ -320,6 +335,10 @@ def do_dailies():
             do_query(query, date + " Loan Awd No FLRP Grad Date 20" + year + ".xls", directory,
                      loans_kr_attachment_list)
 
+        if query.startswith("UUFA_STDTS_WITH_FLPR_INIT") :
+            do_query(query, date + " Students with FLPR Initiated.xls", directory,
+                     loans_kr_attachment_list)
+            
         if query.startswith("UUFA_IL_NURSING_LOANS_TILA_") and (year in query[:-10]) :
             do_query(query, date + " Nursing Loans 20" + year + ".xls", directory,
                      loans_r_attachment_list)
@@ -602,6 +621,10 @@ def do_monday_weeklies():
             do_query(query, date + " FPEL" + year + " Initiated Pell.xls", directory,
                      ak_attachment_list)
 
+        if "WR_FREV_GR_WS" in query and year in query:
+            do_query(query, date + "Grad FREV with Work Study" + year + ".xls", directory,
+                     rmt_attachment_list)
+
         if query.startswith("UUFA_WR_GENDER_") and (year in query[:-10]) :
             do_query(query, date + " Gender Discrepancies 20" + year + ".xls", directory,
                      rkm_attachment_list)
@@ -786,6 +809,14 @@ def do_monday_weeklies():
         if query.startswith("UUFA_WR_SCH_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Cash Non-Cash Sch Not Disb " + year + ".xls", directory,
                      amber_attachment_list)
+
+        if "WR_SCHOLAR_TBP_NO_AWRD" in query and year in query[:-10]:
+            do_query(query, date + " TBP NO Award " + year + ".xls", directory,
+                     schol_attachment_list)
+
+        if "_WR_GRAD_FELLOW" in query and year in query[:-10]:
+            do_query(query, date + " Grad Fellowship " + year + ".xls", directory,
+                     schol_attachment_list)
 
         if query.startswith("UUFA_WR_SSR_MATCH_NOT_CNFRM_") and (year in query[:-10]) :
             do_query(query, date + " SSR Not Confirmed 20" + year + ".xls", directory,
@@ -994,6 +1025,9 @@ def do_monday_weeklies():
     if rkm_attachment_list:
         mailer("", aid_year + " Monday Weekly Queries", rkm_mail, "", rkm_attachment_list)
         del rkm_attachment_list[:]
+    if rmt_attachment_list:
+        mailer("", aid_year + " Monday Weekly Queries", rmt_mail, "", rmt_attachment_list)
+        del rmt_attachment_list[:]
     if rkjm_attachment_list:
         mailer("", aid_year + " Monday Weekly Queries", rkjm_mail, "", rkjm_attachment_list)
         del rkjm_attachment_list[:]
@@ -1021,6 +1055,9 @@ def do_monday_weeklies():
     if prof_attachment_list:
         mailer("", aid_year + " Monday Weekly Queries", prof_mail, "", prof_attachment_list)
         del prof_attachment_list[:]
+    if schol_attachment_list:
+        mailer("", aid_year + " Monday Weekly Queries", schol_mail, "", schol_attachment_list)
+        del schol_attachment_list[:]
     if v_attachment_list:
         mailer("", aid_year + " Monday Weekly Queries", v_mail, "", v_attachment_list)
         del v_attachment_list[:]
@@ -1422,12 +1459,8 @@ def do_packaging_queries():
             do_query(query, date + " ATH Fed State Inst O-A.xls", directory,
                      athletics_attachment_list)
 
-        if query.startswith("UUFA_PRT_AWARD_DATE_HAD_SAT"):
-            do_query(query, date + " SAT Hold Date Award Review.xls", directory,
-                     ak_attachment_list)
-
-        if query.startswith("UUFA_PRT_AWARD_TERM_HAD_SAT"):
-            do_query(query, date + " SAT Hold Term Award Review.xls", directory,
+        if query.startswith("UUFA_PRT_AWARD_TERM_HAD_SAP"):
+            do_query(query, date + " SAP Hold Term Award Review.xls", directory,
                      ak_attachment_list)
 
         if query.startswith("UUFA_PRT_AWARDS_OTHER_INST"):
@@ -1506,7 +1539,7 @@ def do_packaging_queries():
             do_query(query, date + " Heal 20 " + year + ".xls", directory,
                      loans_ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_LEU_C_FSEOG_") and (year in query[:-10]) :
+        if query.startswith("UUFA_PRT_LEU_C_PELL_FSEOG_") and (year in query[:-10]) :
             do_query(query, date + " LEU C Flag Awarded FSEOG " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1514,7 +1547,7 @@ def do_packaging_queries():
             do_query(query, date + " LEU C Flag Awarded Pell " + year + ".xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_PRT_LEU_E_FSEOG_") and (year in query[:-10]) :
+        if query.startswith("UUFA_PRT_LEU_E_PELL_FSEOG_") and (year in query[:-10]) :
             do_query(query, date + " LEU E Flag Awarded FSEOG " + year + ".xls", directory,
                      ak_attachment_list)
 
@@ -1643,22 +1676,27 @@ def do_packaging_queries():
 
 def do_monthlies():
     global aid_year
+    year = "17"
     for query_name in os.listdir("."):
         if "MR_ATHLETE_RESIDENCY" in query_name:
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
+    t_path = "ACCT/Award Summary/Award Summary 20" + year + "/Award Summary " + calendar.month_name[last_month] + " " + str(last_months_year)
+
     # Create FOLDER variables to be used in Move() operation and establishes the directory to save the files
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/Monthly', aid_year, month_folder))
+        directory = os.path.realpath(os.path.join('C:/Testing Bob/Monthly', aid_year, month_folder))
         dl_directory = os.path.realpath(os.path.join('C:/Testing Bob/Direct Loans', aid_year, 'Monthly'))
-        acct_directory = os.path.realpath(os.path.join('C:\Testing Bob/acct/Chartfields', aid_year))
+        acct_directory = os.path.realpath(os.path.join('C:/Testing Bob/ACCT/Chartfields', aid_year))
+        t_directory = os.path.realpath(os.path.join('C:/Testing Bob', t_path))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Monthly', aid_year, month_folder))
         dl_directory = os.path.realpath(os.path.join('O:/Systems/Direct Loans', aid_year, 'Monthly'))
-        acct_directory = os.path.realpath(os.path.join('O:/acct/Chartfields', aid_year))
+        acct_directory = os.path.realpath(os.path.join('O:/ACCT/Chartfields', aid_year))
+        t_directory = os.path.realpath(os.path.join('O:', t_path))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -1667,6 +1705,8 @@ def do_monthlies():
         os.makedirs(dl_directory)
     if not os.path.isdir(acct_directory):
         os.makedirs(acct_directory)
+    if not os.path.isdir(t_directory):
+        os.makedirs(t_directory)
 
     # Change File_Name to be file ac it is received and _new_file_name to what the new file should be.  Prefix date
     # will be added.
@@ -1851,6 +1891,15 @@ def do_monthlies():
             do_query(query, date + " SEFA DL Total Students 20" + year + ".xls", directory,
                      mary_s_attachment_list)
 
+        if "ussfa037" in query and year in query:
+            do_query(query, query, t_directory,
+                     null_attachment_list)
+
+        if "ussfa035-" in query and year in query:
+            do_query(query, query, t_directory,
+                     null_attachment_list)
+
+
     if a_attachment_list:
         mailer("", aid_year + " Monthly Queries", a_mail, "", a_attachment_list)
         del a_attachment_list[:]
@@ -1926,9 +1975,9 @@ def do_end_of_term_queries():
 
     year = aid_year[-2:]
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/SAT/', "20" + year + term))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/SAP/', "20" + year + term))
     else:
-        directory = os.path.realpath(os.path.join('O:\Systems\QUERIES/SAT/', "20" + year + term))
+        directory = os.path.realpath(os.path.join('O:\Systems\QUERIES/SAP/', "20" + year + term))
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
@@ -1954,8 +2003,8 @@ def do_end_of_term_queries():
             do_query(query, date + " CBA UNDISBURSED .xls", directory,
                      ak_attachment_list)
 
-        if query.startswith("UUFA_EOT_ALT_LOAN_SAT"):
-            do_query(query, date + " Alt Loans Awards with SAT Holds.xls", directory,
+        if query.startswith("UUFA_EOT_ALT_LOAN_SAP"):
+            do_query(query, date + " Alt Loans Awards with SAP Holds.xls", directory,
                      loans_ak_attachment_list)
 
         if query.startswith("UUFA_LOANS_ORIG_FAILED_PENDING"):
@@ -1970,16 +2019,16 @@ def do_end_of_term_queries():
             do_query(query, date + " Loan Acad Prog below HT Subsq Disb.xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_PRO_STDNTS_SAT_WARNING"):
-            do_query(query, date + " SAT Warning Professional Students.xls", directory,
+        if query.startswith("UUFA_PRO_STDNTS_SAP_WARNING"):
+            do_query(query, date + " SAP Warning Professional Students.xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_LW1_LW2_LW3_SAT_WARNING"):
-            do_query(query, date + " SAT Warning LW1 LW2 LW3.xls", directory,
+        if query.startswith("UUFA_LW1_LW2_LW3_SAP_WARNING"):
+            do_query(query, date + " SAP Warning LW1 LW2 LW3.xls", directory,
                      loans_r_attachment_list)
 
-        if query.startswith("UUFA_MED_SAT"):
-            do_query(query, date + " Medical SAT Review.xls", directory,
+        if query.startswith("UUFA_MED_SAP"):
+            do_query(query, date + " Medical SAP Review.xls", directory,
                      prof_attachment_list)
 
         if query.startswith("UUFA_MR_FWS_WITH_NSI_HOLD_") and (year in query[:-10]) :
@@ -2014,16 +2063,16 @@ def do_end_of_term_queries():
             do_query(query, date + " Scholarship Academic Progress Review Basic.xls", directory,
                      ac_attachment_list)
 
-        if query.startswith("UUFA_SAT_AGGCP_LAW"):
-            do_query(query, date + " SAT Aggregate Law Career.xls", directory,
+        if query.startswith("UUFA_SAP_AGGCP_LAW"):
+            do_query(query, date + " SAP Aggregate Law Career.xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_SAT_AGGCP_MED"):
-            do_query(query, date + " SAT Aggregate Med Career.xls", directory,
+        if query.startswith("UUFA_SAP_AGGCP_MED"):
+            do_query(query, date + " SAP Aggregate Med Career.xls", directory,
                      prof_attachment_list)
 
-        if query.startswith("UUFA_SAT_AGGCP_DN"):
-            do_query(query, date + " SAT Aggregate Dental Career.xls", directory,
+        if query.startswith("UUFA_SAP_AGGCP_DN"):
+            do_query(query, date + " SAP Aggregate Dental Career.xls", directory,
                      prof_attachment_list)
 
         if query.startswith("UUFA_EU_FALL_GRADE"):
@@ -2042,7 +2091,7 @@ def do_end_of_term_queries():
             do_query(query, date + " Pell Eligible Enrolled NO Award.xls", directory,
                      rkm_attachment_list)
 
-        if query.startswith("UUFA_SAT_FSAP"):
+        if query.startswith("UUFA_SAP_FSAP"):
             do_query(query, date + " FSAP Students.xls", directory,
                      ak_attachment_list)
 
@@ -2388,9 +2437,9 @@ def do_day_after_ldr():
 
 def dl_pre_outbound():
     global aid_year
-    year = "16"
+    year = 16
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_DLR_NOT_DISB"):
+        if "DLR_ORIG_TRNS_PEND" in query_name:
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -2455,11 +2504,11 @@ def dl_pre_outbound():
             do_query(query, date + " Loan Overaward Special Need " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_LN_ACPT_STAF_31_32_") and (year in query[:-10]) :
+        if "DLR_LN_ACPT_STAF_31_32_" in query and year in query[:-10] :
             do_query(query, date + " Stafford Accept Offer " + year + ".xls", directory,
                      dl_attachment_list)
 
-        if query.startswith("UUFA_DLR_NOT_DISB_20") and (year in query[:-10]) :
+        if query.startswith("UUFA_DLR_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " DL Disb Errors " + year + ".xls", directory,
                      dl_attachment_list)
 
@@ -2815,8 +2864,8 @@ def do_after_repackaging():
             do_query(query, date + " Pell Repackage Snapshot.xls", directory,
                      null_attachment_list)
 
-        if query.startswith("UUFA_AP_RPKG_SAT_HOLD_DELETED"):
-            do_query(query, date + " Pell SAT Holds.xls", directory,
+        if query.startswith("UUFA_AP_RPKG_SAP_HOLD_DELETED"):
+            do_query(query, date + " Pell SAP Holds.xls", directory,
                      rkm_attachment_list)
 
         if query.startswith("UUFA_AP_RPKG_SKIP"):
@@ -2983,6 +3032,10 @@ def do_weekly_scholarships():
             do_query(query, date + " All Scholarships Res Transfer " + year + ".xls", directory,
                      ssj_attachment_list)
 
+        if ("WS_UT_PROMISE_CHKLST_" in query) and (year in query[:-10]) :
+            do_query(query, date + " All Scholarships Res Transfer " + year + ".xls", directory,
+                     ssj_attachment_list)
+
 
     if ssj_attachment_list:
         mailer("", aid_year + " Weekly Scholarship Queries", ssj_mail, "", ssj_attachment_list)
@@ -3018,7 +3071,7 @@ for filename in os.listdir("."):
     if filename.startswith("UUFA_LDR_MIN_ENROLLMENT_ATH"):
         do_day_after_ldr()
     # Direct Loans Pre-Outbound Queries
-    if filename.startswith("UUFA_DLR_NOT_DISB"):
+    if "DLR_ORIG_TRNS_PEND" in filename:
         dl_pre_outbound()
     # Alternative Loan Pre-Outbound Queries
     if filename.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_"):

@@ -250,3 +250,5 @@ ModelManifest.xml
 /DoQueriesPy.pyproj
 *.pyproj
 *.pyproj
+*.zip
+*.rar
