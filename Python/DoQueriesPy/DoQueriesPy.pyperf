@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>80a3d9ba-2119-41aa-add6-25792e4accc1</TargetProject>
+    <FriendlyName>DoQueriesPy</FriendlyName>
+  </ProjectTarget>
+</ProfilingTarget>
