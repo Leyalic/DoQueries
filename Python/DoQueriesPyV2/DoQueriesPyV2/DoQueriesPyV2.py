@@ -139,6 +139,7 @@ alt_mail        = MailGroup(send_to(loans, ryan, systems))
 amber_k_mail    = MailGroup(send_to(jonathan, sheryl, amber, karen))
 amber_mail      = MailGroup(send_to(jonathan, sheryl, amber))
 athletics_mail  = MailGroup(send_to(athletics, karen))
+athletics_rktm  = MailGroup(send_to(athletics, ryan, karen, marc, tim))
 disb_mail       = MailGroup(send_to(loans, ryan, karen, marc, jonathan, sheryl, amber, carol, tim, systems))
 disb_tot_mail   = MailGroup(send_to(systems, ryan, tim, karen, marc, brenda))
 dl_mail         = MailGroup(send_to(loans, ryan, karen, systems))
@@ -202,6 +203,7 @@ mail_groups = [
     amber_k_mail,
     amber_mail,
     athletics_mail,
+    athletics_rktm,
     disb_mail,
     disb_tot_mail,
     dl_mail,
@@ -1076,7 +1078,7 @@ def do_budget_queries():
 
         if query.startswith("UUFA_BR_COA_ISIR_BDGT_DIFF_") and (year in query[:-10]) :
             do_query(query, date + " COA ISIR Budget Mismatch " + year + ".xls", directory,
-                     rkm_mail.attachments)
+                     athletics_rktm.attachments)
 
         if query.startswith("UUFA_BR_NO_BUDGET_ATTEND_") and (year in query[:-10]) :
             do_query(query, date + " NO Budget Attend 20" + year + ".xls", directory,
