@@ -15,7 +15,7 @@ last_months_year = now.year - 1 if now.month == 12 else now.year
 month_folder = date[:2] + "-20" + date[-2:]
 year = date[-2:]
 ###############################
-test = True
+test = False
 ###############################
 class MailGroup(object):
     recipients = ""
