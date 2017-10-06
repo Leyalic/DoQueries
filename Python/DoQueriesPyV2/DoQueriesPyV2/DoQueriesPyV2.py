@@ -78,11 +78,16 @@ def do_query(name, new_name, destination, attach_list, i=2):
         rename(destination + "/" + this_name, destination + "/" + this_new_name, this_attach_list)
 
 
-def send_to(*args):
+def make_recipients(*args):
     addresses = ""
     for i in args:
         addresses = addresses + i + ";"
     return addresses
+
+def mail_to(* args):
+    recipients = make_recipients(args)
+
+
 
 
 # region Email and Attachment Groups008/
@@ -124,67 +129,67 @@ prof = shelly
 systems = mat + ";" + leo + ";" + jen + ";" + veronica + ";" + laura
 schol = jonathan + ";" + sheryl + ";" + plooster + ";" + raenetta + ";" + hayley + ";" + jenny 
 
-accounting_mail = MailGroup(send_to(accounting))
-aka_mail = MailGroup(send_to(ryan, karen, accounting))
-akj_mail = MailGroup(send_to(ryan, karen, jenny))
-alt_mail = MailGroup(send_to(loans, ryan, systems))
-athletics_mail = MailGroup(send_to(athletics, karen))
-athletics_rktm = MailGroup(send_to(athletics, ryan, karen, tim, marc))
-disb_mail = MailGroup(send_to(loans, ryan, karen, marc, hayley, jenny, tim, systems))
-disb_tot_mail = MailGroup(send_to(systems, ryan, tim, karen, marc, brenda))
-dl_mail = MailGroup(send_to(loans, ryan, karen, systems))
-hayley_k_mail = MailGroup(send_to(hayley, karen))
-hayley_mail = MailGroup(send_to(hayley))
-hj_mail = MailGroup(send_to(hayley, jenny))
-hjj_mail = MailGroup(send_to(hayley, jenny, jonathan))
-hjr_mail = MailGroup(send_to(hayley, jenny, ryan))
-hjrkm_mail = MailGroup(send_to(hayley, jenny, ryan, karen, marc))
-hjs_mail = MailGroup(send_to(hayley, jenny, sheryl))
-hjvj_mail = MailGroup(send_to(hayley, jenny, veronica, jen))
-hjvjm_mail = MailGroup(send_to(hayley, jenny, veronica, jen, mat))
-jen_mail = MailGroup(send_to(jen))
-ji_mail = MailGroup(send_to(jonathan, isaiah))
-jonathan_mail = MailGroup(send_to(jonathan))
-jsmb_mail = MailGroup(send_to(jonathan, sheryl, mary, brenda))
-jsmbr_mail = MailGroup(send_to(jonathan, sheryl, mary, brenda, raenetta))
-jsmsb_mail = MailGroup(send_to(jonathan, sheryl, mary, shanon, brenda))
-krms_mail = MailGroup(send_to(krista, ryan, mary, shanon))
-laura_mail = MailGroup(send_to(laura))
-leo_mail = MailGroup(send_to(leo))
-loans_kr_mail = MailGroup(send_to(loans, ryan, karen))
-loans_krv_mail = MailGroup(send_to(loans, ryan, karen, veronica))
-loans_r_mail = MailGroup(send_to(loans, ryan))
-loans_rj_mail = MailGroup(send_to(prof, ryan, jenny))
-loans_rk_mail = MailGroup(send_to(loans, ryan, karen))
-mary_s_mail = MailGroup(send_to(mary, shanon))
-mat_mail = MailGroup(send_to(mat))
-meb_mail = MailGroup(send_to(mary, emilie, brenda))
-ml_mail = MailGroup(send_to(mat, leo))
-null_mail = MailGroup(send_to(""))
-prof_k_mail = MailGroup(send_to(prof, karen))
-prof_mail = MailGroup(send_to(prof, ryan))
-prof_rk_mail = MailGroup(send_to(prof, ryan, karen))
-prof_rkm_mail = MailGroup(send_to(ryan, karen, prof, marc))
-prof_rkt_mail = MailGroup(send_to(ryan, karen, tim, prof))
-raj_mail = MailGroup(send_to(raenetta, ryan, jenny))
-rk_mail = MailGroup(send_to(ryan, karen))
-rkam_mail = MailGroup(send_to(ryan, karen, accounting, marc))
-rkjhs_mail = MailGroup(send_to(ryan, karen, jenny, hayley, shanon))
-rkl_mail = MailGroup(send_to(ryan, karen, linh))
-rkm_mail = MailGroup(send_to(ryan, karen, marc))
-rkmv_mail = MailGroup(send_to(ryan, karen, marc, veronica))
-rkt_mail = MailGroup(send_to(ryan, karen, tim))
-rkv_mail = MailGroup(send_to(ryan, karen, veronica))
-rmkt_mail = MailGroup(send_to(ryan, karen, marc, tim))
-rmt_mail = MailGroup(send_to(ryan, marc, tim))
-schol_mail = MailGroup(send_to(schol))
-shanon_mail = MailGroup(send_to(shanon))
-sheryl_mail = MailGroup(send_to(sheryl))
-sl_mail = MailGroup(send_to(steffany, lisa))
-ss_mail = MailGroup(send_to(hayley, jenny, jonathan, mary, sheryl, systems))
-sys_mail = MailGroup(send_to(systems))
-v_mail = MailGroup(send_to(veronica))
-vm_mail = MailGroup(send_to(veronica, mat))
+accounting_mail = MailGroup(make_recipients(accounting))
+aka_mail        = MailGroup(make_recipients(ryan, karen, accounting))
+akj_mail        = MailGroup(make_recipients(ryan, karen, jenny))
+alt_mail        = MailGroup(make_recipients(loans, ryan, systems))
+athletics_mail  = MailGroup(make_recipients(athletics, karen))
+athletics_rktm  = MailGroup(make_recipients(athletics, ryan, karen, tim, marc))
+disb_mail       = MailGroup(make_recipients(loans, ryan, karen, marc, hayley, jenny, tim, systems))
+disb_tot_mail   = MailGroup(make_recipients(systems, ryan, tim, karen, marc, brenda))
+dl_mail         = MailGroup(make_recipients(loans, ryan, karen, systems))
+hayley_k_mail   = MailGroup(make_recipients(hayley, karen))
+hayley_mail     = MailGroup(make_recipients(hayley))
+hj_mail         = MailGroup(make_recipients(hayley, jenny))
+hjj_mail        = MailGroup(make_recipients(hayley, jenny, jonathan))
+hjr_mail        = MailGroup(make_recipients(hayley, jenny, ryan))
+hjrkm_mail      = MailGroup(make_recipients(hayley, jenny, ryan, karen, marc))
+hjs_mail        = MailGroup(make_recipients(hayley, jenny, sheryl))
+hjvj_mail       = MailGroup(make_recipients(hayley, jenny, veronica, jen))
+hjvjm_mail      = MailGroup(make_recipients(hayley, jenny, veronica, jen, mat))
+jen_mail        = MailGroup(make_recipients(jen))
+ji_mail         = MailGroup(make_recipients(jonathan, isaiah))
+jonathan_mail   = MailGroup(make_recipients(jonathan))
+jsmb_mail       = MailGroup(make_recipients(jonathan, sheryl, mary, brenda))
+jsmbr_mail      = MailGroup(make_recipients(jonathan, sheryl, mary, brenda, raenetta))
+jsmsb_mail      = MailGroup(make_recipients(jonathan, sheryl, mary, shanon, brenda))
+krms_mail       = MailGroup(make_recipients(krista, ryan, mary, shanon))
+laura_mail      = MailGroup(make_recipients(laura))
+leo_mail        = MailGroup(make_recipients(leo))
+loans_kr_mail   = MailGroup(make_recipients(loans, ryan, karen))
+loans_krv_mail  = MailGroup(make_recipients(loans, ryan, karen, veronica))
+loans_r_mail    = MailGroup(make_recipients(loans, ryan))
+loans_rj_mail   = MailGroup(make_recipients(prof, ryan, jenny))
+loans_rk_mail   = MailGroup(make_recipients(loans, ryan, karen))
+mary_s_mail     = MailGroup(make_recipients(mary, shanon))
+mat_mail        = MailGroup(make_recipients(mat))
+meb_mail        = MailGroup(make_recipients(mary, emilie, brenda))
+ml_mail         = MailGroup(make_recipients(mat, leo))
+null_mail       = MailGroup(make_recipients(""))
+prof_k_mail     = MailGroup(make_recipients(prof, karen))
+prof_mail       = MailGroup(make_recipients(prof, ryan))
+prof_rk_mail    = MailGroup(make_recipients(prof, ryan, karen))
+prof_rkm_mail   = MailGroup(make_recipients(ryan, karen, prof, marc))
+prof_rkt_mail   = MailGroup(make_recipients(ryan, karen, tim, prof))
+raj_mail        = MailGroup(make_recipients(raenetta, ryan, jenny))
+rk_mail         = MailGroup(make_recipients(ryan, karen))
+rkam_mail       = MailGroup(make_recipients(ryan, karen, accounting, marc))
+rkjhs_mail      = MailGroup(make_recipients(ryan, karen, jenny, hayley, shanon))
+rkl_mail        = MailGroup(make_recipients(ryan, karen, linh))
+rkm_mail        = MailGroup(make_recipients(ryan, karen, marc))
+rkmv_mail       = MailGroup(make_recipients(ryan, karen, marc, veronica))
+rkt_mail        = MailGroup(make_recipients(ryan, karen, tim))
+rkv_mail        = MailGroup(make_recipients(ryan, karen, veronica))
+rmkt_mail       = MailGroup(make_recipients(ryan, karen, marc, tim))
+rmt_mail        = MailGroup(make_recipients(ryan, marc, tim))
+schol_mail      = MailGroup(make_recipients(schol))
+shanon_mail     = MailGroup(make_recipients(shanon))
+sheryl_mail     = MailGroup(make_recipients(sheryl))
+sl_mail         = MailGroup(make_recipients(steffany, lisa))
+ss_mail         = MailGroup(make_recipients(hayley, jenny, jonathan, mary, sheryl, systems))
+sys_mail        = MailGroup(make_recipients(systems))
+v_mail          = MailGroup(make_recipients(veronica))
+vm_mail         = MailGroup(make_recipients(veronica, mat))
 
 #do not include null_mail in mail_groups
 mail_groups = [accounting_mail,
@@ -1048,11 +1053,11 @@ def do_budget_queries():
                      rk_mail.attachments)
 
         if query.startswith("UUFA_BR_ATH_TUIT_INCR_NR_") and (year in query[:-10]) :
-            do_query(query, date + " Athlete Tuition Increase " + year + ".xls", directory,
+            do_query(query, date + " Athlete Tuition Increase NR " + year + ".xls", directory,
                      athletics_mail.attachments)
 
         if query.startswith("UUFA_BR_ATH_TUITION_INCRS_") and (year in query[:-10]) :
-            do_query(query, date + " Athlete Tuition Increase Non Resident 20" + year + ".xls", directory,
+            do_query(query, date + " Athlete Tuition Increase " + year + ".xls", directory,
                      athletics_mail.attachments)
 
         if query.startswith("UUFA_BR_BDGT_DOUBLE_BUDGETS_") and (year in query[:-10]) :
