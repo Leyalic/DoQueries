@@ -84,11 +84,6 @@ def make_recipients(*args):
         addresses = addresses + i + ";"
     return addresses
 
-def mail_to(* args):
-    recipients = make_recipients(args)
-
-
-
 
 # region Email and Attachment Groups008/
 hayley = "HShipton@sa.utah.edu"
@@ -141,7 +136,9 @@ dl_mail         = MailGroup(make_recipients(loans, ryan, karen, systems))
 hayley_k_mail   = MailGroup(make_recipients(hayley, karen))
 hayley_mail     = MailGroup(make_recipients(hayley))
 hj_mail         = MailGroup(make_recipients(hayley, jenny))
+hji_mail        = MailGroup(make_recipients(hayley, jonathan, isaiah))
 hjj_mail        = MailGroup(make_recipients(hayley, jenny, jonathan))
+hj_mail         = MailGroup(make_recipients(hayley, jonathan, isaiah))
 hjr_mail        = MailGroup(make_recipients(hayley, jenny, ryan))
 hjrkm_mail      = MailGroup(make_recipients(hayley, jenny, ryan, karen, marc))
 hjs_mail        = MailGroup(make_recipients(hayley, jenny, sheryl))
@@ -171,7 +168,7 @@ prof_mail       = MailGroup(make_recipients(prof, ryan))
 prof_rk_mail    = MailGroup(make_recipients(prof, ryan, karen))
 prof_rkm_mail   = MailGroup(make_recipients(ryan, karen, prof, marc))
 prof_rkt_mail   = MailGroup(make_recipients(ryan, karen, tim, prof))
-raj_mail        = MailGroup(make_recipients(raenetta, ryan, jenny))
+rhj_mail        = MailGroup(make_recipients(raenetta, hayley, jenny))
 rk_mail         = MailGroup(make_recipients(ryan, karen))
 rkam_mail       = MailGroup(make_recipients(ryan, karen, accounting, marc))
 rkjhs_mail      = MailGroup(make_recipients(ryan, karen, jenny, hayley, shanon))
@@ -205,6 +202,7 @@ mail_groups = [accounting_mail,
     hayley_mail,
 	hj_mail,
     hjj_mail,
+    hji_mail,
     hjr_mail,
     hjrkm_mail,
     hjs_mail,
@@ -233,7 +231,7 @@ mail_groups = [accounting_mail,
     prof_rk_mail,
     prof_rkm_mail,
     prof_rkt_mail,
-    raj_mail,
+    rhj_mail,
     rk_mail,
     rkam_mail,
     rkjhs_mail,
@@ -311,7 +309,7 @@ def do_dailies():
 
         if query.startswith("UUFA_IL_FOUT") and (year in query[:-10]) :
             do_query(query, date + " Outside Resources 20" + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if query.startswith("FA_IL_FP1B") and (year in query[:-10]) :
             do_query(query, date + " FP1B" + year + " Checklist " + year + ".xls", directory,
@@ -323,7 +321,7 @@ def do_dailies():
 
         if query.startswith("FA_IL_FP1N") and (year in query[:-10]) :
             do_query(query, date + " FP1N" + year + " Checklist " + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if query.startswith("FA_IL_FP2N") and (year in query[:-10]) :
             do_query(query, date + " FP2N" + year + " Checklist " + year + ".xls", directory,
@@ -395,7 +393,7 @@ def do_dailies():
 
         if query.startswith("UUFA_IL_SF_RFND_AWD_NO_POST_") and (year in query[:-10]) :
             do_query(query, date + " Refund Post Third Party 20" + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if query.startswith("UUFA_IL_SUB_ISIR_NO_PACKAGE_") and (year in query[:-10]) :
             do_query(query, date + " Subsequent ISIR Not Package Not Verified 20" + year + ".xls", directory,
@@ -815,7 +813,7 @@ def do_monday_weeklies():
 
         if query.startswith("UUFA_WR_SCH_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Cash Non-Cash Sch Not Disb " + year + ".xls", directory,
-                     hayley_mail.attachments)
+                     hji.attachments)
 
         if "WR_SCHOLAR_TBP_NO_AWRD" in query and year in query[:-10]:
             do_query(query, date + " TBP NO Award " + year + ".xls", directory,
@@ -1634,11 +1632,11 @@ def do_monthlies():
 
         if "MR_3RD_PARTY_CROSSWALK" in query and year in query[:-10]:
             do_query(query, date + " Third Party Crosswalk " + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if "MR_3RD_PRT_MNTR_IA_ALL" in query and year in query[:-10]:
             do_query(query, date + " Third Party Monitor " + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if "MR_ACAD_LVLS_NOT_SYNC" in query and year in query[:-10]:
             do_query(query, date + " Academic Levels out of SYNC " + year + ".xls", directory,
@@ -1686,7 +1684,7 @@ def do_monthlies():
 
         if "MR_DSB_CASH_AWD_NOPOST" in query and year in query[:-10]:
             do_query(query, date + " Cash Disbursed Not Posted " + year + ".xls", directory,
-                     accounting_mail.attachments)
+                     hjj.attachments)
 
         if "MR_DSB_WAVR_AWD_NOPOST" in query and year in query[:-10]:
             do_query(query, date + " Waiver-Scholarship Disbursed Not Posted " + year + ".xls", directory,
@@ -1782,7 +1780,7 @@ def do_monthlies():
 
         if "MR_UFORM_GRAD_TERM_PRB" in query and year in query[:-10]:
             do_query(query, date + " Grad Term Wrong " + year + ".xls", directory,
-                     raj_mail.attachments)
+                     rhj_mail.attachments)
 
         if "MR_UNDS_OFFER_SCHOLAR" in query and year in query[:-10]:
             do_query(query, date + " Scholarship Awards UNDS Career " + year + ".xls", directory,
