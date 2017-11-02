@@ -339,7 +339,7 @@ def do_dailies():
             do_query(query, date + " Initiated FEHU" + year + " Checklist.xls", directory,
                      rk_mail.attachments)
 
-        if query.startswith("UUFA_IL_IRS_DRT_02_20") and (year in query[:-10]) :
+        if query.startswith("UUFA_IL_IRS_DRT_02") and (year in query[:-10]) :
             do_query(query, date + " IRS Data Retrieval Equal to 02 " + year + ".xls", directory,
                      rkm_mail.attachments)
 
