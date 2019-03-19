@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26304.0
+VisualStudioVersion = 15.0.26430.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DoQueriesPyV2", "DoQueriesPyV2\DoQueriesPyV2.pyproj", "{69402864-62A4-4F2E-B5A6-DBBF92F9E651}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DoQueriesPyV2", "DoQueriesPyV2\DoQueriesPyV2.pyproj", "{364B2D38-01EE-4141-98ED-44939BDA49B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{69402864-62A4-4F2E-B5A6-DBBF92F9E651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69402864-62A4-4F2E-B5A6-DBBF92F9E651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364B2D38-01EE-4141-98ED-44939BDA49B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364B2D38-01EE-4141-98ED-44939BDA49B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
