@@ -15,7 +15,7 @@ last_months_year = now.year - 1 if now.month == 12 else now.year
 month_folder = date[:2] + "-20" + date[-2:]
 year = date[-2:]
 ###############################
-test = False
+test = True
 ###############################
 class MailGroup(object):
     name = ""
@@ -94,22 +94,23 @@ emilie   = "ehereth@sa.utah.edu"
 hayley   = "HShipton@sa.utah.edu"
 heather  = "hhansen@sa.utah.edu"
 hilerie  = "hilerie.harris@sa.utah.edu"
-jen      = "jberry@sa.utah.edu"
+adam      = "agroussman@sa.utah.edu"
 jenny    = "JRyan@sa.utah.edu"
 jonathanReplacement = "JRyan@sa.utah.edu"
 karen    = "karen.henriquez@utah.edu"
 kayla    = "kmccloyn@sa.utah.edu"
 krista   = "kburton@sa.utah.edu"
-computerAssistant    = "mmason@sa.utah.edu" + ";" + "lgaray@sa.utah.edu" + ";" + "vchristensen@sa.utah.edu"
+computerAssistant    = "msakaeda@sa.utah.edu"
 leo      = "lgaray@sa.utah.edu"
 linh     = "lly@sa.utah.edu"
 lisa     = "lisa.zaelit@admin.utah.edu"
 marc     = "mgangwer@sa.utah.edu"
 mat      = "mmason@sa.utah.edu"
+melanie  = "mevans@sa.utah.edu"
 natalie  = "nzaelit@sa.utah.edu"
 plooster = "matthew.plooster@utah.edu"
 raenetta = "rking@sa.utah.edu"
-counselorManager = "TDespain@sa.utah.edu"
+counselorManager = "kbeecher@sa.utah.edu"
 shelly   = "sreese@sa.utah.edu"
 evans	 = "etan@sa.utah.edu"
 sheryl   = "shansen@sa.utah.edu"
@@ -133,7 +134,7 @@ akj_mail        = MailGroup(make_recipients(counselorManager, tim, karen, jenny)
 alt_mail        = MailGroup(make_recipients(loans, counselorManager, systems)); mail_groups.append(alt_mail)
 athletics_mail  = MailGroup(make_recipients(athletics, karen)); mail_groups.append(athletics_mail)
 athletics_rktm  = MailGroup(make_recipients(athletics, counselorManager, karen, tim, marc)); mail_groups.append(athletics_rktm)
-disb_mail       = MailGroup(make_recipients(loans, counselorManager, karen, marc, hayley, jenny, tim, systems)); mail_groups.append(disb_mail)
+disb_mail       = MailGroup(make_recipients(loans, counselorManager, karen, marc, hayley, jenny, tim, natalie, systems)); mail_groups.append(disb_mail)
 disb_tot_mail   = MailGroup(make_recipients(systems, counselorManager, tim, karen, marc, brenda)); mail_groups.append(disb_tot_mail)
 dl_mail         = MailGroup(make_recipients(loans, counselorManager, tim, karen, systems)); mail_groups.append(dl_mail)
 hayley_k_mail   = MailGroup(make_recipients(hayley, karen)); mail_groups.append(hayley_k_mail)
@@ -146,20 +147,21 @@ hj_mail         = MailGroup(make_recipients(hayley, jonathanReplacement, jenny))
 hjr_mail        = MailGroup(make_recipients(hayley, jenny, counselorManager, tim)); mail_groups.append(hjr_mail)
 hjrkm_mail      = MailGroup(make_recipients(hayley, jenny, counselorManager, tim, karen, marc)); mail_groups.append(hjrkm_mail)
 hjs_mail        = MailGroup(make_recipients(hayley, jenny, sheryl)); mail_groups.append(hjs_mail)
-hjvj_mail       = MailGroup(make_recipients(hayley, jenny, veronica, jen)); mail_groups.append(hjvj_mail)
-hjvjm_mail      = MailGroup(make_recipients(hayley, jenny, veronica, jen, mat)); mail_groups.append(hjvjm_mail)
-jen_mail        = MailGroup(make_recipients(jen)); mail_groups.append(jen_mail)
+hjvj_mail       = MailGroup(make_recipients(hayley, jenny, veronica, adam)); mail_groups.append(hjvj_mail)
+hjvjm_mail      = MailGroup(make_recipients(hayley, jenny, veronica, adam, mat)); mail_groups.append(hjvjm_mail)
+jen_mail        = MailGroup(make_recipients(adam)); mail_groups.append(jen_mail)
 ji_mail         = MailGroup(make_recipients(jonathanReplacement, jenny)); mail_groups.append(ji_mail)
 jonathanReplacement_mail   = MailGroup(make_recipients(jonathanReplacement)); mail_groups.append(jonathanReplacement_mail)
 jsmb_mail       = MailGroup(make_recipients(jonathanReplacement, sheryl, natalie, brenda)); mail_groups.append(jsmb_mail)
 jsmbr_mail      = MailGroup(make_recipients(jonathanReplacement, sheryl, natalie, brenda, raenetta)); mail_groups.append(jsmbr_mail)
 jjsmsb_mail     = MailGroup(make_recipients(jonathanReplacement, jenny, hayley, sheryl, natalie, brenda)); mail_groups.append(jjsmsb_mail)
 krms_mail       = MailGroup(make_recipients(krista, counselorManager, tim, natalie)); mail_groups.append(krms_mail)
+kb_mail         = MailGroup(make_recipients(karen, brenda));mail_groups.append(kb_mail)
 computerAssistant_mail      = MailGroup(make_recipients(computerAssistant)); mail_groups.append(computerAssistant_mail)
 leo_mail        = MailGroup(make_recipients(leo)); mail_groups.append(leo_mail)
 loans_kr_mail   = MailGroup(make_recipients(loans, counselorManager, tim, karen)); mail_groups.append(loans_kr_mail)
 loans_krv_mail  = MailGroup(make_recipients(loans, counselorManager, tim, karen, veronica)); mail_groups.append(loans_krv_mail)
-loans_r_mail    = MailGroup(make_recipients(loans, tim, counselorManager,)); mail_groups.append(loans_r_mail)
+loans_r_mail    = MailGroup(make_recipients(loans, tim, counselorManager)); mail_groups.append(loans_r_mail)
 loans_rj_mail   = MailGroup(make_recipients(prof, counselorManager, tim, jenny)); mail_groups.append(loans_rj_mail)
 loans_rk_mail   = MailGroup(make_recipients(loans, counselorManager, tim, karen)); mail_groups.append(loans_rk_mail)
 natalie_s_mail  = MailGroup(make_recipients(natalie)); mail_groups.append(natalie_s_mail)
@@ -181,7 +183,7 @@ rkm_mail        = MailGroup(make_recipients(counselorManager, tim, karen, marc))
 rkmv_mail       = MailGroup(make_recipients(counselorManager, tim, karen, marc, veronica)); mail_groups.append(rkmv_mail)
 rkt_mail        = MailGroup(make_recipients(counselorManager, karen, tim)); mail_groups.append(rkt_mail)
 rkv_mail        = MailGroup(make_recipients(counselorManager, tim, karen, veronica)); mail_groups.append(rkv_mail)
-rmkt_mail       = MailGroup(make_recipients(counselorManager, tim, karen, marc, tim)); mail_groups.append(rmkt_mail)
+rmkt_mail       = MailGroup(make_recipients(counselorManager, tim, karen, marc)); mail_groups.append(rmkt_mail)
 rmt_mail        = MailGroup(make_recipients(counselorManager, marc, tim)); mail_groups.append(rmt_mail)
 rt_mail         = MailGroup(make_recipients(counselorManager, tim)); mail_groups.append(rt_mail)
 schol_mail      = MailGroup(make_recipients(schol)); mail_groups.append(schol_mail)
@@ -193,17 +195,20 @@ sys_mail        = MailGroup(make_recipients(systems)); mail_groups.append(sys_ma
 v_mail          = MailGroup(make_recipients(veronica)); mail_groups.append(v_mail)
 vm_mail         = MailGroup(make_recipients(veronica, mat)); mail_groups.append(vm_mail)
 rtm_mail        = MailGroup(make_recipients(counselorManager, tim, marc)); mail_groups.append(rtm_mail)
+rtmm_mail       = MailGroup(make_recipients(counselorManager, tim, marc, melanie)); mail_groups.append(rtmm_mail)
 prof_rm_mail    = MailGroup(make_recipients(prof, counselorManager, tim, marc)); mail_groups.append(prof_rm_mail)
 r_mail          = MailGroup(make_recipients(counselorManager, tim)); mail_groups.append(r_mail)
 rjhs_mail       = MailGroup(make_recipients(counselorManager, tim, jenny, hayley)); mail_groups.append(rjhs_mail)
 
 # endregion
+
+#Daily Queries
 def do_dailies():
     global aid_year
     year = date[:2]
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_IL_"):
+        if query_name.startswith("UUFA_IL_ATHLETE_RESIDENCY"):
             year = str(int(re.search(r'\d+', query_name).group()))
             aid_year = "20" + str(int(year) - 1) + "-20" + year
             break
@@ -211,10 +216,14 @@ def do_dailies():
         directory = os.path.realpath(os.path.join('C:\Testing Bob/Daily', aid_year, month_folder))
         royall_directory = os.path.realpath('C:\Testing Bob/Royall')
         pell_directory = os.path.realpath(os.path.join('C:\Testing\QUERIES\Pell Repackaging', aid_year))
+        disb_directory = os.path.realpath('C:\Testing\QUERIES\Disbursement\Pre-Disbursement Queries')
+        refund_directory = os.path.realpath(os.path.join('C:\Testing\QUERIES\Refund Credit Holds', month_folder))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Daily', aid_year, month_folder))
         royall_directory = os.path.realpath('O:/Systems/Royall')
         pell_directory = os.path.realpath(os.path.join('O:\Systems\QUERIES\Pell Repackaging', aid_year))
+        disb_directory = os.path.realpath('O:\Systems\QUERIES\Disbursement\Pre-Disbursement Queries')
+        refund_directory = os.path.realpath(os.path.join('O:\Systems\QUERIES\Refund Credit Holds', month_folder))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -223,6 +232,10 @@ def do_dailies():
         os.makedirs(royall_directory)
     if not os.path.isdir(pell_directory):
         os.makedirs(pell_directory)
+    if not os.path.isdir(disb_directory ):
+        os.makedirs(disb_directory)
+    if not os.path.isdir(refund_directory):
+        os.makedirs(refund_directory)
 
     # Change File_Name to be file as it is received and _new_file_name to what
     # the new file should be.  Prefix date will be added.
@@ -385,14 +398,14 @@ def do_dailies():
 
         if query.startswith("UUFA_IL_FED_AID_OVERAWARD_") and (year in query[:-10]) :
             do_query(query, date + " Federal Aid Overaward " + year + ".xls", directory,
-                     rtm_mail.attachments)
+                     rtmm_mail.attachments)
 
         if query.startswith("UUFA_IL_FHST_I_HST_COMPLETE_") and (year in query[:-10]) :
             do_query(query, date + " HS Transcript 'C' FHST" + year + " I.xls", directory,
                      rtm_mail.attachments)
 
         if query.startswith("ussf0034"):
-            do_query(query, date + " " + query, directory,
+            do_query(query, date + " " + query, refund_directory,
                      rkjhs_mail.attachments)
 
         if query.startswith("UUFA_IL_PKG_SCH_EXP_GRAD_FA_") and (year in query[:-10]) :
@@ -471,11 +484,16 @@ def do_dailies():
             do_query(query, date + " Third Party Main Rpt Summer " + year + ".xls", directory,
                      rhj_mail.attachments)
 
+        if "PDQ_SAP_HOLD_DEL" in query:
+            do_query(query, date + " Third Party Main Rpt Summer " + year + ".xls", disb_directory,
+                     null_mail.attachments)
+
     for mail_group in mail_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Daily Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
+#Monday Weekly Queries
 def do_monday_weeklies():
     global aid_year
     global year
@@ -488,13 +506,15 @@ def do_monday_weeklies():
     # the directory to save the files
     # using the date.
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/Monday Weekly', aid_year, month_folder))
-        packaging_directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year, month_folder))
-        disb_failure_directory = os.path.realpath(os.path.join('C:\Testing Bob/Disb Failure ' + aid_year))
+        directory               = os.path.realpath(os.path.join('C:/Testing Bob/Monday Weekly', aid_year, month_folder))
+        packaging_directory     = os.path.realpath(os.path.join('C:/Testing Bob/Packaging', aid_year, month_folder))
+        disb_failure_directory  = os.path.realpath(os.path.join('C:/Testing Bob/Disb Failure ' + aid_year))
+        save_directory          = os.path.realpath(os.path.join('C:/Testing Bob/SAVE', aid_year))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Monday Weekly', aid_year, month_folder))
-        packaging_directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year, month_folder))
-        disb_failure_directory = os.path.realpath(os.path.join('O:/Disbursement Failure/Disb Failure ' + aid_year))
+        directory               = os.path.realpath(os.path.join('O:/Systems/QUERIES/Monday Weekly', aid_year, month_folder))
+        packaging_directory     = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year, month_folder))
+        disb_failure_directory  = os.path.realpath(os.path.join('O:/Disbursement Failure/Disb Failure ' + aid_year))
+        save_directory          = os.path.realpath(os.path.join('O:/Systems/QUERIES/SAVE', aid_year))
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
@@ -502,6 +522,8 @@ def do_monday_weeklies():
         os.makedirs(packaging_directory)
     if not os.path.isdir(disb_failure_directory):
         os.makedirs(disb_failure_directory)
+    if not os.path.isdir(save_directory):
+        os.makedirs(save_directory)
 
     # Change File_Name to be query ac it is received and _new_file_name to what
     # the new query should be.Prefix date
@@ -525,7 +547,7 @@ def do_monday_weeklies():
 
         if "_WR_AID_DISB_NO_ENR_SCH_" in query and (year in query[:-10]) :
             do_query(query, date + " T 53 Sch Disb Not Enrolled " + year + ".xls", directory,
-                     hayley_mail.attachments)
+                     hj_mail.attachments)
 
         if "_WR_ALL_V4_V5_VER_" in query and (year in query[:-10]) :
             do_query(query, date + " All Verification V4-V5 " + year + ".xls", directory,
@@ -561,7 +583,7 @@ def do_monday_weeklies():
 
         if "_WR_AWD_UG_NOW_GRAD_SV_" in query and (year in query[:-10]) :
             do_query(query, date + " Scholar Awards past Grad Term " + year + ".xls", directory,
-                     hayley_mail.attachments)
+                     hj_mail.attachments)
 
         if "_WR_CHKLST_STATUS_ERROR_" in query and (year in query[:-10]) :
             do_query(query, date + " Checklist Status Error " + year + ".xls", directory,
@@ -1000,6 +1022,12 @@ def do_monday_weeklies():
             do_query(query, date + " Students Not Packaged " + year + ".xls", directory,
                      rmkt_mail.attachments)
 
+        if "_WR_SAVE_CTZNSHIP_VER_" in query and (year in query[:-10]) :
+            do_query(query, date + " SAVE SB81 CTZNSHP VERI " + year + ".xls", save_directory,
+                     kb_mail.attachments)
+
+
+
         # Manually run Queries
         if "_WR_LOAN_EFT_DETAIL_ERROR" in query:
             do_query(query, date + " Loan EFT Detail Error.xls", directory,
@@ -1036,7 +1064,7 @@ def do_monday_weeklies():
             mailer("", aid_year + " Weekly Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Budget Queries
 def do_budget_queries():
     global aid_year
     global year
@@ -1109,6 +1137,10 @@ def do_budget_queries():
             do_query(query, date + " PELL COA Double " + year + ".xls", directory,
                      rk_mail.attachments)
 
+        if "BR_PELL_COA_DBLD_WRNG" in query and (year in query[:-10]) :
+            do_query(query, date + " PELL COA Double " + year + ".xls", directory,
+                     null_mail.attachments)
+
         if query.startswith("FA_BR_PELL_COA_LESS_HT_20") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Less HT Enrollment " + year + ".xls", directory,
                      rk_mail.attachments)
@@ -1150,7 +1182,7 @@ def do_budget_queries():
             mailer("", aid_year + " Budget Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
     
-
+#Budget Testing Queries
 def do_budget_test_queries():
     global aid_year
     for query_name in os.listdir("."):
@@ -1363,7 +1395,7 @@ def do_budget_test_queries():
             do_query(query, date + " Wrong Budget - Undergraduate Nursing.xls", directory,
                      null_mail.attachments)
 
-
+#Packaging Queries
 def do_packaging_queries():
     global aid_year
     for query_name in os.listdir("."):
@@ -1376,9 +1408,9 @@ def do_packaging_queries():
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year, month_folder))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year, month_folder))
+        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -1592,17 +1624,25 @@ def do_packaging_queries():
             do_query(query, date + " Teach Credential 20" + year + ".xls", directory,
                      rk_mail.attachments)
 
+        if ("PRT_SUB_UNSUB_FA_FA") in query and (year in query[:-10]) :
+            do_query(query, date + " Loan Offrd Disb Plan FA Split Code FA.xls" + year + ".xls", directory,
+                     loans_r_mail.attachments)
+
+        if ("PRT_PELL_PKG_LOAD_CHCK_") in query and (year in query[:-10]) :
+            do_query(query, date + " Pell Package Load Check " + year + ".xls", directory,
+                     loans_r_mail.attachments)
+
     for mail_group in mail_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Batch Packaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
-
-
+            
+#Monthly Queries
 def do_monthlies():
     global aid_year
     year = "18"
     for query_name in os.listdir("."):
-        if "_MR_" in query_name:
+        if "MR_DIR_LN_TRNSMIT_HOLD" in query_name:
             year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
@@ -1765,6 +1805,10 @@ def do_monthlies():
             do_query(query, date + " Perkins - Misc Loans Disbursed " + year + ".xls", directory,
                      loans_r_mail.attachments)
 
+        if "_MR_SCH_IT_RECON_" in query and year in query[:-10]:
+            do_query(query, date + " Scholarship IT Recon " + year + ".xls", directory,
+                     schol_mail.attachments)
+
         if "MR_SCH" in query and "LOA" in query and year in query[:-10]:
             do_query(query, date + " Scholarship LOA " + year + ".xls", directory,
                      hjj_mail.attachments)
@@ -1809,6 +1853,10 @@ def do_monthlies():
             do_query(query, date + " Verification Dependency Override " + year + ".xls", directory,
                      rkm_mail.attachments)
 
+        if "MR_GRBEN_EA_POST" in query and year in query[:-10]:
+            do_query(query, date + " Grad Benefit EA Post " + year + ".xls", directory,
+                     rhj_mail.attachments)
+
         if "SEFA_DL_TOTAL_AWARDS" in query and year in query[:-10]:
             do_query(query, date + " SEFA DL Amounts 20" + year + ".xls", directory,
                      natalie_s_mail.attachments)
@@ -1834,7 +1882,7 @@ def do_monthlies():
             mailer("", aid_year + " Monthly Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
     
-
+#End of Term Queries
 def do_end_of_term_queries():
     global aid_year
     term = 'F'
@@ -1964,7 +2012,7 @@ def do_end_of_term_queries():
             mailer("", "End of Term Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Disbursement Queries
 def do_disb_queries():
     global aid_year
     year = "17"
@@ -2049,7 +2097,7 @@ def do_disb_queries():
             mailer("", aid_year + " Disbursement Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#2nd LDR Queries
 def do_2nd_ldr():
     global aid_year
     year = "18"
@@ -2120,7 +2168,7 @@ def do_2nd_ldr():
             mailer("", aid_year + " Second Session LDR Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Day After LDR Queries
 def do_day_after_ldr():
     global aid_year
     for query_name in os.listdir("."):
@@ -2226,7 +2274,7 @@ def do_day_after_ldr():
             mailer("", aid_year + " Day After LDR Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Direct Loan Pre-Outbound Queries
 def dl_pre_outbound():
     global aid_year
     year = '17'
@@ -2289,7 +2337,7 @@ def dl_pre_outbound():
             do_query(query, date + " Loan Split Codes " + year + ".xls", directory,
                      dl_mail.attachments)
 
-        if query.startswith("UUFA_DLR_LN_ORIG_VLOAN_RSN") and (year in query[:-10]) :
+        if "LN_ORIG_VLOAN_RSN" in query and (year in query[:-10]) :
             do_query(query, date + " Loan ORIG VLOAN Reasons.xls", directory,
                      dl_mail.attachments)
 
@@ -2337,7 +2385,7 @@ def dl_pre_outbound():
             mailer("", aid_year + " Pre-Outbound Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Alt Loan Pre-Outbound Queries
 def al_pre_outbound():
     global aid_year
     for query_name in os.listdir("."):
@@ -2440,7 +2488,7 @@ def al_pre_outbound():
             mailer("", aid_year + " Alt Loan Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Pre-Repackaging Queries
 def do_pre_repackaging():
     global aid_year
     strm = "no STRM found"
@@ -2512,7 +2560,7 @@ def do_pre_repackaging():
             mailer("", aid_year + " Pre-Pell Only Repackaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Mid-Repackaging Queries
 def do_mid_repack_queries():
     global aid_year
     strm = "no STRM found"
@@ -2594,7 +2642,7 @@ def do_mid_repack_queries():
             mailer("", aid_year + " Pell Repackaging Mid-Packaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#After Repackaging Queries
 def do_after_repackaging():
     global aid_year
     strm = "no STRM found"
@@ -2688,7 +2736,7 @@ def do_after_repackaging():
             mailer("", aid_year + " Pell Only Repackaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Daily Scholarships Queries
 def do_daily_scholarships():
     global aid_year
     year = date[:2]
@@ -2729,7 +2777,7 @@ def do_daily_scholarships():
             mailer("", aid_year + " Daily Scholarship Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#Weekly Scholarships Queries
 def do_weekly_scholarships():
     global aid_year
     global year
@@ -2831,14 +2879,10 @@ def do_weekly_scholarships():
             mailer("", aid_year + " Weekly Scholarships Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
-
+#ATB, FBILL, 3C Queries
 def do_atb_fb_3c_queries():
     global aid_year
-    year = "18"
-    for query_name in os.listdir("."):
-        if ("UUFA_ADD" in query_name):
-            year = str(int(re.search(r'\d+', query_name).group()))
-            break
+    year = "19"
     aid_year = "20" + str(int(year) - 1) + "-20" + year
 
     if test:
@@ -2927,7 +2971,7 @@ def do_atb_fb_3c_queries():
                      null_mail.attachments)
 
         if ("UUFA_ATB_ISIR_NOT_MATCH" in query):
-            do_query(query, date + " ISIR Not Match SEC " + year + ".xls", atb_directory,
+            do_query(query, date + " ISIR Not Match SEC.xls", atb_directory,
                      rmkt_mail.attachments)
 
         if ("UUFA_ATB_SEQUENCE_DIFFERENCE" in query):
@@ -2939,11 +2983,78 @@ def do_atb_fb_3c_queries():
             mailer("", " ATB Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
 
+#TSM Queries            
+def do_tsm_queries():
+    global aid_year
+    year = "19"
+    for query_name in os.listdir("."):
+        if "_NSLDS_" in query_name:
+            year = str(int(re.search(r'\d+', query_name).group()))
+            break
+    aid_year = "20" + str(int(year) - 1) + "-20" + year
+
+    if test:
+        directory = os.path.realpath(os.path.join('C:/QUERIES/TSM/NSLDS TSM Request'))
+    else:
+        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/TSM/NSLDS TSM Request'))
+
+    # the list 'my_path' should be populated with the FOLDER variables above.
+    if not os.path.isdir(directory):
+        os.makedirs(directory)
+
+    # Change File_Name to be file as it is received and _new_file_name to what
+    # the new file should be.  Prefix date
+    # will be added.
+    for query in os.listdir("."):
+        if ("NSLDS_REQUEST_DN" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Request DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("NSLDS_REQUEST_GR" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Request DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("NSLDS_REQUEST_LW" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Request DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("NSLDS_REQUEST_MD" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Request DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("NSLDS_REQUEST_UG" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Request DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("_NSLDS_VAR_FLAG9_DN" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Var Flag9 DN " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("_NSLDS_VAR_FLAG9_GR" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Var Flag9 GR " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("_NSLDS_VAR_FLAG9_LW" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Var Flag9 LW " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("_NSLDS_VAR_FLAG9_MD" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Var Flag9 MD " + year + ".xls", directory,
+                     null_mail.attachments)
+
+        if ("_NSLDS_VAR_FLAG9_UG" in query) and (year in query[:-10]) :
+            do_query(query, date + " NSLDS Var Flag9 UG " + year + ".xls", directory,
+                     null_mail.attachments)
+
+    for mail_group in mail_groups:
+        if(mail_group.attachments):
+            mailer("", " TSM Queries", mail_group.recipients,"", mail_group.attachments)
+            del mail_group.attachments[:]
 
 def main():
     for filename in os.listdir("."):
     # Daily Queries
-        if filename.startswith("UUFA_IL_"):
+        if filename.startswith("UUFA_IL_ATHLETE_RESIDENCY"):
             do_dailies()
     # Monday Weekly Queries
         if filename.startswith("UUFA_WR_"):
@@ -2955,7 +3066,7 @@ def main():
         if filename.startswith("UUFA_PRT_ACAD_PROG_REVIEW"):
             do_packaging_queries()
     # Monthly Queries
-        if "UUFA_MR_" in filename:
+        if "MR_DIR_LN_TRNSMIT_HOLD" in filename:
             do_monthlies()
     # Disbursement Queries
         if filename.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB"):
@@ -2994,15 +3105,15 @@ def main():
         if filename.startswith("UUFA_BUDGET_20"):
             do_budget_test_queries()
     # ATB and 3C Queries
-        if "UUFA_ADD" in filename:
+        if "UUFA_ATB" in filename:
             do_atb_fb_3c_queries()
     # Remove extra files 
         if "FASTDVER" in filename or "FINAID_Checklist_" in filename  or "ussfa09" in filename or "USSFA090 Reset" in filename or "O-A" in filename:
             os.remove(filename)
             print("Removed " + filename)
-        
-
-
+    # Transfer Student Monitoring
+        if "_NSLDS_" in filename:
+            do_tsm_queries()
 
 if __name__ == "__main__":
     # call your code here
