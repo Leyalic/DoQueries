@@ -209,21 +209,21 @@ def do_dailies():
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_IL_ATHLETE_RESIDENCY"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             aid_year = "20" + str(int(year) - 1) + "-20" + year
             break
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Daily', aid_year, month_folder))
-        royall_directory = os.path.realpath('C:/Testing Bob/Royall')
-        pell_directory = os.path.realpath(os.path.join('C:/Testing/QUERIES/Pell Repackaging', aid_year))
-        disb_directory = os.path.realpath('C:/Testing/QUERIES/Disbursement/Pre-Disbursement Queries')
-        refund_directory = os.path.realpath(os.path.join('C:/Testing/QUERIES/Refund Credit Holds', month_folder))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Daily', aid_year, month_folder))
+        royall_directory = os.path.realpath('C:\Testing Bob/Royall')
+        pell_directory = os.path.realpath(os.path.join('C:\Testing\QUERIES\Pell Repackaging', aid_year))
+        disb_directory = os.path.realpath('C:\Testing\QUERIES\Disbursement\Pre-Disbursement Queries')
+        refund_directory = os.path.realpath(os.path.join('C:\Testing\QUERIES\Refund Credit Holds', month_folder))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Daily', aid_year, month_folder))
         royall_directory = os.path.realpath('O:/Systems/Royall')
-        pell_directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Pell Repackaging', aid_year))
-        disb_directory = os.path.realpath('O:/Systems/QUERIES/Disbursement/Pre-Disbursement Queries')
-        refund_directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Refund Credit Holds', month_folder))
+        pell_directory = os.path.realpath(os.path.join('O:\Systems\QUERIES\Pell Repackaging', aid_year))
+        disb_directory = os.path.realpath('O:\Systems\QUERIES\Disbursement\Pre-Disbursement Queries')
+        refund_directory = os.path.realpath(os.path.join('O:\Systems\QUERIES\Refund Credit Holds', month_folder))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -499,7 +499,7 @@ def do_monday_weeklies():
     global year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_WR_"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     # Create FOLDER variables to be used in Move() operation and establishes
@@ -1070,7 +1070,7 @@ def do_budget_queries():
     global year
     for query_name in os.listdir("."):
         if "BR_BDGT_" in query_name:
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     # Create FOLDER variables to be used in Move() operation and establishes
@@ -1078,7 +1078,7 @@ def do_budget_queries():
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Budgets', aid_year, month_folder))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Budgets', aid_year, month_folder))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Budgets', aid_year, month_folder))
 
@@ -1187,7 +1187,7 @@ def do_budget_test_queries():
     global aid_year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_BUDGET_"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
 
@@ -1196,7 +1196,7 @@ def do_budget_test_queries():
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Budgets', aid_year, month_folder,"Wrong Budget Queries"))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Budgets', aid_year, month_folder,"Wrong Budget Queries"))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Budgets', aid_year, month_folder, "Wrong Budget Queries"))
 
@@ -1400,7 +1400,7 @@ def do_packaging_queries():
     global aid_year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_PRT_ACAD_PROG_REVIEW"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     # Create FOLDER variables to be used in Move() operation and establishes
@@ -1408,7 +1408,7 @@ def do_packaging_queries():
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Packaging', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year))
 
@@ -1643,7 +1643,7 @@ def do_monthlies():
     year = "18"
     for query_name in os.listdir("."):
         if "MR_DIR_LN_TRNSMIT_HOLD" in query_name:
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     t_path = "Award Summary 20" + year + "/Award Summary " + calendar.month_name[last_month] + " " + str(last_months_year)
@@ -1899,9 +1899,9 @@ def do_end_of_term_queries():
 
     year = aid_year[-2:]
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/SAP/', "20" + year + term))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/SAP/', "20" + year + term))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/SAP/', "20" + year + term))
+        directory = os.path.realpath(os.path.join('O:\Systems\QUERIES/SAP/', "20" + year + term))
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
@@ -2018,15 +2018,15 @@ def do_disb_queries():
     year = "17"
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     disb_date = str(raw_input("Enter Date the Disbursement ran in 'MM-DD-YY' format:"))
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Disbursement',
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Disbursement',
                                                   aid_year, month_folder))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Disbursement', aid_year, month_folder))
+        directory = os.path.realpath(os.path.join('O:\Systems\QUERIES\Disbursement', aid_year, month_folder))
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
@@ -2103,11 +2103,11 @@ def do_2nd_ldr():
     year = "18"
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_PRT_PELL_ELG_NO_PELL_"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + str(year)
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Term', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Term', aid_year))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Term', aid_year))
 
@@ -2173,11 +2173,11 @@ def do_day_after_ldr():
     global aid_year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_PRT_PELL_ELG_NO_PELL_"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/LDR', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/LDR', aid_year))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/LDR', aid_year))
 
@@ -2280,16 +2280,16 @@ def dl_pre_outbound():
     year = '17'
     for query_name in os.listdir("."):
         if "DLR_LOAN_ORIG_EDIT_ERR" in query_name:
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     orig_file_doc = date + " DL ORIG 20" + year + ".doc"
     orig_file_doc_2 = date + " DL ORIG 20" + year + " (2).doc"
     orig_file_docx = date + " DL ORIG 20" + year + ".docx"
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Direct Loans', aid_year, 'DL Pre-Outbound'))
-        orig_doc = os.path.realpath(os.path.join('C:/Testing Bob/Direct Loans', aid_year, 'Origination', orig_file_doc))
-        orig_docx = os.path.realpath(os.path.join('C:/Testing Bob/Direct Loans', aid_year, 'Origination', orig_file_docx))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Direct Loans', aid_year, 'DL Pre-Outbound'))
+        orig_doc = os.path.realpath(os.path.join('C:\Testing Bob\Direct Loans', aid_year, 'Origination', orig_file_doc))
+        orig_docx = os.path.realpath(os.path.join('C:\Testing Bob\Direct Loans', aid_year, 'Origination', orig_file_docx))
 
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/Direct Loans', aid_year, 'DL Pre-Outbound'))
@@ -2378,7 +2378,7 @@ def dl_pre_outbound():
                     dl_mail.attachments.append(orig_doc_2)
                 break
             else:
-                raw_input("/nCould not locate DL ORIG 20" + year + ".doc/nMake sure it is located in O:/Systems/Direct Loans/" + aid_year + "/Origination/n/nPress Enter when ready.")
+                raw_input("\nCould not locate DL ORIG 20" + year + ".doc\nMake sure it is located in O:/Systems/Direct Loans/" + aid_year + "/Origination\n\nPress Enter when ready.")
 
     for mail_group in mail_groups:
         if(mail_group.attachments):
@@ -2390,7 +2390,7 @@ def al_pre_outbound():
     global aid_year
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_ALR_LOAN_ORG_LND_NT_CK_"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     skip = "n"
@@ -2398,9 +2398,9 @@ def al_pre_outbound():
     orig_file_docx = date + " ALT Loan ORIG 20" + year + ".docx"
 
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/ALT Loans/', aid_year))
-        orig_doc = os.path.realpath(os.path.join('C:/Testing Bob/ALT Loans/', aid_year, orig_file_doc))
-        orig_docx = os.path.realpath(os.path.join('C:/Testing Bob/ALT Loans/', aid_year, orig_file_docx))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year))
+        orig_doc = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year, orig_file_doc))
+        orig_docx = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year, orig_file_docx))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', aid_year))
         orig_doc = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', aid_year, orig_file_doc))
@@ -2481,7 +2481,7 @@ def al_pre_outbound():
             if str.capitalize(skip) == "Y":
                 break
             else:
-                skip = raw_input("/nCould not locate ALT Loan ORIG 20" + year + ".doc/nMake sure it is located in O:/Systems/Queries/ALT Loans/" + aid_year + "/n/nPress Enter when ready.")
+                skip = raw_input("\nCould not locate ALT Loan ORIG 20" + year + ".doc\nMake sure it is located in O:/Systems/Queries/ALT Loans/" + aid_year + "\n\nPress Enter when ready.")
 
     for mail_group in mail_groups:
         if(mail_group.attachments):
@@ -2501,7 +2501,7 @@ def do_pre_repackaging():
                 if len(strm) == 4 and (0 / int(strm) == 0):
                     break
                 else:
-                    print "/nOnly STRMs in the form of 1(year)4/6/8 are acceptable. Ex: 1168 is Fall of 16."
+                    print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable. Ex: 1168 is Fall of 16."
             if strm[-1] == "8":
                 aid_year = "20" + str(strm[1:3]) + "-20" + str(int(strm[1:3]) + 1)
                 break
@@ -2510,7 +2510,7 @@ def do_pre_repackaging():
                 break
 
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Pell Repackaging', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Pell Repackaging', aid_year))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Pell Repackaging', aid_year))
 
@@ -2573,7 +2573,7 @@ def do_mid_repack_queries():
                 if len(strm) == 4 and (0 / int(strm) == 0):
                     break
                 else:
-                    print "/nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
+                    print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
             if strm[-1] == "8":
                 aid_year = "20" + str(strm[1:3]) + "-20" + str(int(strm[1:3]) + 1)
                 break
@@ -2655,7 +2655,7 @@ def do_after_repackaging():
                 if len(strm) == 4 and (0 / int(strm) == 0):
                     break
                 else:
-                    print "/nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
+                    print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
             if strm[-1] == "8":
                 aid_year = "20" + str(strm[1:3]) + "-20" + str(int(strm[1:3]) + 1)
                 break
@@ -2664,7 +2664,7 @@ def do_after_repackaging():
                 break
 
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Pell Repackaging', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Pell Repackaging', aid_year))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Pell Repackaging', aid_year))
 
@@ -2742,14 +2742,14 @@ def do_daily_scholarships():
     year = date[:2]
     for query_name in os.listdir("."):
         if query_name.startswith("UUFA_SCHOLAR_DISB_ZERO"):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
 
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob', aid_year + ' Scholar/Queries'))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob', aid_year + ' Scholar\Queries'))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems', aid_year + ' Scholar/Queries'))
+        directory = os.path.realpath(os.path.join('O:\Systems', aid_year + ' Scholar\Queries'))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -2783,16 +2783,16 @@ def do_weekly_scholarships():
     global year
     for query_name in os.listdir("."):
         if ("UUFA_WS_" in query_name):
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
 
     if test:
-        directory = os.path.realpath(os.path.join('C:/Testing Bob/Scholarships', aid_year + ' Scholar/Queries'))
-        directory_save = os.path.realpath(os.path.join('C:/Testing Bob/Save', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Scholarships', aid_year + ' Scholar\Queries'))
+        directory_save = os.path.realpath(os.path.join('C:\Testing Bob/Save', aid_year))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/Scholarships', aid_year + ' Scholar/Queries'))
-        directory_save = os.path.realpath(os.path.join('O:/Systems/Queries/Save', aid_year))
+        directory = os.path.realpath(os.path.join('O:\Systems\Scholarships', aid_year + ' Scholar\Queries'))
+        directory_save = os.path.realpath(os.path.join('O:\Systems\Queries\Save', aid_year))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -2887,7 +2887,7 @@ def do_atb_fb_3c_queries():
 
     if test:
         directory = os.path.realpath(os.path.join('C:/Testing Bob/QUERIES/3C Queries'))
-        atb_directory = os.path.realpath(os.path.join('C:/Testing Bob/QUERIES/ATB'))
+        atb_directory = os.path.realpath(os.path.join('C:/Testing Bob/QUERIES\ATB'))
     else:
         directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/3C Queries'))
         atb_directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/ATB'))
@@ -2989,7 +2989,7 @@ def do_tsm_queries():
     year = "19"
     for query_name in os.listdir("."):
         if "_NSLDS_" in query_name:
-            year = str(int(re.search(r'/d+', query_name).group()))
+            year = str(int(re.search(r'\d+', query_name).group()))
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
 
@@ -3133,4 +3133,4 @@ if __name__ == "__main__":
         #    mailer("", aid_year + " Queries", mail_group.recipients,"", mail_group.attachments)
         #    del mail_group.attachments[:]
 
-raw_input("So Long, and Thanks for All the Fish./nPRESS ENTER TO CLOSE.")
+raw_input("So Long, and Thanks for All the Fish.\nPRESS ENTER TO CLOSE.")
