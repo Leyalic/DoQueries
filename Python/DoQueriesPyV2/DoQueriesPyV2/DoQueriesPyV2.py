@@ -87,7 +87,7 @@ def make_recipients(*args):
 
 
 # region Email and Attachment Groups008/
-atir     = "aedwin@sa.utah.edu"
+atir     = ""
 brenda   = "bburke@sa.utah.edu"
 chelsea  = "cspringer@sa.utah.edu"
 emilie   = "ehereth@sa.utah.edu"
@@ -140,7 +140,7 @@ dl_mail         = MailGroup(make_recipients(loans, counselorManager, tim, karen,
 hayley_k_mail   = MailGroup(make_recipients(hayley, karen)); mail_groups.append(hayley_k_mail)
 hayley_mail     = MailGroup(make_recipients(hayley)); mail_groups.append(hayley_mail)
 hj_mail         = MailGroup(make_recipients(hayley, jenny)); mail_groups.append(hj_mail)
-hji_mail        = MailGroup(make_recipients(hayley, jonathanReplacement, jenny)); mail_groups.append(hji_mail)
+hji_mail        = MailGroup(make_recipients(hayley, jonathanReplacement, jenny, raenetta)); mail_groups.append(hji_mail)
 hjj_mail        = MailGroup(make_recipients(hayley, jenny, jonathanReplacement)); mail_groups.append(hjj_mail)
 hjjr_mail       = MailGroup(make_recipients(hayley, jenny, jonathanReplacement, counselorManager,))
 hj_mail         = MailGroup(make_recipients(hayley, jonathanReplacement, jenny)); mail_groups.append(hj_mail)
@@ -177,7 +177,7 @@ prof_rkt_mail   = MailGroup(make_recipients(counselorManager, karen, tim, prof))
 rhj_mail        = MailGroup(make_recipients(raenetta, hayley, jenny)); mail_groups.append(rhj_mail)
 rk_mail         = MailGroup(make_recipients(counselorManager, tim, karen)); mail_groups.append(rk_mail)
 rkam_mail       = MailGroup(make_recipients(counselorManager, tim, karen, accounting, marc)); mail_groups.append(rkam_mail)
-rkjhs_mail      = MailGroup(make_recipients(counselorManager, tim, karen, jenny, hayley, atir)); mail_groups.append(rkjhs_mail)
+rkjhs_mail      = MailGroup(make_recipients(counselorManager, tim, karen, jenny, hayley, atir, evans)); mail_groups.append(rkjhs_mail)
 rkl_mail        = MailGroup(make_recipients(counselorManager, tim, karen, linh)); mail_groups.append(rkl_mail)
 rkm_mail        = MailGroup(make_recipients(counselorManager, tim, karen, marc)); mail_groups.append(rkm_mail)
 rkmv_mail       = MailGroup(make_recipients(counselorManager, tim, karen, marc, veronica)); mail_groups.append(rkmv_mail)
@@ -532,6 +532,10 @@ def do_monday_weeklies():
         if "_WR_ACAD_LVLS_OUT_SYNC_" in query and (year in query[:-10]) :
             do_query(query, date + " GR Academic Levels Out of Sync " + year + ".xls", directory,
                      rk_mail.attachments)
+
+        if "_WR_ADV_FSOI_INITIATED_" in query and (year in query[:-10]) :
+            do_query(query, date + " FSOI Initiated  " + year + ".xls", directory,
+                     rmt_mail.attachments)
 
         if "_WR_AGG_CK_MLT_YR_AWDED_" in query and (year in query[:-10]) :
             do_query(query, date + " Student Pkgd for " + str(int(year) - 1) + " after " + year + ".xls", directory,
@@ -1408,9 +1412,9 @@ def do_packaging_queries():
     # using the date.
     # Create variables to be used in Move() operation.
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/Packaging', aid_year, month_folder))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year))
+        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/Packaging', aid_year, month_folder))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -2044,7 +2048,7 @@ def do_disb_queries():
             do_query(query, disb_date + " Athlete Off Schedule R&B " + year + ".xls", directory,
                      disb_mail.attachments)
 
-        if query.startswith("UUFA_CASH_DISB_TOTALS_20") and (year in query[:-10]) :
+        if ("_CASH_DISB_TOTALS") in query and (year in query[:-10]) :
             do_query(query, disb_date + " Cash Disbursement Totals " + year + ".xls", directory,
                      disb_tot_mail.attachments)
 
@@ -2064,7 +2068,7 @@ def do_disb_queries():
             do_query(query, disb_date + " DL UG PLUS Refund Borrower " + year + ".xls", directory,
                      sl_mail.attachments)
 
-        if query.startswith("UUFA_MISC_DISB_TOTALS_20") and (year in query[:-10]) :
+        if ("MISC_DISB_TOTALS") in query and (year in query[:-10]) :
             do_query(query, disb_date + " Misc Disbursement Totals " + year + ".xls", directory,
                      disb_tot_mail.attachments)
 
@@ -2072,7 +2076,7 @@ def do_disb_queries():
             do_query(query, disb_date + " Misc Resources Disbursement " + year + ".xls", directory,
                      disb_mail.attachments)
 
-        if query.startswith("UUFA_NONCASH_DISB_TOTALS_20") and (year in query[:-10]) :
+        if ("NONCASH_DISB_TOTALS") in query and (year in query[:-10]) :
             do_query(query, disb_date + " Non-cash Disbursement Totals " + year + ".xls", directory,
                      disb_tot_mail.attachments)
 
