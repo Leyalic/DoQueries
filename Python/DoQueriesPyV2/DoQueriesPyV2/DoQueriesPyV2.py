@@ -88,42 +88,41 @@ def make_recipients(*args):
 
 # region Email and Attachment Groups008/
 atir     = ""
-brenda   = "bburke@sa.utah.edu"
-chelsea  = "cspringer@sa.utah.edu"
-emilie   = "ehereth@sa.utah.edu"
-hayley   = "HShipton@sa.utah.edu"
+brenda   = "brenda.burke@utah.edu"
+chelsea  = "chelsea.springer@utah.edu"
+emilie   = "emilie.hereth@utah.edu"
+hayley   = "hayley.shipton@utah.edu"
 heather  = "hhansen@sa.utah.edu"
 hilerie  = "hilerie.harris@sa.utah.edu"
-adam      = "agroussman@sa.utah.edu"
-jenny    = "JRyan@sa.utah.edu"
-jonathanReplacement = "JRyan@sa.utah.edu"
+adam     = "adam.groussman@utah.edu"
+jenny    = "jenny.ryan@utah.edu"
+jonathanReplacement = "jenny.ryan@utah.edu"
 karen    = "karen.henriquez@utah.edu"
-kayla    = "kmccloyn@sa.utah.edu"
-krista   = "kburton@sa.utah.edu"
-computerAssistant    = "msakaeda@sa.utah.edu"
-leo      = "lgaray@sa.utah.edu"
-linh     = "lly@sa.utah.edu"
+kayla    = "Kayla.LaMont@utah.edu"
+krista   = "Krista.Burton@utah.edu"
+mahala   = "mahala.sakaeda@utah.edu"
+leo      = "leo.garay@utah.edu"
+linh     = "linh.ly@utah.edu"
 lisa     = "lisa.zaelit@admin.utah.edu"
-marc     = "mgangwer@sa.utah.edu"
-mat      = "mmason@sa.utah.edu"
-melanie  = "mevans@sa.utah.edu"
-natalie  = "nzaelit@sa.utah.edu"
+marc     = "marc.gangwer@utah.edu"
+mat      = "mat.mason@utah.edu"
+melanie  = "Melanie.Evans@utah.edu"
+natalie  = "natalie.zaelit@utah.edu"
 plooster = "matthew.plooster@utah.edu"
-raenetta = "rking@sa.utah.edu"
-kathi    = "kbeecher@sa.utah.edu"
+raenetta = "raenetta.king@utah.edu"
+kathi    = "kathi.beecher@utah.edu"
 shelly   = ""
-evans	 = "etan@sa.utah.edu"
-sheryl   = "shansen@sa.utah.edu"
+evans	 = "Evans.Tan@utah.edu"
+sheryl   = "sheryl.hansen@utah.edu"
 steffany = "steffany.forrest@income.utah.edu"
-adam	 = "agroussman@sa.utah.edu"
-tim      = "TDespain@sa.utah.edu"
-veronica = "vchristensen@sa.utah.edu"
+tim      = "tim.despain@utah.edu"
+veronica = "veronica.christensen@utah.edu"
 
 accounting = emilie + ";" + natalie + ";" + evans
 athletics  = chelsea + ";" + kayla
 loans      = krista + ";" + heather
 prof       = shelly
-systems    = mat + ";" + leo + ";" + veronica + ";" + computerAssistant + ";" + adam
+systems    = mat + ";" + leo + ";" + veronica + ";" + mahala + ";" + adam
 schol      = jonathanReplacement + ";" + sheryl + ";" + plooster + ";" + raenetta + ";" + hayley + ";" + jenny 
 
 mail_groups = []
@@ -157,7 +156,7 @@ jsmbr_mail      = MailGroup(make_recipients(jonathanReplacement, sheryl, natalie
 jjsmsb_mail     = MailGroup(make_recipients(jonathanReplacement, jenny, hayley, sheryl, natalie, brenda)); mail_groups.append(jjsmsb_mail)
 krms_mail       = MailGroup(make_recipients(krista, kathi, tim, natalie)); mail_groups.append(krms_mail)
 kb_mail         = MailGroup(make_recipients(karen, brenda));mail_groups.append(kb_mail)
-computerAssistant_mail      = MailGroup(make_recipients(computerAssistant)); mail_groups.append(computerAssistant_mail)
+mahala_mail      = MailGroup(make_recipients(mahala)); mail_groups.append(mahala_mail)
 leo_mail        = MailGroup(make_recipients(leo)); mail_groups.append(leo_mail)
 loans_kr_mail   = MailGroup(make_recipients(loans, kathi, tim, karen)); mail_groups.append(loans_kr_mail)
 loans_krv_mail  = MailGroup(make_recipients(loans, kathi, tim, karen, veronica)); mail_groups.append(loans_krv_mail)
@@ -912,7 +911,7 @@ def do_monday_weeklies():
 
         if "_WR_TRANSFER_STU_FA_SP_" in query and (year in query[:-10]) :
             do_query(query, date + " Transfer Students Fall-Spring 20" + year + ".xls", directory,
-                     computerAssistant_mail.attachments)
+                     mahala_mail.attachments)
 
         if "_WR_UG_GR_DIR_LN_GR_TRM_" in query and (year in query[:-10]) :
             do_query(query, date + " UG-GR Direct Ln Grad Term " + year + ".xls", directory,
