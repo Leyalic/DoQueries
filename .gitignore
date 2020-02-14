@@ -9,6 +9,9 @@
 *.exe
 *.bat
 *.lnk
+*.xls
+*.csv
+*.pdf
 setup.py
 
 # User-specific files (MonoDevelop/Xamarin Studio)
@@ -252,3 +255,4 @@ ModelManifest.xml
 *.pyproj
 *.zip
 *.rar
+Python/DoQueriesPyV2/DoQueriesPyV2/ussf0034_refhld_07-FEB-2020.csv
