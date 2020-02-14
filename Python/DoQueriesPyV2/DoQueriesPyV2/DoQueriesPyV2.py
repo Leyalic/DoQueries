@@ -2804,6 +2804,8 @@ def do_weekly_scholarships():
         os.makedirs(directory)
     if not os.path.isdir(directory_save):
         os.makedirs(directory_save)
+    if not os.path.isdir(directory_errors):
+        os.makedirs(directory_errors)
 
     # Change File_Name to be file as it is received and _new_file_name to what
     # the new file should be.  Prefix date
