@@ -15,7 +15,7 @@ last_months_year = now.year - 1 if now.month == 12 else now.year
 month_folder = date[:2] + "-20" + date[-2:]
 year = date[-2:]
 ###############################
-test = False
+test = False 
 ###############################
 class MailGroup(object):
     name = ""
@@ -61,10 +61,11 @@ def mailer(text, subject, recipient, cc, attachments):
     mail = outlook.CreateItem(0)
     mail.To = recipient
     mail.cc = cc
-    mail.Subject = subject
+    mail.Subject = "PHI " + subject
     mail.HtmlBody = text
     for each in attachments:
         mail.Attachments.Add(Source=each)
+    #TODO: add protection for too many email windows open
     mail.Display()
 
 
@@ -88,116 +89,123 @@ def make_recipients(*args):
 
 # region Email and Attachment Groups/
 atir                = ""
-brenda              = "karen.henriquez@utah.edu"
+ashley              = "ashley.stevenson@utah.edu"
+anthony             = "anthony.p.jones@utah.edu"
 chelsea             = "chelsea.springer@utah.edu"
 chelsea_wells       = "chelsea.wells@utah.edu"
 emilie              = "emilie.hereth@utah.edu"
-hayley              = "hayley.shipton@utah.edu"
 heather             = "hhansen@sa.utah.edu"
 hilerie             = "hilerie.harris@sa.utah.edu"
-adam                = "adam.groussman@utah.edu"
+maisa               = "maisa.law@utah.edu"
 jenny               = "jenny.ryan@utah.edu"
-jonathanReplacement = "jenny.ryan@utah.edu"
+russ                = ""
 karen               = "karen.henriquez@utah.edu"
 kayla               = "Kayla.LaMont@utah.edu"
 kelly               = "kelly.tomlinson@utah.edu"
 krista              = "Krista.Burton@utah.edu"
-mahala              = "mahala.sakaeda@utah.edu"
-leo                 = "leo.garay@utah.edu"
+buttars             = "bryan.buttars@utah.edu"
+leo                 = "mat.mason@utah.edu"
 linh                = "linh.ly@utah.edu"
 lisa                = "lisa.zaelit@admin.utah.edu"
 courtney            = "courtney.l.young@utah.edu"
 mat                 = "mat.mason@utah.edu"
 mateo               = "mateo.remsburg@utah.edu"
-melanie             = "Melanie.Evans@utah.edu"
+marissa             = "chelsea.springer@utah.edu"
 natalie             = "natalie.zaelit@utah.edu"
-plooster            = "matthew.plooster@utah.edu"
+plooster            = ""
 raenetta            = "raenetta.king@utah.edu"
-kathi               = "kathi.beecher@utah.edu"
-evans	            = "Evans.Tan@utah.edu"
+counselor_manager   = ""
+evans	            = "walter.hills@utah.edu"
 sheryl              = "sheryl.hansen@utah.edu"
 steffany            = "steffany.forrest@income.utah.edu"
-tim                 = "karen.henriquez@utah.edu"
-veronica            = "veronica.christensen@utah.edu"
+stephen             = "stephen.wickhamshire@utah.edu"
+tim                 = "chelsea.springer@utah.edu"
+walter              = "walter.hills@utah.edu"
+dax                 = "dax.christensen@utah.edu"
 
 accounting = emilie + ";" + natalie + ";" + evans
-athletics  = chelsea + ";" + kayla
+athletics  = chelsea + ";" + kayla + ";" + linh
 loans      = krista + ";" + heather
-prof       = melanie
-systems    = mat + ";" + leo + ";" + veronica + ";" + mahala + ";" + adam
-schol      = jonathanReplacement + ";" + sheryl + ";" + plooster + ";" + raenetta + ";" + hayley + ";" + jenny 
+prof       = marissa
+systems    = mat + ";" + leo + ";" + dax + ";" + buttars + ";" + maisa
+schol      = russ + ";" + sheryl + ";" + plooster + ";" + raenetta + ";" + ashley + ";" + jenny + ";" + walter
 schol2     = schol + ";" + mateo + ";" + kelly + ";" + chelsea_wells
 
 mail_groups = []
 
-acnt_kkmt_mail  = MailGroup(make_recipients(accounting, karen, kathi, courtney, tim)); mail_groups.append(acnt_kkmt_mail)
-acnt_kkt_mail   = MailGroup(make_recipients(accounting, karen, kathi, tim)); mail_groups.append(acnt_kkt_mail)
+ckkls_mail      = MailGroup(make_recipients(courtney, karen, counselor_manager, linh, stephen)); mail_groups.append(ckkls_mail)
+acnt_kkmt_mail  = MailGroup(make_recipients(accounting, karen, counselor_manager, courtney, tim)); mail_groups.append(acnt_kkmt_mail)
+acnt_kkt_mail   = MailGroup(make_recipients(accounting, karen, counselor_manager, tim)); mail_groups.append(acnt_kkt_mail)
 acnt_mail       = MailGroup(make_recipients(accounting)); mail_groups.append(acnt_mail)
-adam_mail       = MailGroup(make_recipients(adam)); mail_groups.append(adam_mail)
-aehjkkt_mail    = MailGroup(make_recipients(atir, evans, hayley, jenny, karen, kathi, tim)); mail_groups.append(aehjkkt_mail)
-ahjmv_mail      = MailGroup(make_recipients(adam, hayley, jenny, mat, veronica)); mail_groups.append(ahjmv_mail)
-ahjv_mail       = MailGroup(make_recipients(adam, hayley, jenny, veronica)); mail_groups.append(ahjv_mail)
-akj_mail        = MailGroup(make_recipients(karen, kathi, jenny, tim));mail_groups.append(akj_mail)
-alt_mail        = MailGroup(make_recipients(loans, kathi, systems)); mail_groups.append(alt_mail)
-ath_kkmt_mail   = MailGroup(make_recipients(athletics, karen, kathi, courtney, tim)); mail_groups.append(ath_kkmt_mail)
+maisa_mail      = MailGroup(make_recipients(maisa)); mail_groups.append(maisa_mail)
+aehjkkt_mail    = MailGroup(make_recipients(atir, evans, ashley, jenny, karen, counselor_manager, tim)); mail_groups.append(aehjkkt_mail)
+ahjmv_mail      = MailGroup(make_recipients(maisa, ashley, jenny, mat, dax)); mail_groups.append(ahjmv_mail)
+ahjv_mail       = MailGroup(make_recipients(maisa, ashley, jenny, dax)); mail_groups.append(ahjv_mail)
+akj_mail        = MailGroup(make_recipients(karen, counselor_manager, jenny, tim));mail_groups.append(akj_mail)
+alt_mail        = MailGroup(make_recipients(loans, counselor_manager, systems)); mail_groups.append(alt_mail)
+ath_kkmt_mail   = MailGroup(make_recipients(athletics, karen, counselor_manager, courtney, tim)); mail_groups.append(ath_kkmt_mail)
 ath_mail        = MailGroup(make_recipients(athletics, karen)); mail_groups.append(ath_mail)
-ben_mail        = MailGroup(make_recipients(brenda, emilie, natalie)); mail_groups.append(ben_mail)
-bhjjns_mail     = MailGroup(make_recipients(brenda, hayley, jonathanReplacement, jenny, natalie, sheryl, evans)); mail_groups.append(bhjjns_mail)
-bekkt_mail      = MailGroup(make_recipients(brenda, emilie, karen, kathi, natalie, tim)); mail_groups.append(bekkt_mail)
-bhjkn_mail      = MailGroup(make_recipients(brenda, hayley, jenny, karen, natalie)); mail_groups.append(bhjkn_mail)
-bjnrs_mail      = MailGroup(make_recipients(brenda, jonathanReplacement, natalie, raenetta, sheryl)); mail_groups.append(bjnrs_mail)
-bjns_mail       = MailGroup(make_recipients(brenda, jonathanReplacement, natalie, sheryl)); mail_groups.append(bjns_mail)
-bk_mail         = MailGroup(make_recipients(brenda, karen));mail_groups.append(bk_mail)
-bkk_mail        = MailGroup(make_recipients(brenda, karen, kathi));mail_groups.append(bkk_mail)
-disb_mail       = MailGroup(make_recipients(loans, hayley, jenny, karen, kathi, courtney, natalie, tim, systems)); mail_groups.append(disb_mail)
-disb_tot_mail   = MailGroup(make_recipients(systems, kathi, tim, karen, courtney, brenda)); mail_groups.append(disb_tot_mail)
-dl_mail         = MailGroup(make_recipients(loans, karen, kathi, tim, systems)); mail_groups.append(dl_mail)
-hayley_mail     = MailGroup(make_recipients(hayley)); mail_groups.append(hayley_mail)
-hj_mail         = MailGroup(make_recipients(hayley, jenny)); mail_groups.append(hj_mail)
-hjj_mail        = MailGroup(make_recipients(hayley, jenny, jonathanReplacement)); mail_groups.append(hjj_mail)
-hjjk_mail       = MailGroup(make_recipients(hayley, jenny, jonathanReplacement, kathi,)); mail_groups.append(hjjk_mail)
-hjjr_mail       = MailGroup(make_recipients(hayley, jonathanReplacement, jenny, raenetta)); mail_groups.append(hjjr_mail)
-hjkkmt_mail     = MailGroup(make_recipients(hayley, jenny, karen, kathi, courtney, tim)); mail_groups.append(hjkkmt_mail)
-hjkt_mail       = MailGroup(make_recipients(hayley, jenny, kathi, tim)); mail_groups.append(hjkt_mail)
-hjr_mail        = MailGroup(make_recipients(hayley, jenny, raenetta)); mail_groups.append(hjr_mail)
-hjs_mail        = MailGroup(make_recipients(hayley, jenny, sheryl)); mail_groups.append(hjs_mail)
-hk_mail         = MailGroup(make_recipients(hayley, karen)); mail_groups.append(hk_mail)
-jj_mail         = MailGroup(make_recipients(jonathanReplacement, jenny)); mail_groups.append(jj_mail)
-kklt_mail       = MailGroup(make_recipients(karen, kathi, linh, tim)); mail_groups.append(kklt_mail)
-kkmt_mail       = MailGroup(make_recipients(karen, kathi, courtney, tim)); mail_groups.append(kkmt_mail)
-kkmtv_mail      = MailGroup(make_recipients(karen, kathi, courtney, tim, veronica)); mail_groups.append(kkmtv_mail)
-kkt_mail        = MailGroup(make_recipients(karen, kathi, tim)); mail_groups.append(kkt_mail)
-kktv_mail       = MailGroup(make_recipients(karen, kathi, tim, veronica)); mail_groups.append(kktv_mail)
-kmmt_mail       = MailGroup(make_recipients(kathi, courtney, melanie, tim)); mail_groups.append(kmmt_mail)
-kmt_mail        = MailGroup(make_recipients(kathi, courtney, tim)); mail_groups.append(kmt_mail)
-krms_mail       = MailGroup(make_recipients(krista, kathi, tim, natalie)); mail_groups.append(krms_mail)
-kt_mail         = MailGroup(make_recipients(kathi, tim)); mail_groups.append(kt_mail)
+ben_mail        = MailGroup(make_recipients(anthony, emilie, natalie)); mail_groups.append(ben_mail)
+bhjjns_mail     = MailGroup(make_recipients(anthony, ashley, russ, jenny, natalie, sheryl, evans)); mail_groups.append(bhjjns_mail)
+bekkt_mail      = MailGroup(make_recipients(anthony, emilie, karen, counselor_manager, natalie, tim)); mail_groups.append(bekkt_mail)
+bhjkn_mail      = MailGroup(make_recipients(anthony, ashley, jenny, karen, natalie)); mail_groups.append(bhjkn_mail)
+bjnrs_mail      = MailGroup(make_recipients(anthony, russ, natalie, raenetta, sheryl)); mail_groups.append(bjnrs_mail)
+bjns_mail       = MailGroup(make_recipients(anthony, russ, natalie, sheryl)); mail_groups.append(bjns_mail)
+bk_mail         = MailGroup(make_recipients(anthony, karen));mail_groups.append(bk_mail)
+bkk_mail        = MailGroup(make_recipients(anthony, karen, counselor_manager));mail_groups.append(bkk_mail)
+disb_mail       = MailGroup(make_recipients(loans, ashley, jenny, karen, counselor_manager, courtney, natalie, tim, systems)); mail_groups.append(disb_mail)
+disb_tot_mail   = MailGroup(make_recipients(systems, counselor_manager, tim, karen, courtney, anthony)); mail_groups.append(disb_tot_mail)
+dl_mail         = MailGroup(make_recipients(loans, karen, counselor_manager, tim, systems)); mail_groups.append(dl_mail)
+ashley_mail     = MailGroup(make_recipients(ashley)); mail_groups.append(ashley_mail)
+hj_mail         = MailGroup(make_recipients(ashley, jenny)); mail_groups.append(hj_mail)
+hjj_mail        = MailGroup(make_recipients(ashley, jenny, russ)); mail_groups.append(hjj_mail)
+hjjk_mail       = MailGroup(make_recipients(ashley, jenny, russ, counselor_manager,ashley)); mail_groups.append(hjjk_mail)
+hjjr_mail       = MailGroup(make_recipients(ashley, russ, jenny, raenetta)); mail_groups.append(hjjr_mail)
+hjkkmt_mail     = MailGroup(make_recipients(ashley, jenny, karen, counselor_manager, courtney, tim)); mail_groups.append(hjkkmt_mail)
+hjkt_mail       = MailGroup(make_recipients(ashley, jenny, counselor_manager, tim)); mail_groups.append(hjkt_mail)
+hjr_mail        = MailGroup(make_recipients(ashley, jenny, raenetta)); mail_groups.append(hjr_mail)
+hjs_mail        = MailGroup(make_recipients(ashley, jenny, sheryl)); mail_groups.append(hjs_mail)
+hk_mail         = MailGroup(make_recipients(ashley, karen)); mail_groups.append(hk_mail)
+jj_mail         = MailGroup(make_recipients(russ, jenny)); mail_groups.append(jj_mail)
+jja_mail        = MailGroup(make_recipients(russ, jenny, ashley)); mail_groups.append(jja_mail)
+kklt_mail       = MailGroup(make_recipients(karen, counselor_manager, linh, tim)); mail_groups.append(kklt_mail)
+kkmt_mail       = MailGroup(make_recipients(karen, counselor_manager, courtney, tim)); mail_groups.append(kkmt_mail)
+kkmtv_mail      = MailGroup(make_recipients(karen, counselor_manager, courtney, tim, dax)); mail_groups.append(kkmtv_mail)
+kkt_mail        = MailGroup(make_recipients(karen, counselor_manager, tim)); mail_groups.append(kkt_mail)
+kktv_mail       = MailGroup(make_recipients(karen, counselor_manager, tim, dax)); mail_groups.append(kktv_mail)
+kmmt_mail       = MailGroup(make_recipients(counselor_manager, courtney, marissa, tim)); mail_groups.append(kmmt_mail)
+kmt_mail        = MailGroup(make_recipients(counselor_manager, courtney, tim)); mail_groups.append(kmt_mail)
+krms_mail       = MailGroup(make_recipients(krista, counselor_manager, tim, natalie)); mail_groups.append(krms_mail)
+kt_mail         = MailGroup(make_recipients(counselor_manager, tim)); mail_groups.append(kt_mail)
 leo_mail        = MailGroup(make_recipients(leo)); mail_groups.append(leo_mail)
-loans_kkt_mail  = MailGroup(make_recipients(loans, karen, kathi, tim)); mail_groups.append(loans_kkt_mail)
-loans_kkt_mail  = MailGroup(make_recipients(loans, karen, kathi, tim)); mail_groups.append(loans_kkt_mail)
-loans_kktv_mail = MailGroup(make_recipients(loans, karen, kathi, tim, veronica)); mail_groups.append(loans_kktv_mail)
-loans_kt_mail   = MailGroup(make_recipients(loans, kathi, tim)); mail_groups.append(loans_kt_mail)
-mahala_mail     = MailGroup(make_recipients(mahala)); mail_groups.append(mahala_mail)
+loans_kkt_mail  = MailGroup(make_recipients(loans, karen, counselor_manager, tim)); mail_groups.append(loans_kkt_mail)
+loans_kkt_mail  = MailGroup(make_recipients(loans, karen, counselor_manager, tim)); mail_groups.append(loans_kkt_mail)
+loans_kktv_mail = MailGroup(make_recipients(loans, karen, counselor_manager, tim, dax)); mail_groups.append(loans_kktv_mail)
+loans_kt_mail   = MailGroup(make_recipients(loans, counselor_manager, tim)); mail_groups.append(loans_kt_mail)
+loans_c_mail    = MailGroup(make_recipients(loans, chelsea));mail_groups.append(loans_c_mail)
+loans_mail      = MailGroup(make_recipients(loans)); mail_groups.append(loans_mail)
+buttars_mail     = MailGroup(make_recipients(buttars)); mail_groups.append(buttars_mail)
 mat_mail        = MailGroup(make_recipients(mat)); mail_groups.append(mat_mail)
 ml_mail         = MailGroup(make_recipients(mat, leo)); mail_groups.append(ml_mail)
+monthly_dl_mail = MailGroup(make_recipients(krista, heather, counselor_manager, chelsea, karen, anthony, natalie, evans, walter)); mail_groups.append(monthly_dl_mail)
 natalie_mail    = MailGroup(make_recipients(natalie)); mail_groups.append(natalie_mail)
 null_mail       = MailGroup(make_recipients("")) #do not add this to list of mail_groups, don't want to send email.
-prof_jkt_mail   = MailGroup(make_recipients(prof, jenny, kathi, tim)); mail_groups.append(prof_jkt_mail)
+prof_jkt_mail   = MailGroup(make_recipients(prof, jenny, counselor_manager, tim)); mail_groups.append(prof_jkt_mail)
 prof_k_mail     = MailGroup(make_recipients(prof, karen)); mail_groups.append(prof_k_mail)
-prof_kkt_mail   = MailGroup(make_recipients(prof, karen, kathi, tim)); mail_groups.append(prof_kkt_mail)
-prof_kktm_mail  = MailGroup(make_recipients(prof, karen, kathi, tim, courtney)); mail_groups.append(prof_kktm_mail)
-prof_kmt_mail   = MailGroup(make_recipients(prof, kathi, courtney, tim)); mail_groups.append(prof_kmt_mail)
-prof_mail       = MailGroup(make_recipients(prof, tim, kathi,)); mail_groups.append(prof_mail)
-prof_rk_mail    = MailGroup(make_recipients(prof, tim, kathi, karen)); mail_groups.append(prof_rk_mail)
+prof_kkt_mail   = MailGroup(make_recipients(prof, karen, counselor_manager, tim)); mail_groups.append(prof_kkt_mail)
+prof_kktm_mail  = MailGroup(make_recipients(prof, karen, counselor_manager, tim, courtney)); mail_groups.append(prof_kktm_mail)
+prof_kmt_mail   = MailGroup(make_recipients(prof, counselor_manager, courtney, tim)); mail_groups.append(prof_kmt_mail)
+prof_mail       = MailGroup(make_recipients(prof, tim, counselor_manager,)); mail_groups.append(prof_mail)
+prof_rk_mail    = MailGroup(make_recipients(prof, tim, counselor_manager, karen)); mail_groups.append(prof_rk_mail)
 schol_mail      = MailGroup(make_recipients(schol)); mail_groups.append(schol_mail)
-schol2_mail     = MailGroup(make_recipients(schol2, )); mail_groups.append(schol2_mail)
+schol2_mail     = MailGroup(make_recipients(schol2)); mail_groups.append(schol2_mail)
 sheryl_mail     = MailGroup(make_recipients(sheryl)); mail_groups.append(sheryl_mail)
 sl_mail         = MailGroup(make_recipients(steffany, lisa)); mail_groups.append(sl_mail)
-ss_mail         = MailGroup(make_recipients(hayley, jenny, jonathanReplacement, natalie, sheryl, systems)); mail_groups.append(ss_mail)
+ss_mail         = MailGroup(make_recipients(ashley, jenny, russ, natalie, sheryl, systems)); mail_groups.append(ss_mail)
 sys_mail        = MailGroup(make_recipients(systems)); mail_groups.append(sys_mail)
-v_mail          = MailGroup(make_recipients(veronica)); mail_groups.append(v_mail)
-vm_mail         = MailGroup(make_recipients(veronica, mat)); mail_groups.append(vm_mail)
-jonathanReplacement_mail   = MailGroup(make_recipients(jonathanReplacement)); mail_groups.append(jonathanReplacement_mail)
+v_mail          = MailGroup(make_recipients(dax)); mail_groups.append(v_mail)
+vm_mail         = MailGroup(make_recipients(dax, mat)); mail_groups.append(vm_mail)
+russ_mail       = MailGroup(make_recipients(russ)); mail_groups.append(russ_mail)
 
 # endregion
 
@@ -207,7 +215,7 @@ def do_dailies():
     year = date[:2]
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     for query_name in os.listdir("."):
-        if query_name.startswith("UUFA_IL_ATHLETE_RESIDENCY"):
+        if query_name.startswith("UUFA_IL_REPEAT_COURSES"):
             year = str(int(re.search(r'\d+', query_name).group()))
             aid_year = "20" + str(int(year) - 1) + "-20" + year
             break
@@ -335,7 +343,7 @@ def do_dailies():
             do_query(query, date + " Loan Awd No FLRP Grad Date " + year + ".xls", directory,
                      loans_kt_mail.attachments)
 
-        if ("STDTS_WITH_FLPR_INIT") in query:
+        if (("STDT_WITH_FLPR_INIT") in query) and (year in query[:-10]) :
             do_query(query, date + " Students with FLPR Initiated.xls", directory,
                      loans_kt_mail.attachments)
             
@@ -403,9 +411,13 @@ def do_dailies():
             do_query(query, date + " HS Transcript 'C' FHST" + year + " I.xls", directory,
                      kmt_mail.attachments)
 
-        if query.startswith("ussf0034"):
+        # if query.startswith("ussf0034"):
+        #     do_query(query, date + " " + query, refund_directory,
+        #              aehjkkt_mail.attachments)
+
+        if query.startswith("UUFA_REFUND_HOLDS"):
             do_query(query, date + " " + query, refund_directory,
-                     aehjkkt_mail.attachments)
+                     null_mail.attachments)
 
         if query.startswith("UUFA_IL_PKG_SCH_EXP_GRAD_FA_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Aid Grad Date Fall 20" + year + ".xls", directory,
@@ -505,7 +517,11 @@ def do_dailies():
 
         if "_INCOMPLETE_CHECKLIST_" in query:
             do_query(query, date + " famil2 " + year + ".xls", disb_directory,
-                     bkk_mail.attachments)
+                     null_mail.attachments)
+
+        if "IL_SUMMER_AWARDING_" in query and (year in query[:-10]):
+            do_query(query, date + " Summer Awarding " + year + ".xls", disb_directory,
+                     ckkls_mail.attachments)
 
 
     for mail_group in mail_groups:
@@ -596,6 +612,10 @@ def do_monday_weeklies():
         if "_WR_AUDIT_CLSS_AID_DISB_" in query and (year in query[:-10]) :
             do_query(query, date + " Audit Class Aid Disbursed " + year + ".xls", directory,
                      kkt_mail.attachments)
+
+        if "_WR_ISA_PER_TERM" in query and (year in query[:-10]) :
+            do_query(query, date + " ISA Per Term FISA" + year + ".xls", directory,
+                     kkt_mail.attachments)  
 
         if "_WR_AWD_UG_NOW_GRAD_ATH_" in query and (year in query[:-10]) :
             do_query(query, date + " Ath Awards past Grad Term " + year + ".xls", directory,
@@ -703,7 +723,7 @@ def do_monday_weeklies():
 
         if "_WR_HRS_DECREASE_SV_" in query and (year in query[:-10]) :
             do_query(query, date + " Hours Decrease SV " + year + ".xls", directory,
-                     hayley_mail.attachments)
+                     ashley_mail.attachments)
 
         if "_WR_FHST_I_HST_COMPLETE_" in query and (year in query[:-10]) :
             do_query(query, date + " HS Transcript 'C' FHST" + year + " 'I'.xls", directory,
@@ -788,7 +808,7 @@ def do_monday_weeklies():
 
         if "_WR_MULTIPLE_EMPLIDS_" in query and (year in query[:-10]) :
             do_query(query, date + " Multiple EMPLIDS 20" + year + ".xls", directory,
-                     mat_mail.attachments)
+                     sys_mail.attachments)
 
         if "_WR_NO_COMMENT_CODE_" in query and (year in query[:-10]) :
             do_query(query, date + " Sub ISIR Checklist No ISIR Comment Code 20" + year + ".xls", directory,
@@ -932,7 +952,7 @@ def do_monday_weeklies():
 
         if "_WR_TRANSFER_STU_FA_SP_" in query and (year in query[:-10]) :
             do_query(query, date + " Transfer Students Fall-Spring 20" + year + ".xls", directory,
-                     mahala_mail.attachments)
+                     buttars_mail.attachments)
 
         if "_WR_UG_GR_DIR_LN_GR_TRM_" in query and (year in query[:-10]) :
             do_query(query, date + " UG-GR Direct Ln Grad Term " + year + ".xls", directory,
@@ -1046,12 +1066,16 @@ def do_monday_weeklies():
             do_query(query, date + " Students Not Packaged " + year + ".xls", directory,
                      kkmt_mail.attachments)
 
-        if "_WR_SAVE_CTZNSHIP_VER_" in query and (year in query[:-10]) :
+        if "WR_SAVE_CTZNSHIP_VER" in query and (year in query[:-10]) :
             do_query(query, date + " SAVE SB81 CTZNSHP VERI " + year + ".xls", save_directory,
                      bk_mail.attachments)
 
         if "WR_ALL_C_FVRA_I_NO_COR" in query and (year in query[:-10]) :
             do_query(query, date + " FVRA Ini with no Correction " + year + ".xls", save_directory,
+                     kkmt_mail.attachments)
+            
+        if "WR_CORRECTION_NOT_SENT" in query and (year in query[:-10]) :
+            do_query(query, date + " Corrections Sent still Pending " + year + ".xls", save_directory,
                      kkmt_mail.attachments)
 
         # Manually run Queries
@@ -1161,6 +1185,11 @@ def do_budget_queries():
         if query.startswith("UUFA_BR_PELL_COA_BLANK_") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Blank " + year + ".xls", directory,
                      acnt_kkt_mail.attachments)
+
+        if (("BR_PELL_COA_CHECK" in query) and (year in query[:-10])) :
+            do_query(query, date + " PELL COA Fix - COD Review " + year + ".xls", directory,
+                     acnt_kkt_mail.attachments)
+        
 
         if query.startswith("UUFA_BR_PELL_COA_DOUBLE_") and (year in query[:-10]) :
             do_query(query, date + " PELL COA Double " + year + ".xls", directory,
@@ -1575,7 +1604,7 @@ def do_packaging_queries():
 
         if query.startswith("UUFA_PRT_NSL_LOAN_RPT_VERI_") and (year in query[:-10]) :
             do_query(query, date + " NSL Loan Need Verification.xls", directory,
-                     loans_kktv_mail.attachments)
+                     loans_c_mail.attachments)
 
         if query.startswith("UUFA_PRT_NURSING_LOAN_RPT_") and (year in query[:-10]) :
             do_query(query, date + " NSL Needs NSL P-N Checklist " + year + ".xls", directory,
@@ -1760,7 +1789,7 @@ def do_monthlies():
 
         if "MR_DL_ORIG_AWARD" in query and year in query[:-10]:
             do_query(query, date + " DL ORIG Award " + year + ".xls", directory,
-                     ath_mail.attachments)
+                     loans_c_mail.attachments)
 
         if "MR_DSB_CASH_AWD_NOPOST" in query and year in query[:-10]:
             do_query(query, date + " Cash Disbursed Not Posted " + year + ".xls", directory,
@@ -1776,6 +1805,10 @@ def do_monthlies():
 
         if "MR_DN_INC_CHECKLISTS" in query and year in query[:-10]:
             do_query(query, date + " Dental Students with I Checklists " + year + ".xls", directory,
+                     prof_mail.attachments)
+
+        if "MR_M_L_D_INI_CHECKLIST" in query and year in query[:-10]:
+            do_query(query, date + " L-M-D Students with I Checklists " + year + ".xls", directory,
                      prof_mail.attachments)
 
         if "MR_FWS_WITH_NSI_HOLD" in query and year in query[:-10]:
@@ -1875,11 +1908,11 @@ def do_monthlies():
                      hj_mail.attachments)
 
         if "MR_UNDS_OFRD_AMT_FDRL" in query and year in query[:-10]:
-            do_query(query, date + " Athlete Awards UNDS Career " + year + ".xls", directory,
+            do_query(query, date + " Federal Awards UNDS Career " + year + ".xls", directory,
                      ath_mail.attachments)
 
         if "MR_UNDS_OFRD_AMT_ATH" in query and year in query[:-10]:
-            do_query(query, date + " Federal Awards UNDS Career " + year + ".xls", directory,
+            do_query(query, date + " Athlete Awards UNDS Career " + year + ".xls", directory,
                      kkmt_mail.attachments)
 
         if "MR_VERIFY_DEP_OVERRIDE" in query and year in query[:-10]:
@@ -1892,11 +1925,11 @@ def do_monthlies():
 
         if "SEFA_DL_TOTAL_AWARDS" in query and year in query[:-10]:
             do_query(query, date + " SEFA DL Amounts " + year + ".xls", directory,
-                     natalie_mail.attachments)
+                     monthly_dl_mail.attachments)
 
         if "SEFA_TOTAL_STUDENT" in query and year in query[:-10]:
             do_query(query, date + " SEFA DL Total Students " + year + ".xls", directory,
-                     natalie_mail.attachments)
+                     monthly_dl_mail.attachments)
 
         if "STP_DISB_RULE_MISMATCH" in query and year in query[:-10]:
             do_query(query, date + " Item Type Setup Mismatch " + year + ".xls", directory,
@@ -1909,6 +1942,14 @@ def do_monthlies():
         if "ussfa035-" in query and year in query:
             do_query(query, query, t_directory,
                      null_mail.attachments)
+
+        if "MR_EXPIRED_MPN_CURR_LN" in query and year in query[:-10]:
+            do_query(query, date + " Expired MPN Current LN " + year + ".xls", directory,
+                    loans_mail.attachments)
+
+        if "_MR_RNDM_GRAD_ENR_CHANG_" in query and year in query[:-10]:
+            do_query(query, date + " Audit Graduation & Enrollment Change " + year + ".xls", directory,
+                     loans_mail.attachments)
 
     for mail_group in mail_groups:
         if(mail_group.attachments):
@@ -1994,11 +2035,11 @@ def do_end_of_term_queries():
 
         if query.startswith("UUFA_EOT_SCH_ACAD_PROG_REVIEW"):
             do_query(query, date + " Scholarship Academic Progress Review " + year + ".xls", directory,
-                     jj_mail.attachments)
+                     jja_mail.attachments)
 
         if query.startswith("UUFA_EOT_SCH_ACD_PRG_REVIEW"):
             do_query(query, date + " All 70000792 Item types Academic Progress Review.xls", directory,
-                     jj_mail.attachments)
+                     jja_mail.attachments)
 
         if query.startswith("UUFA_EOT_SAP_AGGCP_DENTAL"):
             do_query(query, date + " SAP Aggregate Dental Career.xls", directory,
@@ -2034,11 +2075,11 @@ def do_end_of_term_queries():
 
         if query.startswith("UUFA_EOT_SCHOLAR_LEADER_CGPA"):
             do_query(query, date + " Scholarship CGPA Leadership.xls", directory,
-                     jj_mail.attachments)
+                     jja_mail.attachments)
 
         if "EOT_WUE_ACAD_PROG_REV" in query:
             do_query(query, date + " WUE AcadProg Rvw 700007880038.xls", directory,
-                     jj_mail.attachments)
+                     jja_mail.attachments)
 
     for mail_group in mail_groups:
         if(mail_group.attachments):
@@ -2053,8 +2094,9 @@ def do_disb_queries():
         if query_name.startswith("UUFA_DQ_AUTHORIZED_NOT_DISB"):
             year = str(int(re.search(r'\d+', query_name).group()))
             break
+        
     aid_year = "20" + str(int(year) - 1) + "-20" + year
-    disb_date = str(raw_input("Enter Date the Disbursement ran in 'MM-DD-YY' format:"))
+    disb_date = str(raw_input("Enter Date the most recent Disbursement ran in 'MM-DD-YY' format:"))
     disb_date = disb_date[:-1]
     if test:
         directory = os.path.realpath(os.path.join('C:\Testing Bob/Disbursement',
@@ -2082,6 +2124,10 @@ def do_disb_queries():
             do_query(query, disb_date + " Cash Disbursement Totals " + year + ".xls", directory,
                      disb_tot_mail.attachments)
 
+        if ("_DQ_DISB_TOTALS") in query and (year in query[:-10]) :
+            do_query(query, disb_date + " Disbursement Totals " + year + ".xls", directory,
+                     disb_tot_mail.attachments)
+
         if query.startswith("UUFA_DQ_FALL_" + year) :
             do_query(query, disb_date + " DL Fall Awards 20" + year + ".xls", directory,
                      disb_mail.attachments)
@@ -2096,6 +2142,14 @@ def do_disb_queries():
 
         if query.startswith("UUFA_DQ_UG_PLUS_REFUND_IA_") and (year in query[:-10]) :
             do_query(query, disb_date + " DL UG PLUS Refund Borrower " + year + ".xls", directory,
+                     sl_mail.attachments)
+
+        if ("DQ_MISC_CARES_DISB") in query and (year in query[:-10]) :
+            do_query(query, disb_date + " Misc CARES Disbursement Total " + year + ".xls", directory,
+                     sl_mail.attachments)
+
+        if ("DQ_MISC_CARES_RES_DISB") in query and (year in query[:-10]) :
+            do_query(query, disb_date + " Misc CARES Resources Disb " + year + ".xls", directory,
                      sl_mail.attachments)
 
         if ("MISC_DISB_TOTALS") in query and (year in query[:-10]) :
@@ -2536,7 +2590,7 @@ def do_pre_repackaging():
         if query_name.startswith("UUFA_PP_"):
             while True:
                 strm = raw_input(prompt)
-                if len(strm) == 4 and (0 / int(strm) == 0):
+                if (len(strm) == 5) and ((0 / int(strm) == 0)):
                     break
                 else:
                     print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable. Ex: 1168 is Fall of 16."
@@ -2608,7 +2662,7 @@ def do_mid_repack_queries():
         if query_name.startswith("UUFA_MP_"):
             while True:
                 strm = raw_input(prompt)
-                if len(strm) == 4 and (0 / int(strm) == 0):
+                if len(strm) == 5 and (0 / int(strm) == 0):
                     break
                 else:
                     print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
@@ -2690,7 +2744,7 @@ def do_after_repackaging():
         if query_name.startswith("UUFA_AP_"):
             while True:
                 strm = raw_input(prompt)
-                if len(strm) == 4 and (0 / int(strm) == 0):
+                if len(strm) == 5 and (0 / int(strm) == 0):
                     break
                 else:
                     print "\nOnly STRMs in the form of 1(year)4/6/8 are acceptable."
@@ -2803,11 +2857,11 @@ def do_daily_scholarships():
 
         if query.startswith("UUFA_SCHOLAR_TWO_CAREERS_") and (year in query[:-10]) :
             do_query(query, date + " Scholarship Award with Two Careers " + year + ".xls", directory,
-                     adam_mail.attachments)
+                     maisa_mail.attachments)
 
         if query.startswith("UUFA_SCHOLAR_AUTH_NOT_DISB_") and (year in query[:-10]) :
             do_query(query, date + " Scholar Authorized Not Disbursed " + year + ".xls", directory,
-                     adam_mail.attachments)
+                     maisa_mail.attachments)
 
  
     for mail_group in mail_groups:
@@ -2919,11 +2973,11 @@ def do_weekly_scholarships():
                 do_query(query, date + " Weekly Error Query " + year + ".xls", directory_errors,
                      schol_mail.attachments)
 
-        if ("WS_SCHOLAR_ADM_REVIEW" in query):
+        if ("WS_SCHOLAR_ADM_REVIEW" in query) and (year in query[:-10]):
                 do_query(query, date + " Scholarship Admin Review " + year + ".xls", directory,
                      schol_mail.attachments)
 
-        if ("WS_FAC_STAFF" in query):
+        if ("WS_FAC_STAFF" in query) and (year in query[:-10]):
                 do_query(query, date + " Faculty-Staff Not Posted " + year + ".xls", directory,
                      schol_mail.attachments)
             
@@ -3112,7 +3166,7 @@ def do_tsm_queries():
 def main():
     for filename in os.listdir("."):
     # Daily Queries
-        if filename.startswith("UUFA_IL_ATHLETE_RESIDENCY"):
+        if filename.startswith("UUFA_IL_REPEAT_COURSES"):
             do_dailies()
     # Monday Weekly Queries
         if filename.startswith("UUFA_WR_"):
