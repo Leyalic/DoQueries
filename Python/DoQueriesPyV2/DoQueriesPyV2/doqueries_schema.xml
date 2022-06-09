@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <query>
+       <type>Daily</type>
+       <name>UUFA_IL_3RD_PARTY_EXCEPT_XX</name>
+    </query>
+    <query>
+       <type>Weekly</type>
+       <name>UUFA_WR_UAC_SNGDO_XX</name>
+    </query>
+</data-set>

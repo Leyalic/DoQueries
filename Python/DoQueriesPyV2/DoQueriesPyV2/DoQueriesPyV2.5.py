@@ -138,80 +138,80 @@ schol      = russ + ";" + sheryl + ";" + plooster + ";" + raenetta + ";" + ashle
 schol2     = schol + ";" + mateo + ";" + kelly + ";" + chelsea_wells
 schol_mngr = ashley
 
-mail_groups = []
+query_groups = []
 
-ckkls_mail      = MailGroup(make_recipients(chelsea, courtney, karen, counselor_manager, stephen)); mail_groups.append(ckkls_mail)
-acnt_kkmt_mail  = MailGroup(make_recipients(accounting, karen, counselor_manager, courtney, chelsea)); mail_groups.append(acnt_kkmt_mail)
-acnt_kkt_mail   = MailGroup(make_recipients(accounting, karen, counselor_manager, chelsea)); mail_groups.append(acnt_kkt_mail)
-acnt_mail       = MailGroup(make_recipients(accounting)); mail_groups.append(acnt_mail)
-maisa_mail      = MailGroup(make_recipients(maisa)); mail_groups.append(maisa_mail)
-aehjkkt_mail    = MailGroup(make_recipients(atir, evans, ashley, jenny, karen, counselor_manager, chelsea)); mail_groups.append(aehjkkt_mail)
-ahjmv_mail      = MailGroup(make_recipients(maisa, ashley, jenny, mat, dax)); mail_groups.append(ahjmv_mail)
-ahjv_mail       = MailGroup(make_recipients(maisa, ashley, jenny, dax)); mail_groups.append(ahjv_mail)
-akj_mail        = MailGroup(make_recipients(karen, counselor_manager, jenny, chelsea));mail_groups.append(akj_mail)
-alt_mail        = MailGroup(make_recipients(loans, counselor_manager, systems)); mail_groups.append(alt_mail)
-ath_kkmt_mail   = MailGroup(make_recipients(athletics, karen, counselor_manager, courtney, chelsea)); mail_groups.append(ath_kkmt_mail)
-ath_mail        = MailGroup(make_recipients(athletics, karen)); mail_groups.append(ath_mail)
-ben_mail        = MailGroup(make_recipients(emilie, justin)); mail_groups.append(ben_mail)
-bhjjns_mail     = MailGroup(make_recipients(ashley, russ, jenny, justin, sheryl, evans)); mail_groups.append(bhjjns_mail)
-bekkt_mail      = MailGroup(make_recipients(emilie, karen, counselor_manager, justin, chelsea, lamishia, cory)); mail_groups.append(bekkt_mail)
-bhjkn_mail      = MailGroup(make_recipients(ashley, jenny, karen, justin)); mail_groups.append(bhjkn_mail)
-bjnrs_mail      = MailGroup(make_recipients(russ, justin, raenetta, sheryl)); mail_groups.append(bjnrs_mail)
-bjns_mail       = MailGroup(make_recipients(russ, justin, sheryl)); mail_groups.append(bjns_mail)
-bk_mail         = MailGroup(make_recipients(anthony, karen));mail_groups.append(bk_mail)
-bkk_mail        = MailGroup(make_recipients(anthony, karen, counselor_manager, chelsea));mail_groups.append(bkk_mail)
-disb_mail       = MailGroup(make_recipients(loans, ashley, jenny, karen, counselor_manager, courtney, justin, chelsea, systems)); mail_groups.append(disb_mail)
-disb_tot_mail   = MailGroup(make_recipients(systems, counselor_manager, chelsea, karen, courtney, anthony)); mail_groups.append(disb_tot_mail)
-dl_mail         = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea, systems)); mail_groups.append(dl_mail)
-ashley_mail     = MailGroup(make_recipients(ashley)); mail_groups.append(ashley_mail)
-hj_mail         = MailGroup(make_recipients(ashley, jenny)); mail_groups.append(hj_mail)
-hjj_mail        = MailGroup(make_recipients(ashley, jenny, russ)); mail_groups.append(hjj_mail)
-hjjk_mail       = MailGroup(make_recipients(ashley, jenny, russ, counselor_manager,ashley)); mail_groups.append(hjjk_mail)
-hjjr_mail       = MailGroup(make_recipients(ashley, russ, jenny, raenetta)); mail_groups.append(hjjr_mail)
-hjkkmt_mail     = MailGroup(make_recipients(ashley, jenny, karen, counselor_manager, courtney, chelsea)); mail_groups.append(hjkkmt_mail)
-hjkt_mail       = MailGroup(make_recipients(ashley, jenny, counselor_manager, chelsea, ashley)); mail_groups.append(hjkt_mail)
-hjr_mail        = MailGroup(make_recipients(ashley, jenny, raenetta)); mail_groups.append(hjr_mail)
-hjs_mail        = MailGroup(make_recipients(ashley, jenny, sheryl)); mail_groups.append(hjs_mail)
-hk_mail         = MailGroup(make_recipients(ashley, karen)); mail_groups.append(hk_mail)
-jj_mail         = MailGroup(make_recipients(russ, jenny)); mail_groups.append(jj_mail)
-jja_mail        = MailGroup(make_recipients(russ, ashley)); mail_groups.append(jja_mail)
-kklt_mail       = MailGroup(make_recipients(karen, counselor_manager, chelsea)); mail_groups.append(kklt_mail)
-kkmt_mail       = MailGroup(make_recipients(karen, counselor_manager, courtney, chelsea)); mail_groups.append(kkmt_mail)
-kkmtv_mail      = MailGroup(make_recipients(karen, counselor_manager, courtney, chelsea, dax)); mail_groups.append(kkmtv_mail)
-kkt_mail        = MailGroup(make_recipients(karen, counselor_manager, chelsea)); mail_groups.append(kkt_mail)
-kktv_mail       = MailGroup(make_recipients(karen, counselor_manager, chelsea, dax)); mail_groups.append(kktv_mail)
-kmmt_mail       = MailGroup(make_recipients(counselor_manager, courtney, shana, chelsea, ashley)); mail_groups.append(kmmt_mail)
-kmt_mail        = MailGroup(make_recipients(counselor_manager, courtney, chelsea)); mail_groups.append(kmt_mail)
-krms_mail       = MailGroup(make_recipients(devon, counselor_manager, chelsea, justin)); mail_groups.append(krms_mail)
-kt_mail         = MailGroup(make_recipients(counselor_manager, chelsea)); mail_groups.append(kt_mail)
-leo_mail        = MailGroup(make_recipients(leo)); mail_groups.append(leo_mail)
-loans_kkt_mail  = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea)); mail_groups.append(loans_kkt_mail)
-loans_kktv_mail = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea, dax)); mail_groups.append(loans_kktv_mail)
-loans_kt_mail   = MailGroup(make_recipients(loans, counselor_manager, chelsea)); mail_groups.append(loans_kt_mail)
-loans_c_mail    = MailGroup(make_recipients(loans, chelsea));mail_groups.append(loans_c_mail)
-loans_mail      = MailGroup(make_recipients(loans)); mail_groups.append(loans_mail)
-buttars_mail     = MailGroup(make_recipients(buttars)); mail_groups.append(buttars_mail)
-mat_mail        = MailGroup(make_recipients(mat)); mail_groups.append(mat_mail)
-ml_mail         = MailGroup(make_recipients(mat, leo)); mail_groups.append(ml_mail)
-monthly_dl_mail = MailGroup(make_recipients(devon, heather, cory, counselor_manager, chelsea, karen, anthony, justin, evans, walter)); mail_groups.append(monthly_dl_mail)
-natalie_mail    = MailGroup(make_recipients(justin)); mail_groups.append(natalie_mail)
+ckkls_mail      = MailGroup(make_recipients(chelsea, courtney, karen, counselor_manager, stephen)); query_groups.append(ckkls_mail)
+acnt_kkmt_mail  = MailGroup(make_recipients(accounting, karen, counselor_manager, courtney, chelsea)); query_groups.append(acnt_kkmt_mail)
+acnt_kkt_mail   = MailGroup(make_recipients(accounting, karen, counselor_manager, chelsea)); query_groups.append(acnt_kkt_mail)
+acnt_mail       = MailGroup(make_recipients(accounting)); query_groups.append(acnt_mail)
+maisa_mail      = MailGroup(make_recipients(maisa)); query_groups.append(maisa_mail)
+aehjkkt_mail    = MailGroup(make_recipients(atir, evans, ashley, jenny, karen, counselor_manager, chelsea)); query_groups.append(aehjkkt_mail)
+ahjmv_mail      = MailGroup(make_recipients(maisa, ashley, jenny, mat, dax)); query_groups.append(ahjmv_mail)
+ahjv_mail       = MailGroup(make_recipients(maisa, ashley, jenny, dax)); query_groups.append(ahjv_mail)
+akj_mail        = MailGroup(make_recipients(karen, counselor_manager, jenny, chelsea));query_groups.append(akj_mail)
+alt_mail        = MailGroup(make_recipients(loans, counselor_manager, systems)); query_groups.append(alt_mail)
+ath_kkmt_mail   = MailGroup(make_recipients(athletics, karen, counselor_manager, courtney, chelsea)); query_groups.append(ath_kkmt_mail)
+ath_mail        = MailGroup(make_recipients(athletics, karen)); query_groups.append(ath_mail)
+ben_mail        = MailGroup(make_recipients(emilie, justin)); query_groups.append(ben_mail)
+bhjjns_mail     = MailGroup(make_recipients(ashley, russ, jenny, justin, sheryl, evans)); query_groups.append(bhjjns_mail)
+bekkt_mail      = MailGroup(make_recipients(emilie, karen, counselor_manager, justin, chelsea, lamishia, cory)); query_groups.append(bekkt_mail)
+bhjkn_mail      = MailGroup(make_recipients(ashley, jenny, karen, justin)); query_groups.append(bhjkn_mail)
+bjnrs_mail      = MailGroup(make_recipients(russ, justin, raenetta, sheryl)); query_groups.append(bjnrs_mail)
+bjns_mail       = MailGroup(make_recipients(russ, justin, sheryl)); query_groups.append(bjns_mail)
+bk_mail         = MailGroup(make_recipients(anthony, karen));query_groups.append(bk_mail)
+bkk_mail        = MailGroup(make_recipients(anthony, karen, counselor_manager, chelsea));query_groups.append(bkk_mail)
+disb_mail       = MailGroup(make_recipients(loans, ashley, jenny, karen, counselor_manager, courtney, justin, chelsea, systems)); query_groups.append(disb_mail)
+disb_tot_mail   = MailGroup(make_recipients(systems, counselor_manager, chelsea, karen, courtney, anthony)); query_groups.append(disb_tot_mail)
+dl_mail         = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea, systems)); query_groups.append(dl_mail)
+ashley_mail     = MailGroup(make_recipients(ashley)); query_groups.append(ashley_mail)
+hj_mail         = MailGroup(make_recipients(ashley, jenny)); query_groups.append(hj_mail)
+hjj_mail        = MailGroup(make_recipients(ashley, jenny, russ)); query_groups.append(hjj_mail)
+hjjk_mail       = MailGroup(make_recipients(ashley, jenny, russ, counselor_manager,ashley)); query_groups.append(hjjk_mail)
+hjjr_mail       = MailGroup(make_recipients(ashley, russ, jenny, raenetta)); query_groups.append(hjjr_mail)
+hjkkmt_mail     = MailGroup(make_recipients(ashley, jenny, karen, counselor_manager, courtney, chelsea)); query_groups.append(hjkkmt_mail)
+hjkt_mail       = MailGroup(make_recipients(ashley, jenny, counselor_manager, chelsea, ashley)); query_groups.append(hjkt_mail)
+hjr_mail        = MailGroup(make_recipients(ashley, jenny, raenetta)); query_groups.append(hjr_mail)
+hjs_mail        = MailGroup(make_recipients(ashley, jenny, sheryl)); query_groups.append(hjs_mail)
+hk_mail         = MailGroup(make_recipients(ashley, karen)); query_groups.append(hk_mail)
+jj_mail         = MailGroup(make_recipients(russ, jenny)); query_groups.append(jj_mail)
+jja_mail        = MailGroup(make_recipients(russ, ashley)); query_groups.append(jja_mail)
+kklt_mail       = MailGroup(make_recipients(karen, counselor_manager, chelsea)); query_groups.append(kklt_mail)
+kkmt_mail       = MailGroup(make_recipients(karen, counselor_manager, courtney, chelsea)); query_groups.append(kkmt_mail)
+kkmtv_mail      = MailGroup(make_recipients(karen, counselor_manager, courtney, chelsea, dax)); query_groups.append(kkmtv_mail)
+kkt_mail        = MailGroup(make_recipients(karen, counselor_manager, chelsea)); query_groups.append(kkt_mail)
+kktv_mail       = MailGroup(make_recipients(karen, counselor_manager, chelsea, dax)); query_groups.append(kktv_mail)
+kmmt_mail       = MailGroup(make_recipients(counselor_manager, courtney, shana, chelsea, ashley)); query_groups.append(kmmt_mail)
+kmt_mail        = MailGroup(make_recipients(counselor_manager, courtney, chelsea)); query_groups.append(kmt_mail)
+krms_mail       = MailGroup(make_recipients(devon, counselor_manager, chelsea, justin)); query_groups.append(krms_mail)
+kt_mail         = MailGroup(make_recipients(counselor_manager, chelsea)); query_groups.append(kt_mail)
+leo_mail        = MailGroup(make_recipients(leo)); query_groups.append(leo_mail)
+loans_kkt_mail  = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea)); query_groups.append(loans_kkt_mail)
+loans_kktv_mail = MailGroup(make_recipients(loans, karen, counselor_manager, chelsea, dax)); query_groups.append(loans_kktv_mail)
+loans_kt_mail   = MailGroup(make_recipients(loans, counselor_manager, chelsea)); query_groups.append(loans_kt_mail)
+loans_c_mail    = MailGroup(make_recipients(loans, chelsea));query_groups.append(loans_c_mail)
+loans_mail      = MailGroup(make_recipients(loans)); query_groups.append(loans_mail)
+buttars_mail     = MailGroup(make_recipients(buttars)); query_groups.append(buttars_mail)
+mat_mail        = MailGroup(make_recipients(mat)); query_groups.append(mat_mail)
+ml_mail         = MailGroup(make_recipients(mat, leo)); query_groups.append(ml_mail)
+monthly_dl_mail = MailGroup(make_recipients(devon, heather, cory, counselor_manager, chelsea, karen, anthony, justin, evans, walter)); query_groups.append(monthly_dl_mail)
+natalie_mail    = MailGroup(make_recipients(justin)); query_groups.append(natalie_mail)
 null_mail       = MailGroup(make_recipients("")) #do not add this to list of mail_groups, don't want to send email.
-prof_jkt_mail   = MailGroup(make_recipients(prof, jenny, counselor_manager, chelsea)); mail_groups.append(prof_jkt_mail)
-prof_k_mail     = MailGroup(make_recipients(prof, karen)); mail_groups.append(prof_k_mail)
-prof_kkt_mail   = MailGroup(make_recipients(prof, karen, counselor_manager, chelsea)); mail_groups.append(prof_kkt_mail)
-prof_kktm_mail  = MailGroup(make_recipients(prof, karen, counselor_manager, chelsea, courtney)); mail_groups.append(prof_kktm_mail)
-prof_kmt_mail   = MailGroup(make_recipients(prof, counselor_manager, courtney, chelsea)); mail_groups.append(prof_kmt_mail)
-prof_mail       = MailGroup(make_recipients(prof, chelsea, counselor_manager,)); mail_groups.append(prof_mail)
-prof_rk_mail    = MailGroup(make_recipients(prof, chelsea, counselor_manager, karen)); mail_groups.append(prof_rk_mail)
-schol_mail      = MailGroup(make_recipients(schol)); mail_groups.append(schol_mail)
-schol2_mail     = MailGroup(make_recipients(schol2)); mail_groups.append(schol2_mail)
-sheryl_mail     = MailGroup(make_recipients(sheryl)); mail_groups.append(sheryl_mail)
-sl_mail         = MailGroup(make_recipients(steffany, lisa)); mail_groups.append(sl_mail)
-ss_mail         = MailGroup(make_recipients(ashley, jenny, russ, justin, sheryl, systems)); mail_groups.append(ss_mail)
-sys_mail        = MailGroup(make_recipients(systems)); mail_groups.append(sys_mail)
-v_mail          = MailGroup(make_recipients(dax)); mail_groups.append(v_mail)
-vm_mail         = MailGroup(make_recipients(dax, mat)); mail_groups.append(vm_mail)
-russ_mail       = MailGroup(make_recipients(russ)); mail_groups.append(russ_mail)
+prof_jkt_mail   = MailGroup(make_recipients(prof, jenny, counselor_manager, chelsea)); query_groups.append(prof_jkt_mail)
+prof_k_mail     = MailGroup(make_recipients(prof, karen)); query_groups.append(prof_k_mail)
+prof_kkt_mail   = MailGroup(make_recipients(prof, karen, counselor_manager, chelsea)); query_groups.append(prof_kkt_mail)
+prof_kktm_mail  = MailGroup(make_recipients(prof, karen, counselor_manager, chelsea, courtney)); query_groups.append(prof_kktm_mail)
+prof_kmt_mail   = MailGroup(make_recipients(prof, counselor_manager, courtney, chelsea)); query_groups.append(prof_kmt_mail)
+prof_mail       = MailGroup(make_recipients(prof, chelsea, counselor_manager,)); query_groups.append(prof_mail)
+prof_rk_mail    = MailGroup(make_recipients(prof, chelsea, counselor_manager, karen)); query_groups.append(prof_rk_mail)
+schol_mail      = MailGroup(make_recipients(schol)); query_groups.append(schol_mail)
+schol2_mail     = MailGroup(make_recipients(schol2)); query_groups.append(schol2_mail)
+sheryl_mail     = MailGroup(make_recipients(sheryl)); query_groups.append(sheryl_mail)
+sl_mail         = MailGroup(make_recipients(steffany, lisa)); query_groups.append(sl_mail)
+ss_mail         = MailGroup(make_recipients(ashley, jenny, russ, justin, sheryl, systems)); query_groups.append(ss_mail)
+sys_mail        = MailGroup(make_recipients(systems)); query_groups.append(sys_mail)
+v_mail          = MailGroup(make_recipients(dax)); query_groups.append(v_mail)
+vm_mail         = MailGroup(make_recipients(dax, mat)); query_groups.append(vm_mail)
+russ_mail       = MailGroup(make_recipients(russ)); query_groups.append(russ_mail)
 # endregion
 
 #Daily Queries
@@ -537,7 +537,7 @@ def do_dailies():
                      kmt_mail.attachments)
 
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Daily Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -855,10 +855,6 @@ def do_monday_weeklies():
             do_query(query, date + " Pell Summer No Pell 20" + year + ".xls", directory,
                      kkmt_mail.attachments)
 
-        if "WR_PELL_SUMMER_AGGS" in query and (year in query[:-8]) :
-            do_query(query, date + " Pell Aggregate Summer Report" + year + ".xls", directory,
-                     kkmt_mail.attachments)
-
         if "_WR_PELL_TERM_FT_" in query and (year in query[:-8]) :
             do_query(query, date + " Term Pell Awards FT 20" + year + ".xls", directory,
                      kkmt_mail.attachments)
@@ -1129,7 +1125,7 @@ def do_monday_weeklies():
             do_query(query, date + " Athlete Offered Federal Aid " + year + ".xls", packaging_directory,
                      ath_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Weekly Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -1252,7 +1248,7 @@ def do_budget_queries():
             do_query(query, date + " TRIAL Acad Levels out of SYNC " + year + ".xls", directory,
                      kkmt_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Budget Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -1715,11 +1711,7 @@ def do_packaging_queries():
             do_query(query, date + " Aid Awarded No Funds " + year + ".xls", directory,
                      bekkt_mail.attachments)
 
-        if ("PKG_NOT_PKGD_NO_UNITS") in query and (year in query[:-8]) :
-            do_query(query, date + " Not Packaged No Units " + year + ".xls", directory,
-                     kkt_mail.attachments)
-
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Batch Packaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -1976,7 +1968,7 @@ def do_monthlies():
             do_query(query, date + " Audit Graduation & Enrollment Change " + year + ".xls", directory,
                      loans_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Monthly Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2107,7 +2099,7 @@ def do_end_of_term_queries():
             do_query(query, date + " WUE AcadProg Rvw 700007880038.xls", directory,
                      jja_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", "End of Term Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2124,7 +2116,7 @@ def do_disb_queries():
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     disb_date = str(raw_input("Enter Date the most recent Disbursement ran in 'MM-DD-YY' format:"))
     disb_date = disb_date[:-1]
-    if test:0
+    if test:
         directory = os.path.realpath(os.path.join('C:\Testing Bob/Disbursement',
                                                   aid_year, month_folder))
     else:
@@ -2214,7 +2206,7 @@ def do_disb_queries():
             do_query(query, disb_date + " Teach Grant Recipients 20" + year + ".xls", directory,
                      disb_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Disbursement Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2285,7 +2277,7 @@ def do_2nd_ldr():
             do_query(query, date + " Pell Eligible No Pell 20" + year + ".xls", directory,
                      kkmt_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Second Session LDR Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2395,7 +2387,7 @@ def do_day_after_ldr():
             do_query(query, date + " Non-Matric Stu Athlete Balance Owing " + year + ".xls", directory,
                      ath_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Day After LDR Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2506,7 +2498,7 @@ def dl_pre_outbound():
             else:
                 raw_input("\nCould not locate DL ORIG 20" + year + ".doc\nMake sure it is located in O:/Systems/Direct Loans/Origination\n\nPress Enter when ready.")
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Pre-Outbound Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2520,17 +2512,17 @@ def al_pre_outbound():
             break
     aid_year = "20" + str(int(year) - 1) + "-20" + year
     skip = "n"
-    orig_file_doc = date + " ALT Loan ORIG " + year + ".doc"
-    orig_file_docx = date + " ALT Loan ORIG " + year + ".docx"
+    orig_file_doc = date + " ALT Loan ORIG 20" + year + ".doc"
+    orig_file_docx = date + " ALT Loan ORIG 20" + year + ".docx"
 
     if test:
-        directory = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/'))
-        orig_doc = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', orig_file_doc))
-        orig_docx = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', orig_file_docx))
+        directory = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year))
+        orig_doc = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year, orig_file_doc))
+        orig_docx = os.path.realpath(os.path.join('C:\Testing Bob/ALT Loans/', aid_year, orig_file_docx))
     else:
-        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/'))
-        orig_doc = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', orig_file_doc))
-        orig_docx = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', orig_file_docx))
+        directory = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', aid_year))
+        orig_doc = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', aid_year, orig_file_doc))
+        orig_docx = os.path.realpath(os.path.join('O:/Systems/QUERIES/ALT Loans/', aid_year, orig_file_docx))
 
     # the list 'my_path' should be populated with the FOLDER variables above.
     if not os.path.isdir(directory):
@@ -2609,7 +2601,7 @@ def al_pre_outbound():
             else:
                 skip = raw_input("\nCould not locate ALT Loan ORIG 20" + year + ".doc\nMake sure it is located in O:/Systems/Queries/ALT Loans/" + aid_year + "\n\nPress Enter when ready.")
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Alt Loan Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2681,7 +2673,7 @@ def do_pre_repackaging():
             do_query(query, date + " Pell Total Withdrawn Drop.xls", directory,
                      kkmt_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Pre-Pell Only Repackaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2763,7 +2755,7 @@ def do_mid_repack_queries():
                      null_mail.attachments)
 
  
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Pell Repackaging Mid-Packaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2857,7 +2849,7 @@ def do_after_repackaging():
             do_query(query, date + " Term Pell Awards TQ.xls", directory,
                      kkmt_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Pell Only Repackaging Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -2898,7 +2890,7 @@ def do_daily_scholarships():
                      maisa_mail.attachments)
 
  
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Daily Scholarship Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -3024,7 +3016,7 @@ def do_weekly_scholarships():
                      schol2_mail.attachments)
 
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", aid_year + " Weekly Scholarships Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -3128,7 +3120,7 @@ def do_atb_fb_3c_queries():
             do_query(query, date + " SEC Sequence Difference.xls", atb_directory,
                      kkmt_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", " ATB Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
@@ -3196,7 +3188,7 @@ def do_tsm_queries():
             do_query(query, date + " NSLDS Var Flag9 UG " + year + ".xls", directory,
                      null_mail.attachments)
 
-    for mail_group in mail_groups:
+    for mail_group in query_groups:
         if(mail_group.attachments):
             mailer("", " TSM Queries", mail_group.recipients,"", mail_group.attachments)
             del mail_group.attachments[:]
